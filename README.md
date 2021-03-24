@@ -40,7 +40,7 @@
 |:white_check_mark:已上线|共享|http://shared-onedrive.langnang.ml|OneDrive + OneIndex|
 
 <!-- 
-|:clock8:开发中|R18|http://r18-onedrive.langnang.ml|OneDrive + OneIndex|
+|:white_check_mark:已上线|R18|http://r18-onedrive.langnang.ml|OneDrive + OneIndex|
 -->
 
 ## Account

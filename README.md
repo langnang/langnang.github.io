@@ -31,8 +31,9 @@
 |--|--|--|--|
 |:heavy_minus_sign:未开始|Angular|--|--|
 |:heavy_minus_sign:未开始|React|--|--|
-|:clock8:开发中|Vue|--|--|
-|:clock8:开发中|AspNetCore+Vue|--|--|
+|:heavy_check_mark:已上线|Vue|https://github.com/langnang/vue-template|--|
+|:heavy_check_mark:已上线|Vue-Component|https://github.com/langnang/vue-component-template|--|
+|:heavy_check_mark:已上线|AspNetCore-Vue|https://github.com/langnang/aspnetcore-vue-template|--|
 
 ## Storage
 

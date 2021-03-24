@@ -29,6 +29,8 @@
 
 |状态|网站名|网址|描述|
 |--|--|--|--|
+|:heavy_minus_sign:未开始|Angular|--|--|
+|:heavy_minus_sign:未开始|React|--|--|
 |:clock8:开发中|Vue|--|--|
 |:clock8:开发中|AspNetCore+Vue|--|--|
 

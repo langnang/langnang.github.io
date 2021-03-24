@@ -1,8 +1,11 @@
 # langnang.github.io
 
 ## Static
-- [代办事项列表](https://langnang.github.io/todolist)
-- [调色板]()
+
+|状态|网站名|网址|描述|
+|--|--|--|--|
+|:clock8:开发中|待办事项列表|https://langnang.github.io/todolist|Vue|
+|:clock8:开发中|调色板|--|Vue|
 
 ## PHP
 
@@ -22,8 +25,10 @@
 
 ## Template
 
-- [Vue]
-- [ASP.NET Core + Vue]
+|状态|网站名|网址|描述|
+|--|--|--|--|
+|:clock8:开发中|Vue|--|--|
+|:clock8:开发中|AspNetCore+Vue|--|--|
 
 ## Storage
 

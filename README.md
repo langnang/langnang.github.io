@@ -6,6 +6,7 @@
 |--|--|--|--|
 |:clock8:开发中|待办事项列表|https://langnang.github.io/todolist|Vue|
 |:clock8:开发中|调色板|--|Vue|
+|:clock8:未开始|脚本|http://script.langnang.ml/html/|HTML|
 
 ## PHP
 
@@ -16,6 +17,7 @@
 |:clock8:开发中|音频|http://audio.langnang.ml|Typecho + MySQL|
 |:clock8:开发中|图片|http://img.langnang.ml|Typecho + MySQL|
 |:clock8:开发中|导航|http://nav.langnang.ml|Typecho + MySQL|
+|:clock8:未开始|脚本|http://script.langnang.ml/php/|PHP|
 
 <!-- 
 |:clock8:开发中|API|http://api.langnang.ml|Typecho + MySQL|

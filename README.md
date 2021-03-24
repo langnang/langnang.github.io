@@ -20,7 +20,7 @@
 |:heavy_minus_sign:未开始|脚本|http://script.langnang.ml/php/|PHP|
 
 <!-- 
-|:clock8:开发中|API|http://api.langnang.ml|Typecho + MySQL|
+|:clock8:开发中|API|http://api.langnang.ml|PHP|
 |:x:已下线|--|--|--|
 -->
 ## ASP.NET Core

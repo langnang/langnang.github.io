@@ -18,7 +18,7 @@
 |:heavy_minus_sign:未开始|图片|http://img.langnang.ml|Typecho + MySQL|
 |:heavy_check_mark:已上线|导航|http://nav.langnang.ml|Typecho + MySQL|
 |:heavy_minus_sign:未开始|脚本|http://script.langnang.ml/php/|PHP|
-
+|:heavy_minus_sign:未开始|OneIndex|--|OneIndex二次开发|
 <!-- 
 |:clock8:开发中|API|http://api.langnang.ml|PHP|
 |:x:已下线|--|--|--|
@@ -58,8 +58,8 @@
 
 |状态|网站名|网址|描述|
 |--|--|--|--|
-|:heavy_minus_sign:未开始|OneIndex|--|OneIndex|
-|:heavy_minus_sign:未开始|Typecho-Blog|--|Typecho|
+|:heavy_minus_sign:未开始|OneIndex-theme|--|OneIndex|
+|:heavy_minus_sign:未开始|Typecho-blog-theme|--|Typecho|
 
 
 ## Plugin

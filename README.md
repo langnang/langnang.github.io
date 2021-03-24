@@ -8,7 +8,7 @@
 
 |状态|网站名|网址|描述|
 |--|--|--|--|
-|已上线|博客|http://blog.langnang.ml|Typecho + MySQL|
+|:white_check_mark:已上线|博客|http://blog.langnang.ml|Typecho + MySQL|
 |开发中|视频|http://video.langnang.ml|Typecho + MySQL|
 |开发中|音频|http://audio.langnang.ml|Typecho + MySQL|
 |开发中|图片|http://img.langnang.ml|Typecho + MySQL|

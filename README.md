@@ -48,6 +48,22 @@
 |:white_check_mark:已上线|R18|http://r18-onedrive.langnang.ml|OneDrive + OneIndex|
 -->
 
+## Component
+
+|状态|网站名|网址|描述|
+|--|--|--|--|
+|:heavy_minus_sign:未开始|vue-audio-player|--|Vue|
+
+## Theme
+
+|状态|网站名|网址|描述|
+|--|--|--|--|
+|:heavy_minus_sign:未开始|OneIndex|--|OneIndex|
+|:heavy_minus_sign:未开始|Typecho-Blog|--|Typecho|
+
+
+## Plugin
+
 ## Account
 
 - [GitHub]

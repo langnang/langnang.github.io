@@ -37,7 +37,7 @@
 |:clock8:开发中|音频|http://audio-onedrive.langnang.ml|OneDrive + OneIndex|
 |:clock8:开发中|视频|http://video-onedrive.langnang.ml|OneDrive + OneIndex|
 |:clock8:开发中|图片|http://img-onedrive.langnang.ml|OneDrive + OneIndex|
-|:clock8:开发中|共享|http://shared-onedrive.langnang.ml|OneDrive + OneIndex|
+|:white_check_mark:已上线|共享|http://shared-onedrive.langnang.ml|OneDrive + OneIndex|
 
 <!-- 
 |:clock8:开发中|R18|http://r18-onedrive.langnang.ml|OneDrive + OneIndex|

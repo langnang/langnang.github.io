@@ -6,7 +6,7 @@
 |--|--|--|--|
 |:clock8:开发中|待办事项列表|https://langnang.github.io/todolist|Vue|
 |:clock8:开发中|调色板|--|Vue|
-|:clock8:未开始|脚本|http://script.langnang.ml/html/|HTML|
+|:heavy_minus_sign:未开始|脚本|http://script.langnang.ml/html/|HTML|
 
 ## PHP
 

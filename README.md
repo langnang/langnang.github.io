@@ -6,14 +6,15 @@
 
 <!-- r18.langnang -->
 
-- blog.langnang
+- [博客](blog.langnang.ml) 
   > Typecho + MySQL
-- video.langnang
+- [视频](video.langnang.ml)
   > OneDrive + OneIndex
-- audio.langnang
+- [音频](audio.langnang.ml)
   > OneDrive + OneIndex
-- img.langnang
+- [图片](img.langnang.ml)
   > OneDrive + OneIndex
-- nav.langnang
+- [导航](nav.langnang.ml)
+  > Typecho + MySQL
 
 ## ASP.NET Core

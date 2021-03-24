@@ -1,5 +1,5 @@
 # langnang.github.io
-
+> http://langnang.ml
 ## Static
 
 |状态|网站名|网址|描述|

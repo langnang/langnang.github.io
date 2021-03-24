@@ -16,7 +16,7 @@
 |:heavy_minus_sign:未开始|视频|http://video.langnang.ml|Typecho + MySQL|
 |:heavy_minus_sign:未开始|音频|http://audio.langnang.ml|Typecho + MySQL|
 |:heavy_minus_sign:未开始|图片|http://img.langnang.ml|Typecho + MySQL|
-|:clock8:开发中|导航|http://nav.langnang.ml|Typecho + MySQL|
+|:heavy_check_mark:已上线|导航|http://nav.langnang.ml|Typecho + MySQL|
 |:heavy_minus_sign:未开始|脚本|http://script.langnang.ml/php/|PHP|
 
 <!-- 

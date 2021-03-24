@@ -4,8 +4,8 @@
 
 |状态|网站名|网址|描述|
 |--|--|--|--|
-|:clock8:开发中|待办事项列表|https://langnang.github.io/todolist|Vue|
-|:clock8:开发中|调色板|--|Vue|
+|:heavy_minus_sign:未开始|待办事项列表|https://langnang.github.io/todolist|Vue|
+|:heavy_minus_sign:未开始|调色板|--|Vue|
 |:heavy_minus_sign:未开始|脚本|http://script.langnang.ml/html/|HTML|
 
 ## PHP

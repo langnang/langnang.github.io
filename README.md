@@ -7,8 +7,6 @@
 ## PHP
 
 <!-- 
-- [R18](http://r18.langnang.ml)
-  > OneDrive + OneIndex
 - [API](http://api.langnang.ml)
   > PHP
 -->
@@ -17,11 +15,11 @@
 - [博客](http://blog.langnang.ml) 
   > Typecho + MySQL
 - [视频](http://video.langnang.ml)
-  > OneDrive + OneIndex
+  > Typecho + MySQL
 - [音频](http://audio.langnang.ml)
-  > OneDrive + OneIndex
+  > Typecho + MySQL
 - [图片](http://img.langnang.ml)
-  > OneDrive + OneIndex
+  > Typecho + MySQL
 - [导航](http://nav.langnang.ml)
   > Typecho + MySQL
 
@@ -31,3 +29,24 @@
 
 - [Vue]
 - [ASP.NET Core + Vue]
+
+## Storage
+
+<!-- 
+- [R18](http://r18-onedrive.langnang.ml)
+  > OneDrive + OneIndex
+-->
+- [音频](http://audio-onedrive.langnang.ml)
+  > OneDrive + OneIndex
+- [视频](http://video-onedrive.langnang.ml)
+  > OneDrive + OneIndex
+- [图片](http://img-onedrive.langnang.ml)
+  > OneDrive + OneIndex
+- [共享](http://shared-onedrive.langnang.ml)
+  > OneDrive + OneIndex
+
+## Account
+
+- [GitHub]
+- [Gitee]
+- [GitLab]

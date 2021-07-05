@@ -147,5 +147,13 @@ var document, window;
     };
 
     $(document).ready(flat.docReady);
-    $(window).on("load", flat.winLoad);
+    $(window).on("load", function () {
+        $.get("./../../layout/components/header.htm").then(function (res) {
+            $("body>header").html(res);
+        });
+        $.get("./../../layout/components/footer.htm").then(function (res) {
+            $("body>footer").html(res);
+        });
+        flat.winLoad();
+    });
 })(jQuery); // jshint ignore:line

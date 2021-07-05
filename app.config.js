@@ -90,7 +90,7 @@
               "css!https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css",
               "css!https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css",
               "css!https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css",
-              "css!/../../assets/css/main.css",
+              "css!http://langnang.github.io/assets/css/main.css",
             ],
           },
           gmaps: {

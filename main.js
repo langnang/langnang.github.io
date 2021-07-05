@@ -7,13 +7,13 @@
 
     require([
       "jquery",
+      "handlebars",
       `text!${config.publicPath}/layout/component/header.hbs`,
       `text!${config.publicPath}/layout/component/footer.hbs`,
-      "handlebars",
       "bootstrap",
-    ], function ($, headerHtml, footerHtml) {
-      $("body>header").html(headerHtml);
-      $("body>footer").html(footerHtml);
+    ], function ($, Handlebars, headerHtml, footerHtml) {
+      $("body>header").html(Handlebars.compile(headerHtml)(config));
+      $("body>footer").html(Handlebars.compile(footerHtml)(config));
       $(document).ready(function () {
         $(".loading").fadeOut(500);
       });

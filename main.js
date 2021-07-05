@@ -2,7 +2,7 @@
 
 (function (requirejs) {
   // requirejs.config();
-  define(["./.config.js"], function (config) {
+  define(["./app.config"], function (config) {
     requirejs(config.requirejsConfig);
 
     require([

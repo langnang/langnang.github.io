@@ -49,7 +49,7 @@ trim_trailing_whitespace = false
 indent_size = 2
 
 # Web Files
-[*.{html,htm,jsm,ts,tsx,css,sass,scss,less,svg,vue,php}]
+[*.{html,htm,jsm,ts,tsx,css,sass,scss,less,js,svg,vue,php,hbs}]
 indent_size = 2
 
 # Batch Files

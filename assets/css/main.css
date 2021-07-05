@@ -368,7 +368,7 @@ iframe {
  ***************************** */
 header {
   background-color: #222538;
-  padding: 18px 0;
+  padding: 12px 0;
 }
 
 .logo-column a.logo {
@@ -461,7 +461,7 @@ form.search-form button {
   margin: 0;
 }
 #menu ul li.has-child > a::after {
-  content: "";
+  /* content: ""; */
   font-family: "fontawesome";
   margin-left: 4px;
 }
@@ -1160,7 +1160,7 @@ footer {
 
 .footer-bottom {
   background-color: #1f2131;
-  padding: 25px 0;
+  padding: 18px 0;
 }
 .footer-bottom a {
   color: #7286a0;

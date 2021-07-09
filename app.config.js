@@ -56,7 +56,7 @@
             "https://cdn.jsdelivr.net/npm/node-vibrant@3.2.1-alpha.1/dist/vibrant.min",
           "video-js":
             "https://cdn.jsdelivr.net/npm/video.js@7.10.2/dist/video.min",
-          vue: "https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min",
+          Vue: "https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min",
           "vue-demi":
             "https://cdn.jsdelivr.net/npm/vue-demi@0.9.1/lib/index.iife.min",
           "vue-echarts":

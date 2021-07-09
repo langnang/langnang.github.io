@@ -62,7 +62,7 @@
           "vue-echarts":
             "https://cdn.jsdelivr.net/npm/vue-echarts@6.0.0-rc.6/dist/index.umd.min",
           "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@3.0.3/dist/vue-router.min",
-          vuex: "https://cdn.jsdelivr.net/npm/vuex@3.0.1/dist/vuex.min.js",
+          vuex: "https://cdn.jsdelivr.net/npm/vuex@3.0.1/dist/vuex.min",
         },
         map: {
           "*": {

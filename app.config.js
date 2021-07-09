@@ -3,6 +3,7 @@
   define(function (require, exports, module) {
     "use strict";
     module.exports = {
+      env: location.hostname === "127.0.0.1" ? "dev" : "prod",
       publicPath: location.hostname === "127.0.0.1" ? "" : "",
       requirejsConfig: {
         paths: {
@@ -60,6 +61,8 @@
             "https://cdn.jsdelivr.net/npm/vue-demi@0.9.1/lib/index.iife.min",
           "vue-echarts":
             "https://cdn.jsdelivr.net/npm/vue-echarts@6.0.0-rc.6/dist/index.umd.min",
+          "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@3.0.3/dist/vue-router.min",
+          vuex: "https://cdn.jsdelivr.net/npm/vuex@3.0.1/dist/vuex.min.js",
         },
         map: {
           "*": {

@@ -44,6 +44,7 @@
           masonry:
             "https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min",
           mockjs: "https://cdn.jsdelivr.net/npm/mockjs@1.1.0/dist/mock.min",
+          "monaco-editor": "https://cdn.jsdelivr.net/npm/monaco-editor@0.21.2/min/vs/editor/editor.main",
           mxgraph:
             "https://cdn.jsdelivr.net/npm/mxgraph@4.2.2/javascript/mxClient.min",
           openlayers:

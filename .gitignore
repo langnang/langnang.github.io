@@ -104,4 +104,7 @@ typings/
 # TernJS port file
 .tern-port
 
+.vscode/
 .idea/
+.user.ini
+.htaccess

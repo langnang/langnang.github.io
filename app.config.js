@@ -44,7 +44,8 @@
           masonry:
             "https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min",
           mockjs: "https://cdn.jsdelivr.net/npm/mockjs@1.1.0/dist/mock.min",
-          "monaco-editor": "https://cdn.jsdelivr.net/npm/monaco-editor@0.21.2/min/vs/editor/editor.main",
+          "monaco-editor":
+            "https://cdn.jsdelivr.net/npm/monaco-editor@0.21.2/min/vs/editor/editor.main",
           mxgraph:
             "https://cdn.jsdelivr.net/npm/mxgraph@4.2.2/javascript/mxClient.min",
           openlayers:
@@ -63,7 +64,8 @@
             "https://cdn.jsdelivr.net/npm/vue-demi@0.9.1/lib/index.iife.min",
           "vue-echarts":
             "https://cdn.jsdelivr.net/npm/vue-echarts@6.0.0-rc.6/dist/index.umd.min",
-          "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@3.0.3/dist/vue-router.min",
+          "vue-router":
+            "https://cdn.jsdelivr.net/npm/vue-router@3.0.3/dist/vue-router.min",
           vuex: "https://cdn.jsdelivr.net/npm/vuex@3.0.1/dist/vuex.min",
         },
         map: {

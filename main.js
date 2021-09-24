@@ -15,20 +15,18 @@
 		], function ($, Handlebars, headerHtml, footerHtml) {
 			$("body>header").html(Handlebars.compile(headerHtml)(config));
 			$("body>footer").html(Handlebars.compile(footerHtml)(config));
-			$(document).ready(function () {
-				$(".loading").fadeOut(500);
-			});
+			// $(document).ready(function () {});
 
 			$(document).on("click", ".search-icon", function (e) {
 				const searchForm = $(".search-form");
 				$(this).add(searchForm).toggleClass("active");
 			});
-			$(document).on("input", "input[type=search]", function (e) {
-				console.log(e);
-			});
+			$(document).on("input", "input[type=search]", function (e) {});
 
 			if (window.location.pathname === "/faq.html") {
 				requirejs(["faq"]);
+			} else {
+				$(".loading").fadeOut(500);
 			}
 		});
 
@@ -36,16 +34,18 @@
 		// $(window).on("load", flat.winLoad);
 	});
 
-	define("faq", ["jquery", "handlebars"], function ($, Handlebars) {
-		console.log("faq");
+	define("faq", ["./app.config", "jquery", "handlebars"], function (config, $, Handlebars) {
 		Handlebars.registerHelper("index", function (index, page = 1, size = 10) {
 			return index + 1;
 		});
 		$.ajax({
 			method: "post",
-			url: "http://127.0.0.1:9090/log/history/list",
+			url: `${config.api_php_url}/typecho/post/list`,
+			data: {
+				prefix: "*",
+				title: getUrlParams()["kw"],
+			},
 			success: function (res) {
-				console.log(res);
 				$(".faq-area-2 .container .row").html(
 					Handlebars.compile(`
 <div class="col-md-8">
@@ -58,7 +58,6 @@
 </div>
 <div class="col-md-4">
 	<div class="faq-sidebar-wrap">
-		<h3>Index</h3>
 		<ul class="faq-sidebar">
 		{{#each @root.rows}}
 			<li>
@@ -68,10 +67,28 @@
 		</ul>
 	</div>
 </div>
-
 				`)(res.data)
 				);
+				$(".loading").fadeOut(500);
 			},
 		});
 	});
 })(requirejs);
+
+function getUrlParams(url = window.location.href, key = null) {
+	if (url.indexOf("?") === -1) {
+		return false;
+	}
+	var arr = decodeURIComponent(url).split("?");
+	arr = arr[1].split("&");
+	var len = arr.length,
+		obj = {};
+	for (var i = 0; i < len; i++) {
+		var a = arr[i].split("=");
+		obj[a[0]] = a[1];
+	}
+	if (key) {
+		return obj[key];
+	}
+	return obj;
+}

@@ -379,7 +379,7 @@ iframe {
  ***************************** */
 header {
 	background-color: #222538;
-	padding: 6px 0;
+	padding: 10px 0;
 }
 
 .logo-column a.logo {
@@ -1839,5 +1839,5 @@ footer {
 /*# sourceMappingURL=main.css.map */
 
 body > main {
-	min-height: calc(100vh - 120px);
+	min-height: calc(100vh - 112px);
 }

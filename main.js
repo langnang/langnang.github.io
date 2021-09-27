@@ -21,20 +21,32 @@
 				const searchForm = $(".search-form");
 				$(this).add(searchForm).toggleClass("active");
 			});
-			$(document).on("input", "input[type=search]", function (e) {});
+			$(document).on("input", "input[type=search]", function (e) {
+				console.log($(this).val());
+			});
 
-			if (window.location.pathname === "/faq.html") {
-				requirejs(["faq"]);
-			} else {
-				$(".loading").fadeOut(500);
-			}
+			const routes = new Map();
+			routes.set("/", ["home"]);
+			routes.set("/faq", ["faq"]);
+			routes.set("/typecho", ["typecho"]);
+			window.addEventListener("hashchange", function (e) {
+				console.log(routeMatch(routes));
+				requirejs(routeMatch(routes));
+			});
+			requirejs(routeMatch(routes));
 		});
 
 		// $(document).ready(flat.docReady);
 		// $(window).on("load", flat.winLoad);
 	});
+	define("home", ["./app.config", "jquery", "handlebars", `text!/views/home.hbs`], function (config, $, Handlebars, view) {
+		document.title = "Home - Langnang";
+		$("#app").html(Handlebars.compile(view)(config));
+		$(".loading").fadeOut(500);
+	});
 
-	define("faq", ["./app.config", "jquery", "handlebars"], function (config, $, Handlebars) {
+	define("faq", ["./app.config", "jquery", "handlebars", `text!/views/faq.hbs`], function (config, $, Handlebars, view) {
+		document.title = "FAQ - Langnang";
 		Handlebars.registerHelper("index", function (index, page = 1, size = 10) {
 			return index + 1;
 		});
@@ -46,29 +58,20 @@
 				title: getUrlParams()["kw"],
 			},
 			success: function (res) {
-				$(".faq-area-2 .container .row").html(
-					Handlebars.compile(`
-<div class="col-md-8">
-	{{#each @root.rows}}
-		<div class="single-faq">
-			<h2><span>{{index @index}}</span>{{title}}</h2>
-			<p>{{text}}</p>
-		</div>
-	{{/each}}
-</div>
-<div class="col-md-4">
-	<div class="faq-sidebar-wrap">
-		<ul class="faq-sidebar">
-		{{#each @root.rows}}
-			<li>
-				<a href="#"><span>{{index @index}}.</span>{{title}}</a>
-			</li>
-		{{/each}}
-		</ul>
-	</div>
-</div>
-				`)(res.data)
-				);
+				$("#app").html(Handlebars.compile(view)(res.data));
+				$(".loading").fadeOut(500);
+			},
+		});
+	});
+
+	define("typecho", ["./app.config", "jquery", "handlebars", `text!/views/typecho.hbs`], function (config, $, Handlebars, view) {
+		document.title = "Typecho - Langnang";
+		$.ajax({
+			method: "post",
+			url: `${config.api_php_url}/typecho/list`,
+			data: {},
+			success: function (res) {
+				$("#app").html(Handlebars.compile(view)(res.data));
 				$(".loading").fadeOut(500);
 			},
 		});
@@ -79,16 +82,42 @@ function getUrlParams(url = window.location.href, key = null) {
 	if (url.indexOf("?") === -1) {
 		return false;
 	}
-	var arr = decodeURIComponent(url).split("?");
+	let start = url.indexOf("?");
+	let end = url.indexOf("#");
+	end = end === -1 ? url.length : end;
+	end = end < start ? url.length : end;
+
+	let arr = decodeURIComponent(url.substring(start, end)).split("?");
 	arr = arr[1].split("&");
-	var len = arr.length,
+	let len = arr.length,
 		obj = {};
-	for (var i = 0; i < len; i++) {
-		var a = arr[i].split("=");
+	for (let i = 0; i < len; i++) {
+		let a = arr[i].split("=");
 		obj[a[0]] = a[1];
 	}
 	if (key) {
 		return obj[key];
 	}
 	return obj;
+}
+
+function hashRouter(url = window.location.hash) {
+	if (url.indexOf("#") === -1) {
+		return "/";
+	}
+	let start = url.indexOf("#");
+	let end = url.indexOf("?");
+	// 未找到?
+	end = end === -1 ? url.length : end;
+	// #\? 顺序逆反
+	end = end < start ? url.length : end;
+	return url.substring(start + 1, end);
+}
+
+function routeMatch(routes) {
+	let route = hashRouter();
+	if (routes.has(route)) {
+		return routes.get(route);
+	}
+	return routes.get("/");
 }

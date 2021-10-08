@@ -105,7 +105,7 @@
 		};
 		module.exports = {
 			env: location.hostname === "127.0.0.1" ? "dev" : "prod",
-			api_php_url: location.hostname === "127.0.0.1" ? "http://127.0.0.1:9090" : "http://127.0.0.1:9090",
+			api_php_url: "http://localhost:9090",
 			publicPath: location.hostname === "127.0.0.1" ? "" : "",
 			components: {
 				header: "/src/components/header/index.hbs",

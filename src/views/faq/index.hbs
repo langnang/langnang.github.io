@@ -8,45 +8,50 @@
 	<div class="faq-area-2 sp">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8">
-					{{#each @root.rows}}
-						<div class="single-faq">
-							<h2><span>{{index @index}}</span>{{title}}</h2>
-							<p>{{text}}</p>
+				<ul class="nav nav-tabs nav-justified" role="tablist">
+					{{#each @root}}
+						<li role="presentation">
+							<a href="#faq_{{prefix}}" aria-controls="faq_{{prefix}}" role="tab" data-toggle="tab">
+								{{prefix}}
+								<span class="badge">{{data.total}}</span>
+							</a>
+						</li>
+					{{/each}}
+				</ul>
+				<br />
+				<div class="tab-content">
+					{{#each @root}}
+						<div role="tabpanel" class="tab-pane" id="faq_{{prefix}}" data-prefix="{{prefix}}">
+							<div class="row">
+								<div class="col-md-9">
+									{{#each data.rows}}
+										<div class="single-faq">
+											<h2><span>{{index @index data.page data.size}}</span>{{title}}</h2>
+											<p>{{abstract}}</p>
+										</div>
+									{{/each}}
+								</div>
+								<div class="col-md-3">
+									<div class="faq-sidebar-wrap">
+										<ul class="faq-sidebar">
+											{{#each data.rows}}
+												<li>
+													<span>{{index @index data.page data.size}}.</span>{{title}}
+												</li>
+											{{/each}}
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="row" style="text-align: center;">
+								{{#pagination data.total data.size data.page}}{{/pagination}}
+							</div>
 						</div>
 					{{/each}}
 				</div>
-				<div class="col-md-4">
-					<div class="faq-sidebar-wrap">
-						<ul class="faq-sidebar">
-							{{#each @root.rows}}
-								<li>
-									<a href="#"><span>{{index @index}}.</span>{{title}}</a>
-								</li>
-							{{/each}}
-						</ul>
-					</div>
-				</div>
 			</div>
-			<div class="row" style="text-align: center;">
-				<ul class="pagination">
-					<li>
-						<a href="#" aria-label="Previous">
-							<span aria-hidden="true">&laquo;</span>
-						</a>
-					</li>
-					<li><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li>
-						<a href="#" aria-label="Next">
-							<span aria-hidden="true">&raquo;</span>
-						</a>
-					</li>
-				</ul>
-			</div>
+
 		</div>
 	</div>
 </div>

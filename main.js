@@ -1,21 +1,23 @@
 "use strict";
 
 (function (requirejs) {
-	// requirejs.config();
+	// 默认路由地址
+	if (window.location.hash === "") {
+		window.location.hash = "#/";
+	}
 	define(["./app.config"], function (config) {
 		requirejs(config.requirejsConfig);
-
 		require([
 			"jquery",
 			"handlebars",
-			`text!${config.publicPath}/layout/component/header.hbs`,
-			`text!${config.publicPath}/layout/component/footer.hbs`,
-			"css!assets/css/main.css",
+			`text!${config.publicPath}/src/components/header/index.hbs`,
+			`text!${config.publicPath}/src/components/footer/index.hbs`,
+			"css!src/assets/css/main.css",
 			"bootstrap",
+			"./src/routes/index", // 路由
 		], function ($, Handlebars, headerHtml, footerHtml) {
 			$("body>header").html(Handlebars.compile(headerHtml)(config));
 			$("body>footer").html(Handlebars.compile(footerHtml)(config));
-			// $(document).ready(function () {});
 
 			$(document).on("click", ".search-icon", function (e) {
 				const searchForm = $(".search-form");
@@ -24,58 +26,45 @@
 			$(document).on("input", "input[type=search]", function (e) {
 				console.log($(this).val());
 			});
-
-			const routes = new Map();
-			routes.set("/", ["home"]);
-			routes.set("/faq", ["faq"]);
-			routes.set("/typecho", ["typecho"]);
-			window.addEventListener("hashchange", function (e) {
-				console.log(routeMatch(routes));
-				requirejs(routeMatch(routes));
-			});
-			requirejs(routeMatch(routes));
-		});
-
-		// $(document).ready(flat.docReady);
-		// $(window).on("load", flat.winLoad);
-	});
-	define("home", ["./app.config", "jquery", "handlebars", `text!/views/home.hbs`], function (config, $, Handlebars, view) {
-		document.title = "Home - Langnang";
-		$("#app").html(Handlebars.compile(view)(config));
-		$(".loading").fadeOut(500);
-	});
-
-	define("faq", ["./app.config", "jquery", "handlebars", `text!/views/faq.hbs`], function (config, $, Handlebars, view) {
-		document.title = "FAQ - Langnang";
-		Handlebars.registerHelper("index", function (index, page = 1, size = 10) {
-			return index + 1;
-		});
-		$.ajax({
-			method: "post",
-			url: `${config.api_php_url}/typecho/post/list`,
-			data: {
-				prefix: "*",
-				title: getUrlParams()["kw"],
-			},
-			success: function (res) {
-				$("#app").html(Handlebars.compile(view)(res.data));
-				$(".loading").fadeOut(500);
-			},
 		});
 	});
+	// define("home", ["./app.config", "jquery", "handlebars", `text!/views/home.hbs`], function (config, $, Handlebars, view) {
+	// 	document.title = "Home - Langnang";
+	// 	$("#app").html(Handlebars.compile(view)(config));
+	// 	$(".loading").fadeOut(500);
+	// });
 
-	define("typecho", ["./app.config", "jquery", "handlebars", `text!/views/typecho.hbs`], function (config, $, Handlebars, view) {
-		document.title = "Typecho - Langnang";
-		$.ajax({
-			method: "post",
-			url: `${config.api_php_url}/typecho/list`,
-			data: {},
-			success: function (res) {
-				$("#app").html(Handlebars.compile(view)(res.data));
-				$(".loading").fadeOut(500);
-			},
-		});
-	});
+	// define("faq", ["./app.config", "jquery", "handlebars", `text!/views/faq.hbs`], function (config, $, Handlebars, view) {
+	// 	document.title = "FAQ - Langnang";
+	// 	Handlebars.registerHelper("index", function (index, page = 1, size = 10) {
+	// 		return index + 1;
+	// 	});
+	// 	$.ajax({
+	// 		method: "post",
+	// 		url: `${config.api_php_url}/typecho/post/list`,
+	// 		data: {
+	// 			prefix: "*",
+	// 			title: getUrlParams()["kw"],
+	// 		},
+	// 		success: function (res) {
+	// 			$("#app").html(Handlebars.compile(view)(res.data));
+	// 			$(".loading").fadeOut(500);
+	// 		},
+	// 	});
+	// });
+
+	// define("typecho", ["./app.config", "jquery", "handlebars", `text!/views/typecho.hbs`], function (config, $, Handlebars, view) {
+	// 	document.title = "Typecho - Langnang";
+	// 	$.ajax({
+	// 		method: "post",
+	// 		url: `${config.api_php_url}/typecho/list`,
+	// 		data: {},
+	// 		success: function (res) {
+	// 			$("#app").html(Handlebars.compile(view)(res.data));
+	// 			$(".loading").fadeOut(500);
+	// 		},
+	// 	});
+	// });
 })(requirejs);
 
 function getUrlParams(url = window.location.href, key = null) {

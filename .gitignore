@@ -108,3 +108,5 @@ typings/
 .idea/
 .user.ini
 .htaccess
+
+toolkit/

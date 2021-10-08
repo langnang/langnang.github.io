@@ -56,7 +56,6 @@
 		function renderView(options) {
 			options.path = options.path || window.location.hash.substr(1, window.location.hash.indexOf("?") === -1 ? window.location.hash.length : window.location.hash.indexOf("?") - 1);
 			const route = options.routes[options.path];
-			console.log(route);
 			let callback = Object.assign(options, {
 				route,
 				Handlebars,
@@ -69,6 +68,7 @@
 					document.getElementById("app").innerHTML = Handlebars.compile(callback.template)(args[0]);
 				},
 				proxyViews,
+				config,
 				run() {
 					this.render();
 				},

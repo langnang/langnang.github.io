@@ -107,6 +107,10 @@
 			env: location.hostname === "127.0.0.1" ? "dev" : "prod",
 			api_php_url: location.hostname === "127.0.0.1" ? "http://127.0.0.1:9090" : "prod",
 			publicPath: location.hostname === "127.0.0.1" ? "" : "",
+			components: {
+				header: "/src/components/header/index.hbs",
+				footer: "/src/components/footer/index.hbs",
+			},
 			requirejsConfig: {
 				paths,
 				map,

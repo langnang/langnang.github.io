@@ -3,8 +3,13 @@
 	define(function (require, exports, module) {
 		`use strict`;
 		const jsdelivrCDN = 'https://cdn.jsdelivr.net/npm';
+		const vendor = {
+			'crypto-js': {
+
+			}
+		};
 		const paths = {
-			ace: `${jsdelivrCDN}/ace-builds@1.4.12/src-min`,
+			ace: `${jsdelivrCDN}/ace-builds@latest/src-min-noconflict`,
 			amplitudejs: `${jsdelivrCDN}/amplitudejs@{{version-number}}/dist/amplitude`,
 			audiojs: `audiojs/audiojs/audio`,
 			axios: `${jsdelivrCDN}/axios@0.21.1/dist/axios.min`,
@@ -113,6 +118,7 @@
 				header: `/src/components/header/index.hbs`,
 				footer: `/src/components/footer/index.hbs`,
 			},
+			vendor,
 			requirejsConfig: {
 				paths,
 				map,

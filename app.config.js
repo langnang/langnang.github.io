@@ -60,7 +60,7 @@
 		const map = {
 			'*': {
 				css: `${cdn}/require-css@0.1.10/css.min.js`,
-				text: `${cdn}/requirejs-text@2.0.15/text.min.js`,
+				text: `${cdn}/requirejs-text@2.0.15/text.js`,
 				async: `${cdn}/requirejs-plugins@1.0.2/src/async.js`,
 				font: `${cdn}/requirejs-plugins@1.0.2/src/font.js`,
 				goog: `${cdn}/requirejs-plugins@1.0.2/src/goog.js`,

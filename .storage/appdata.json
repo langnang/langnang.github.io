@@ -1,0 +1,43 @@
+{
+  "name": "langnang",
+  "email": "langnang.chen@outlook.com",
+  "details": [],
+  "educations": [
+    {
+      "daterang": [
+        "2014",
+        "2018"
+      ]
+    }
+  ],
+  "skills": [],
+  "works": [
+    {
+      "daterang": [
+        "2021",
+        "至今"
+      ],
+      "enterprise": "复深蓝",
+      "job": "前端开发工程师",
+      "responsibilities": []
+    },
+    {
+      "daterang": [
+        "2018",
+        "2021"
+      ],
+      "enterprise": "研华科技",
+      "job": "前端开发工程师",
+      "responsibilities": []
+    }
+  ],
+  "projects": [
+    {
+      "name": "StoreVue - 智能零售",
+      "daterang": [],
+      "description": "",
+      "responsibilities": []
+    }
+  ],
+  "certificates": []
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SVG</title>
+  <link rel="stylesheet" href="https://www.unpkg.com/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div id="app" class="container-fluid">
+    <h1 class="text-center">Static Bootstrap v3</h1>
+    <div class="row">
+      <div class="col" v-for="(item, index) in tableData" :key="index">
+        <div class="card">
+          <img :src="item.source" class="card-img-top" :alt="item.title">
+          <div class="card-body">
+            <h5 class="card-title">{{item.title}}</h5>
+            <p class="card-text">{{item.title}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://www.unpkg.com/axios"></script>
+  <script src="https://www.unpkg.com/jquery"></script>
+  <script src="https://www.unpkg.com/bootstrap@4"></script>
+  <script src="https://www.unpkg.com/vue@2"></script>
+
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        list: [],
+        loading:false,
+        table:{
+          data:[],
+          size:100,
+          page:1,
+          total:0,
+        },
+      },
+      computed: {
+        tableData() {
+          return this.list.slice(0, 100)
+        }
+      },
+      created() {
+        this.fetchData();
+      },
+      methods: {
+        fetchData() {
+          axios
+            .get('https://cdn.jsdelivr.net/gh/langnang/storage/json/simple-icons.json')
+            .then(res => {
+              const { data } = res;
+              this.list = data.icons;
+            }).finally(() => {
+
+            })
+        }
+      },
+    })
+  </script>
+</body>
+
+</html>

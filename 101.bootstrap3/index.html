@@ -1,151 +1,330 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Langlang.Chen</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>Langlang.Chen</title>
-  <link href="./fullscreen/css/style.css" rel="stylesheet" type="text/css">
-  <link href="./../.storage/lib/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet" type="text/css">
-  <link href="./fullscreen/css/media.css" rel="stylesheet" type="text/css">
-  <link href="./fullscreen/css/jquery.fancybox.css" rel="stylesheet" type="text/css">
-  <link href="./../.storage/lib/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <!-- <link href="./fullscreen/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
-  <link href="./fullscreen/css/owl.carousel.css" rel="stylesheet" type="text/css">
-  <link href="./fullscreen/css/owl.theme.css" rel="stylesheet" type="text/css">
-  <link href="./fullscreen/css/animate.css" rel="stylesheet" type="text/css">
-  <link href="./fullscreen/css/jpushmenu.css" rel="stylesheet" type="text/css">
-</head>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="https://cdn.jsdelivr.net/gh/langnang/storage/img/favicon/langnang.ico"
+    />
 
-<body class="push-body">
-  <header id="main-navigation">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12"> <a href="#" class="navbar-brand pull-right"></a>
-          <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left"> <a href="#" class="push_nav_brand">Alex Mia</a>
-            <ul class="push_nav">
-              <li><a class="active scroll" href="#home">Home</a></li>
-              <li><a class="scroll" href="#aboutme">About Me</a></li>
-              <li><a class="scroll" href="#mywork">My Work</a></li>
-              <li><a class="scroll" href="#contactme">Contact ME</a></li>
-            </ul>
-            <ul class="icons">
-              <li><a href="#." class="fa"><i class="fa fa-fw fa-facebook"></i></a></li>
-              <li><a href="#." class="fa"><i class="fa fa-fw fa-twitter"></i></a></li>
-              <li><a href="#." class="fa"><i class="fa fa-fw fa-google-plus"></i></a></li>
-              <li><a href="#." class="fa"><i class="fa fa-fw fa-linkedin"></i></a></li>
-              <li><a href="#." class="fa"><i class="fa fa-fw fa-pinterest-p"></i></a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
-  <div class="container-fluid">
-    <div class="main-button left">
-      <button class="toggle-menu menu-left push-body"> <span></span> <span></span> <span></span> </button>
-    </div>
-  </div>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./../_assets/fullscreen/css/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./../_storage/lib/bootstrap/3.3.6/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./../_assets/fullscreen/css/media.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./../_assets/fullscreen/css/jquery.fancybox.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./../_storage/lib/font-awesome/4.6.1/css/font-awesome.min.css"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="./../_assets/fullscreen/font-awesome/4.6.1/css/font-awesome.min.css"> -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./../_assets/fullscreen/css/owl.carousel.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./../_assets/fullscreen/css/owl.theme.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./../_assets/fullscreen/css/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./../_assets/fullscreen/css/jpushmenu.css"
+    />
 
-  <!-- Info-->
-  <div id="home" class="row section">
-    <div class="container info text-center">
-      <div class="row">
-        <div class="col-xs-12 text-center">
-          <div class="info_detail">
-            <div class="zoom"><img src="./fullscreen/images/alex.jpg" alt="alex">
-              <div class="zoom-overlay"></div>
-            </div>
-            <h3>Langlang Chen / Alexander Mia</h3>
-            <p>Front-End Developer / Team Leader</p>
-            <!-- <p>Creative Designer / Team Lead</p> -->
-            <!-- Social Icons -->
-            <div class="icons">
-              <ul>
-                <li><a href="#." class="fa fb"><i class="fa fa-fw fa-facebook"></i></a></li>
-                <li><a href="#." class="fa tw"><i class="fa fa-fw fa-twitter"></i></a></li>
-                <li><a href="#." class="fa gp"><i class="fa fa-fw fa-google-plus"></i></a></li>
-                <li><a href="#." class="fa in"><i class="fa fa-fw fa-linkedin"></i></a></li>
-                <li><a href="#." class="fa pin"><i class="fa fa-fw fa-pinterest-p"></i></a></li>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/langnang/storage/lib/perfect-scrollbar/1.5.3/css/perfect-scrollbar.css"
+    />
+  </head>
+
+  <body id="app" class="push-body">
+    <header id="main-navigation">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <a href="#" class="navbar-brand pull-right"></a>
+            <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left">
+              <a href="#" class="push_nav_brand">Langlang.Chen</a>
+              <ul class="push_nav">
+                <li><a class="active scroll" href="#home">Home</a></li>
+                <li><a class="scroll" href="#aboutme">About Me</a></li>
+                <li><a class="scroll" href="#mywork">My Work</a></li>
+                <li><a class="scroll" href="#contactme">Contact ME</a></li>
               </ul>
-            </div>
+              <ul class="icons">
+                <li>
+                  <a href="#." class="fa"
+                    ><i class="fa fa-fw fa-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#." class="fa"
+                    ><i class="fa fa-fw fa-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#." class="fa"
+                    ><i class="fa fa-fw fa-google-plus"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#." class="fa"
+                    ><i class="fa fa-fw fa-linkedin"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#." class="fa"
+                    ><i class="fa fa-fw fa-pinterest-p"></i
+                  ></a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
-      <div class="button"> <a href="#contactme" data-target="contactme" class="btn active scroll">Hire Me</a> <a href="#mywork" data-target="mywork" class="btn scroll">My Work</a> </div>
+    </header>
+    <div class="container-fluid">
+      <div class="main-button left">
+        <button class="toggle-menu menu-left push-body">
+          <span></span> <span></span> <span></span>
+        </button>
+      </div>
     </div>
-  </div>
 
-  <!-- About -->
-  <div id="aboutme" class="row section">
-    <div class="container career text-center">
-      <div class="row">
-        <div class="col-xs-12 text-center">
-          <div class="animate fadeInRight">
-            <div class="heading">
-              <h1>My Career Timeline</h1>
-              <p>Maecenas biban lacus gravida placerat consequat Vivamus quis hendrerit mauris. Vestiblum laoreetfelis sed consectetur sollicitudin.</p>
+    <!-- Info-->
+    <div id="home" class="row section">
+      <div class="container info text-center">
+        <div class="row">
+          <div class="col-xs-12 text-center">
+            <div class="info_detail">
+              <div class="zoom">
+                <img src="./../_assets/fullscreen/images/user.jpg" alt="user" />
+                <div class="zoom-overlay"></div>
+              </div>
+              <h3>Langlang Chen</h3>
+              <p>Front-End Developer</p>
+              <!-- <p>Creative Designer / Team Lead</p> -->
+              <!-- Social Icons -->
+              <div class="icons">
+                <ul>
+                  <li>
+                    <a href="#." class="fa fb"
+                      ><i class="fa fa-fw fa-facebook"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#." class="fa tw"
+                      ><i class="fa fa-fw fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#." class="fa gp"
+                      ><i class="fa fa-fw fa-google-plus"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#." class="fa in"
+                      ><i class="fa fa-fw fa-linkedin"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="#." class="fa pin"
+                      ><i class="fa fa-fw fa-pinterest-p"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="col-md-12 text-center">
-            <div id="text-demo" class="owl-carousel">
-              <div class="item text-center">
-                <h2>Masters in Multimedia Design</h2>
-                <em>University Of Oxford,<span> 2012-2013</span></em>
-                <p> et venenatis massa tincidunt. Quisque a feuqiat metus. Praesent hendrerit iaculis lorem. Quisque a feuqiat metus. Praesent hendrerit iaculis lorem. Nullam nec velit iaculis, tincidunt felis nec lobortis elit. </p>
-              </div>
-              <div class="item text-center">
-                <h2>Visual art & Design</h2>
-                <em>Boston University,<span> 2013-2014</span></em>
-                <p> et venenatis massa tincidunt. Quisque a feuqiat metus. Praesent hendrerit iaculis lorem. Quisque a feuqiat metus. Praesent hendrerit iaculis lorem. Nullam nec velit iaculis, tincidunt felis nec lobortis elit. </p>
-              </div>
-              <div class="item text-center">
-                <h2>Creative Programmer</h2>
-                <em>Creative Coders,<span> 2014-2015</span></em>
-                <p> et venenatis massa tincidunt. Quisque a feuqiat metus. Praesent hendrerit iaculis lorem. Quisque a feuqiat metus. Praesent hendrerit iaculis lorem. Nullam nec velit iaculis, tincidunt felis nec lobortis elit. </p>
-              </div>
-              <div class="item text-center">
-                <h2>Software Developer</h2>
-                <em>Subex,<span> 2015-2016</span></em>
-                <p> et venenatis massa tincidunt. Quisque a feuqiat metus. Praesent hendrerit iaculis lorem. Quisque a feuqiat metus. Praesent hendrerit iaculis lorem. Nullam nec velit iaculis, tincidunt felis nec lobortis elit. </p>
-              </div>
-            </div>
+        </div>
+        <div class="button">
+          <a href="#contactme" data-target="contactme" class="btn active scroll"
+            >Hire Me</a
+          >
+          <a href="#mywork" data-target="mywork" class="btn scroll">My Work</a>
+        </div>
+      </div>
+    </div>
 
-          </div>
-          <div class="col-xs-12 skills text-center">
+    <!-- About -->
+    <div id="aboutme" class="row section">
+      <div class="container career text-center">
+        <div class="row">
+          <div class="col-xs-12 text-center">
             <div class="animate fadeInRight">
               <div class="heading">
-                <h1>My Awesome Skills</h1>
-                <p>Maecenas bibendum lacus gravida placerat consequat. Vivamus quis hendrerit mauris. Vestibulum laoreet felis sed consectetur sollicitudin.</p>
+                <h1>My Career Timeline</h1>
+                <p>
+                  Maecenas biban lacus gravida placerat consequat Vivamus quis
+                  hendrerit mauris. Vestiblum laoreetfelis sed consectetur
+                  sollicitudin.
+                </p>
               </div>
             </div>
-            <div class="animate bounceInUp">
-              <div class="circle">
-                <div class="circle_detail">
-                  <div class="myStat" data-dimension="250" data-text="70%" data-fontsize="18" data-percent="70" data-fgcolor="#fff"></div>
-                  <h3>Web</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+            <div class="col-md-12 text-center">
+              <div id="text-demo" class="owl-carousel">
+                <div class="item text-center">
+                  <h2>Masters in Multimedia Design</h2>
+                  <em>University Of Oxford,<span> 2012-2013</span></em>
+                  <p>
+                    et venenatis massa tincidunt. Quisque a feuqiat metus.
+                    Praesent hendrerit iaculis lorem. Quisque a feuqiat metus.
+                    Praesent hendrerit iaculis lorem. Nullam nec velit iaculis,
+                    tincidunt felis nec lobortis elit.
+                  </p>
                 </div>
-                <div class="circle_detail">
-                  <div class="myStat" data-dimension="250" data-text="70%" data-fontsize="18" data-percent="70" data-fgcolor="#fff"></div>
-                  <h3>Vue</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+                <div class="item text-center">
+                  <h2>Visual art & Design</h2>
+                  <em>Boston University,<span> 2013-2014</span></em>
+                  <p>
+                    et venenatis massa tincidunt. Quisque a feuqiat metus.
+                    Praesent hendrerit iaculis lorem. Quisque a feuqiat metus.
+                    Praesent hendrerit iaculis lorem. Nullam nec velit iaculis,
+                    tincidunt felis nec lobortis elit.
+                  </p>
                 </div>
-                <div class="circle_detail">
-                  <div class="myStat" data-dimension="250" data-text="20%" data-fontsize="18" data-percent="20" data-fgcolor="#fff"></div>
-                  <h3>React</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+                <div class="item text-center">
+                  <h2>Creative Programmer</h2>
+                  <em>Creative Coders,<span> 2014-2015</span></em>
+                  <p>
+                    et venenatis massa tincidunt. Quisque a feuqiat metus.
+                    Praesent hendrerit iaculis lorem. Quisque a feuqiat metus.
+                    Praesent hendrerit iaculis lorem. Nullam nec velit iaculis,
+                    tincidunt felis nec lobortis elit.
+                  </p>
                 </div>
-                <div class="circle_detail">
-                  <div class="myStat" data-dimension="250" data-text="50%" data-fontsize="18" data-percent="50" data-fgcolor="#fff"></div>
-                  <h3>PHP</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+                <div class="item text-center">
+                  <h2>Software Developer</h2>
+                  <em>Subex,<span> 2015-2016</span></em>
+                  <p>
+                    et venenatis massa tincidunt. Quisque a feuqiat metus.
+                    Praesent hendrerit iaculis lorem. Quisque a feuqiat metus.
+                    Praesent hendrerit iaculis lorem. Nullam nec velit iaculis,
+                    tincidunt felis nec lobortis elit.
+                  </p>
                 </div>
-                <div class="circle_detail">
-                  <div class="myStat" data-dimension="250" data-text="20%" data-fontsize="18" data-percent="20" data-fgcolor="#fff"></div>
-                  <h3>UniApp</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+              </div>
+            </div>
+            <div class="col-xs-12 skills text-center">
+              <div class="animate fadeInRight">
+                <div class="heading">
+                  <h1>My Awesome Skills</h1>
+                  <p>
+                    Maecenas bibendum lacus gravida placerat consequat. Vivamus
+                    quis hendrerit mauris. Vestibulum laoreet felis sed
+                    consectetur sollicitudin.
+                  </p>
+                </div>
+              </div>
+              <div class="animate bounceInUp">
+                <div class="circle">
+                  <div class="circle_detail">
+                    <div
+                      class="myStat"
+                      data-dimension="250"
+                      data-text="70%"
+                      data-fontsize="18"
+                      data-percent="70"
+                      data-fgcolor="#fff"
+                    ></div>
+                    <h3>Web</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                      sed do eiusmod tempor incididunt ut
+                    </p>
+                  </div>
+                  <div class="circle_detail">
+                    <div
+                      class="myStat"
+                      data-dimension="250"
+                      data-text="70%"
+                      data-fontsize="18"
+                      data-percent="70"
+                      data-fgcolor="#fff"
+                    ></div>
+                    <h3>Vue</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                      sed do eiusmod tempor incididunt ut
+                    </p>
+                  </div>
+                  <div class="circle_detail">
+                    <div
+                      class="myStat"
+                      data-dimension="250"
+                      data-text="20%"
+                      data-fontsize="18"
+                      data-percent="20"
+                      data-fgcolor="#fff"
+                    ></div>
+                    <h3>React</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                      sed do eiusmod tempor incididunt ut
+                    </p>
+                  </div>
+                  <div class="circle_detail">
+                    <div
+                      class="myStat"
+                      data-dimension="250"
+                      data-text="50%"
+                      data-fontsize="18"
+                      data-percent="50"
+                      data-fgcolor="#fff"
+                    ></div>
+                    <h3>PHP</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                      sed do eiusmod tempor incididunt ut
+                    </p>
+                  </div>
+                  <div class="circle_detail">
+                    <div
+                      class="myStat"
+                      data-dimension="250"
+                      data-text="20%"
+                      data-fontsize="18"
+                      data-percent="20"
+                      data-fgcolor="#fff"
+                    ></div>
+                    <h3>UniApp</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                      sed do eiusmod tempor incididunt ut
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -153,595 +332,957 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Work -->
+    <!-- Work -->
 
-  <div id="mywork" class="row section">
-    <div class="container-fluid work text-center">
-      <div class="row">
-        <div class="col-xs-12 text-center">
-          <div class="animate fadeInRight">
-            <div class="head">
-              <h1>My Recent Work</h1>
-            </div>
-          </div>
-          <div class="col-xs-12 work_filter text-center">
-            <div class="row">
-              <div class="animate fadeInLeft">
-                <ul class="breadcrumb">
-                  <li><a href="#." class="filter active" data-filter="all">All</a></li>
-                  <li><a href="#." class="filter" data-filter=".temp">Template</a></li>
-                  <li><a href="#." class="filter" data-filter=".docs">Docs</a></li>
-                  <li><a href="#." class="filter" data-filter=".package">Package</a></li>
-                  <li><a href="#." class="filter" data-filter=".redev">Re-Develop</a></li>
-                  <li><a href="#." class="filter" data-filter=".web">Web</a></li>
-                  <li><a href="#." class="filter" data-filter=".static">Static</a></li>
-                  <li><a href="#." class="filter" data-filter=".node">Node</a></li>
-                  <!-- <li><a href="#." class="filter" data-filter=".component">Component</a></li> -->
-                  <li><a href="#." class="filter" data-filter=".vue">Vue</a></li>
-                  <li><a href="#." class="filter" data-filter=".react">React</a></li>
-                  <li><a href="#." class="filter" data-filter=".uniapp">UniApp</a></li>
-                  <li><a href="#." class="filter" data-filter=".php">PHP</a></li>
-                  <!-- <li><a href="#." class="filter" data-filter=".module">Module</a></li> -->
-                  <li><a href="#." class="filter" data-filter=".laravel">Laravel</a></li>
-                  <li><a href="#." class="filter" data-filter=".thinkphp">ThinkPHP</a></li>
-                  <!-- <li><a href="#." class="filter" data-filter=".brand">Branding</a></li> -->
-                  <!-- <li><a href="#." class="filter" data-filter=".design">Design</a></li> -->
-                  <!-- <li><a href="#." class="filter" data-filter=".photography">Photography</a></li> -->
-                </ul>
-              </div>
-              <div class="gallery">
-                <div class="row">
-                  <div class="mix php">
-                    <div class="mix_sec">
-                      <div class="panel panel-default mb-0">
-                        <div class="panel-body">
-                          <div class="media">
-                            <div class="media-left">
-                              <a href="#">
-                                <img class="media-object" src="./fullscreen/images/work1.png" alt="..." style="width: 60px;">
-                              </a>
-                            </div>
-                            <div class="media-body">
-                              <h4 class="media-heading">langnang.github.io</h4>
-                              <p class="text-left">
-                                <span class="badge">Web</span>
-                                <span class="badge">Static</span>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mix php">
-                    <div class="mix_sec">
-                      <div class="panel panel-default mb-0">
-                        <div class="panel-body">
-                          <div class="media">
-                            <div class="media-left">
-                              <a href="#">
-                                <img class="media-object" src="./fullscreen/images/work1.png" alt="..." style="width: 60px;">
-                              </a>
-                            </div>
-                            <div class="media-body">
-                              <h4 class="media-heading">typecho-webstack</h4>
-                              <p class="text-left">
-                                <span class="badge">PHP</span>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mix php">
-                    <div class="mix_sec">
-                      <div class="panel panel-default m-0">
-                        <div class="panel-body">
-                          <div class="media">
-                            <div class="media-left">
-                              <a href="#">
-                                <img class="media-object" src="./fullscreen/images/work1.png" alt="..." style="width: 60px;">
-                              </a>
-                            </div>
-                            <div class="media-body">
-                              <h4 class="media-heading">typecho-cheatsheet</h4>
-                              <p class="text-left">
-                                <span class="badge">PHP</span>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mix web temp">
-                    <div class="mix_sec">
-                      <div class="panel panel-default mb-0">
-                        <div class="panel-body">
-                          <div class="media">
-                            <div class="media-left">
-                              <a href="#">
-                                <img class="media-object" src="./fullscreen/images/work1.png" alt="..." style="width: 60px;">
-                              </a>
-                            </div>
-                            <div class="media-body">
-                              <h4 class="media-heading">vue-ui</h4>
-                              <p class="text-left">
-                                <span class="badge">Web</span>
-                                <span class="badge">Vue</span>
-                              </p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mix web temp">
-                    <div class="mix_sec">
-                      <div class="panel panel-default mb-0">
-                        <div class="panel-body">
-                          <div class="media">
-                            <div class="media-left">
-                              <a href="#">
-                                <img class="media-object" src="./fullscreen/images/work1.png" alt="..." style="width: 60px;">
-                              </a>
-                            </div>
-                            <div class="media-body">
-                              <h4 class="media-heading">vue-element-ui</h4>
-                              <p class="text-left">
-                                <span class="badge">Web</span>
-                                <span class="badge">Template</span>
-                                <span class="badge">Vue</span>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mix web temp">
-                    <div class="mix_sec">
-                      <div class="panel panel-default mb-0">
-                        <div class="panel-body">
-                          <div class="media">
-                            <div class="media-left">
-                              <a href="#">
-                                <img class="media-object" src="./fullscreen/images/work1.png" alt="..." style="width: 60px;">
-                              </a>
-                            </div>
-                            <div class="media-body">
-                              <h4 class="media-heading">react-ui</h4>
-                              <p class="text-left">
-                                <span class="badge">Web</span>
-                                <span class="badge">Template</span>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mix web temp">
-                    <div class="mix_sec">
-                      <div class="panel panel-default mb-0">
-                        <div class="panel-body">
-                          <div class="media">
-                            <div class="media-left">
-                              <a href="#">
-                                <img class="media-object" src="./fullscreen/images/work1.png" alt="..." style="width: 60px;">
-                              </a>
-                            </div>
-                            <div class="media-body">
-                              <h4 class="media-heading">vuepress</h4>
-                              <p class="text-left">
-                                <span class="badge">Web</span>
-                                <span class="badge">Template</span>
-                                <span class="badge">Docs</span>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mix web temp">
-                    <div class="mix_sec">
-                      <div class="panel panel-default mb-0">
-                        <div class="panel-body">
-                          <div class="media">
-                            <div class="media-left">
-                              <a href="#">
-                                <img class="media-object" src="./fullscreen/images/work1.png" alt="..." style="width: 60px;">
-                              </a>
-                            </div>
-                            <div class="media-body">
-                              <h4 class="media-heading">vue-element-admin</h4>
-                              <p class="text-left">
-                                <span class="badge">Web</span>
-                                <span class="badge">Template</span>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mix web temp">
-                    <div class="mix_sec">
-                      <div class="panel panel-default mb-0">
-                        <div class="panel-body">
-                          <div class="media">
-                            <div class="media-left">
-                              <a href="#">
-                                <img class="media-object" src="./fullscreen/images/work1.png" alt="..." style="width: 60px;">
-                              </a>
-                            </div>
-                            <div class="media-body">
-                              <h4 class="media-heading">vanilla-ui</h4>
-                              <p class="text-left">
-                                <span class="badge">Web</span>
-                                <span class="badge">Template</span>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mix web temp">
-                    <div class="mix_sec">
-                      <div class="panel panel-default mb-0">
-                        <div class="panel-body">
-                          <div class="media">
-                            <div class="media-left">
-                              <a href="#">
-                                <img class="media-object" src="./fullscreen/images/work1.png" alt="..." style="width: 60px;">
-                              </a>
-                            </div>
-                            <div class="media-body">
-                              <h4 class="media-heading">react-native-ui</h4>
-                              <p class="text-left">
-                                <span class="badge">Web</span>
-                                <span class="badge">Template</span>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mix web temp">
-                    <div class="mix_sec">
-                      <div class="panel panel-default mb-0">
-                        <div class="panel-body">
-                          <div class="media">
-                            <div class="media-left">
-                              <a href="#">
-                                <img class="media-object" src="./fullscreen/images/work1.png" alt="..." style="width: 60px;">
-                              </a>
-                            </div>
-                            <div class="media-body">
-                              <h4 class="media-heading">express-server</h4>
-                              <p class="text-left">
-                                <span class="badge">Template</span>
-                                <span class="badge">Web</span>
-                                <span class="badge">Node</span>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mix web temp">
-                    <div class="mix_sec">
-                      <div class="panel panel-default mb-0">
-                        <div class="panel-body">
-                          <div class="media">
-                            <div class="media-left">
-                              <a href="#">
-                                <img class="media-object" src="./fullscreen/images/work1.png" alt="..." style="width: 60px;">
-                              </a>
-                            </div>
-                            <div class="media-body">
-                              <h4 class="media-heading">laravel-modular</h4>
-                              <p class="text-left">
-                                <span class="badge">Template</span>
-                                <span class="badge">Web</span>
-                                <span class="badge">PHP</span>
-                                <span class="badge">Laravel</span>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mix web temp">
-                    <div class="mix_sec">
-                      <div class="panel panel-default mb-0">
-                        <div class="panel-body">
-                          <div class="media">
-                            <div class="media-left">
-                              <a href="#">
-                                <img class="media-object" src="./fullscreen/images/work1.png" alt="..." style="width: 60px;">
-                              </a>
-                            </div>
-                            <div class="media-body">
-                              <h4 class="media-heading">grafana-echarts-panel</h4>
-                              <p class="text-left">
-                                <span class="badge">Template</span>
-                                <span class="badge">Web</span>
-                                <span class="badge">Package</span>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mix web temp">
-                    <div class="mix_sec">
-                      <div class="panel panel-default mb-0">
-                        <div class="panel-body">
-                          <div class="media">
-                            <div class="media-left">
-                              <a href="#">
-                                <img class="media-object" src="./fullscreen/images/work1.png" alt="..." style="width: 60px;">
-                              </a>
-                            </div>
-                            <div class="media-body">
-                              <h4 class="media-heading">vue-audio-player</h4>
-                              <p class="text-left">
-                                <span class="badge">Template</span>
-                                <span class="badge">Web</span>
-                                <span class="badge">Package</span>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mix web uniapp">
-                    <div class="mix_sec">
-                      <div class="panel panel-default mb-0">
-                        <div class="panel-body">
-                          <div class="media">
-                            <div class="media-left">
-                              <a href="#">
-                                <img class="media-object" src="./fullscreen/images/work1.png" alt="..." style="width: 60px;">
-                              </a>
-                            </div>
-                            <div class="media-body">
-                              <h4 class="media-heading">uni-sudoku</h4>
-                              <p class="text-left">
-                                <span class="badge">Web</span>
-                                <span class="badge">UniApp</span>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mix web uniapp">
-                    <div class="mix_sec">
-                      <div class="panel panel-default mb-0">
-                        <div class="panel-body">
-                          <div class="media">
-                            <div class="media-left">
-                              <a href="#">
-                                <img class="media-object" src="./fullscreen/images/work1.png" alt="..." style="width: 60px;">
-                              </a>
-                            </div>
-                            <div class="media-body">
-                              <h4 class="media-heading">simple-audio-player</h4>
-                              <p class="text-left">
-                                <span class="badge">Web</span>
-                                <span class="badge">Vue</span>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mix php redev">
-                    <div class="mix_sec">
-                      <div class="panel panel-default mb-0">
-                        <div class="panel-body">
-                          <div class="media">
-                            <div class="media-left">
-                              <a href="#">
-                                <img class="media-object" src="./fullscreen/images/work1.png" alt="..." style="width: 60px;">
-                              </a>
-                            </div>
-                            <div class="media-body">
-                              <h4 class="media-heading">oneindex</h4>
-                              <p class="text-left">
-                                <span class="badge">PHP</span>
-                                <span class="badge">Re-Develop</span>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mix web">
-                    <div class="mix_sec">
-                      <div class="imageContainer">
-                        <img class="sec" src="./fullscreen/images/work1.png" alt="work"> <a class="overlayText fancybox" href="./fullscreen/images/work1.png" data-fancybox-group="gallery">
-                          <h4> Photo Chelenge </h4>
-                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mix brand">
-                    <div class="mix_sec">
-                      <div class="imageContainer"> <img class="sec" src="./fullscreen/images/work2.png" alt="work"> <a class="overlayText fancybox" href="./fullscreen/images/work2.png" data-fancybox-group="gallery">
-                          <h4> Photo Chelenge </h4>
-                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-                        </a> </div>
-                    </div>
-                  </div>
-                  <div class="mix design">
-                    <div class="mix_sec">
-                      <div class="imageContainer"> <img class="sec" src="./fullscreen/images/work3.png" alt="work"> <a class="overlayText fancybox" href="./fullscreen/images/work3.png" data-fancybox-group="gallery">
-                          <h4> Photo Chelenge </h4>
-                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-                        </a> </div>
-                    </div>
-                  </div>
-                  <div class="mix web">
-                    <div class="mix_sec">
-                      <div class="imageContainer"> <img class="sec" src="./fullscreen/images/work4.png" alt="work"> <a class="overlayText fancybox" href="./fullscreen/images/work4.png" data-fancybox-group="gallery">
-                          <h4> Photo Chelenge </h4>
-                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-                        </a> </div>
-                    </div>
-                  </div>
-                  <div class="mix brand">
-                    <div class="mix_sec">
-                      <div class="imageContainer"> <img class="sec" src="./fullscreen/images/work5.png" alt="work"> <a class="overlayText fancybox" href="./fullscreen/images/work5.png" data-fancybox-group="gallery">
-                          <h4> Photo Chelenge </h4>
-                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-                        </a> </div>
-                    </div>
-                  </div>
-                  <div class="mix web">
-                    <div class="mix_sec">
-                      <div class="imageContainer"> <img class="sec" src="./fullscreen/images/work2.png" alt="work"> <a class="overlayText fancybox" href="./fullscreen/images/work2.png" data-fancybox-group="gallery">
-                          <h4> Photo Chelenge </h4>
-                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-                        </a> </div>
-                    </div>
-                  </div>
-                  <div class="mix photography">
-                    <div class="mix_sec">
-                      <div class="imageContainer"> <img class="sec" src="./fullscreen/images/work4.png" alt="work"> <a class="overlayText fancybox" href="./fullscreen/images/work4.png" data-fancybox-group="gallery">
-                          <h4> Photo Chelenge </h4>
-                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-                        </a> </div>
-                    </div>
-                  </div>
-                  <div class="mix photography">
-                    <div class="mix_sec">
-                      <div class="imageContainer"> <img class="sec" src="./fullscreen/images/work5.png" alt="work"> <a class="overlayText fancybox" href="./fullscreen/images/work5.png" data-fancybox-group="gallery">
-                          <h4> Photo Chelenge </h4>
-                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-                        </a> </div>
-                    </div>
-                  </div>
-                  <div class="mix design">
-                    <div class="mix_sec">
-                      <div class="imageContainer"> <img class="sec" src="./fullscreen/images/work1.png" alt="work"> <a class="overlayText fancybox" href="./fullscreen/images/work1.png" data-fancybox-group="gallery">
-                          <h4> Photo Chelenge </h4>
-                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-                        </a> </div>
-                    </div>
-                  </div>
-                  <div class="mix photography">
-                    <div class="mix_sec">
-                      <div class="imageContainer"> <img class="sec" src="./fullscreen/images/work3.png" alt="work"> <a class="overlayText fancybox" href="./fullscreen/images/work3.png" data-fancybox-group="gallery">
-                          <h4> Photo Chelenge </h4>
-                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </p>
-                        </a> </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 title text-center">
+    <div id="mywork" class="row section">
+      <div class="container-fluid work text-center">
+        <div class="row">
+          <div class="col-xs-12 text-center">
             <div class="animate fadeInRight">
-              <h1>Are You Ready to Start Your Project Now?</h1>
-              <div class="getin"> <a class="scroll" href="#contactme" data-target="contactme">Get In Touch</a></div>
+              <div class="head">
+                <h1>My Recent Work</h1>
+              </div>
+            </div>
+            <div class="col-xs-12 work_filter text-center">
+              <div class="row">
+                <div class="animate fadeInLeft">
+                  <ul class="breadcrumb">
+                    <li>
+                      <a href="#." class="filter active" data-filter="all"
+                        >All</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#." class="filter" data-filter=".temp"
+                        >Template</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#." class="filter" data-filter=".docs">Docs</a>
+                    </li>
+                    <li>
+                      <a href="#." class="filter" data-filter=".package"
+                        >Package</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#." class="filter" data-filter=".redev"
+                        >Re-Develop</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#." class="filter" data-filter=".web">Web</a>
+                    </li>
+                    <li>
+                      <a href="#." class="filter" data-filter=".static"
+                        >Static</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#." class="filter" data-filter=".node">Node</a>
+                    </li>
+                    <!-- <li><a href="#." class="filter" data-filter=".component">Component</a></li> -->
+                    <li>
+                      <a href="#." class="filter" data-filter=".vue">Vue</a>
+                    </li>
+                    <li>
+                      <a href="#." class="filter" data-filter=".react">React</a>
+                    </li>
+                    <li>
+                      <a href="#." class="filter" data-filter=".uniapp"
+                        >UniApp</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#." class="filter" data-filter=".php">PHP</a>
+                    </li>
+                    <!-- <li><a href="#." class="filter" data-filter=".module">Module</a></li> -->
+                    <li>
+                      <a href="#." class="filter" data-filter=".laravel"
+                        >Laravel</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#." class="filter" data-filter=".thinkphp"
+                        >ThinkPHP</a
+                      >
+                    </li>
+                    <!-- <li><a href="#." class="filter" data-filter=".brand">Branding</a></li> -->
+                    <!-- <li><a href="#." class="filter" data-filter=".design">Design</a></li> -->
+                    <!-- <li><a href="#." class="filter" data-filter=".photography">Photography</a></li> -->
+                  </ul>
+                </div>
+                <div class="gallery">
+                  <div class="row">
+                    <div class="mix php">
+                      <div class="mix_sec">
+                        <div class="panel panel-default mb-0">
+                          <div class="panel-body">
+                            <div class="media">
+                              <div class="media-left">
+                                <a href="#">
+                                  <img
+                                    class="media-object"
+                                    src="./../_assets/fullscreen/images/work1.png"
+                                    alt="..."
+                                    style="width: 60px"
+                                  />
+                                </a>
+                              </div>
+                              <div class="media-body">
+                                <h4 class="media-heading">
+                                  langnang.github.io
+                                </h4>
+                                <p class="text-left">
+                                  <span class="badge">Web</span>
+                                  <span class="badge">Static</span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix php">
+                      <div class="mix_sec">
+                        <div class="panel panel-default mb-0">
+                          <div class="panel-body">
+                            <div class="media">
+                              <div class="media-left">
+                                <a href="#">
+                                  <img
+                                    class="media-object"
+                                    src="./../_assets/fullscreen/images/work1.png"
+                                    alt="..."
+                                    style="width: 60px"
+                                  />
+                                </a>
+                              </div>
+                              <div class="media-body">
+                                <h4 class="media-heading">typecho-webstack</h4>
+                                <p class="text-left">
+                                  <span class="badge">PHP</span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix php">
+                      <div class="mix_sec">
+                        <div class="panel panel-default m-0">
+                          <div class="panel-body">
+                            <div class="media">
+                              <div class="media-left">
+                                <a href="#">
+                                  <img
+                                    class="media-object"
+                                    src="./../_assets/fullscreen/images/work1.png"
+                                    alt="..."
+                                    style="width: 60px"
+                                  />
+                                </a>
+                              </div>
+                              <div class="media-body">
+                                <h4 class="media-heading">
+                                  typecho-cheatsheet
+                                </h4>
+                                <p class="text-left">
+                                  <span class="badge">PHP</span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix web temp">
+                      <div class="mix_sec">
+                        <div class="panel panel-default mb-0">
+                          <div class="panel-body">
+                            <div class="media">
+                              <div class="media-left">
+                                <a href="#">
+                                  <img
+                                    class="media-object"
+                                    src="./../_assets/fullscreen/images/work1.png"
+                                    alt="..."
+                                    style="width: 60px"
+                                  />
+                                </a>
+                              </div>
+                              <div class="media-body">
+                                <h4 class="media-heading">vue-ui</h4>
+                                <p class="text-left">
+                                  <span class="badge">Web</span>
+                                  <span class="badge">Vue</span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix web temp">
+                      <div class="mix_sec">
+                        <div class="panel panel-default mb-0">
+                          <div class="panel-body">
+                            <div class="media">
+                              <div class="media-left">
+                                <a href="#">
+                                  <img
+                                    class="media-object"
+                                    src="./../_assets/fullscreen/images/work1.png"
+                                    alt="..."
+                                    style="width: 60px"
+                                  />
+                                </a>
+                              </div>
+                              <div class="media-body">
+                                <h4 class="media-heading">vue-element-ui</h4>
+                                <p class="text-left">
+                                  <span class="badge">Web</span>
+                                  <span class="badge">Template</span>
+                                  <span class="badge">Vue</span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix web temp">
+                      <div class="mix_sec">
+                        <div class="panel panel-default mb-0">
+                          <div class="panel-body">
+                            <div class="media">
+                              <div class="media-left">
+                                <a href="#">
+                                  <img
+                                    class="media-object"
+                                    src="./../_assets/fullscreen/images/work1.png"
+                                    alt="..."
+                                    style="width: 60px"
+                                  />
+                                </a>
+                              </div>
+                              <div class="media-body">
+                                <h4 class="media-heading">react-ui</h4>
+                                <p class="text-left">
+                                  <span class="badge">Web</span>
+                                  <span class="badge">Template</span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix web temp">
+                      <div class="mix_sec">
+                        <div class="panel panel-default mb-0">
+                          <div class="panel-body">
+                            <div class="media">
+                              <div class="media-left">
+                                <a href="#">
+                                  <img
+                                    class="media-object"
+                                    src="./../_assets/fullscreen/images/work1.png"
+                                    alt="..."
+                                    style="width: 60px"
+                                  />
+                                </a>
+                              </div>
+                              <div class="media-body">
+                                <h4 class="media-heading">vuepress</h4>
+                                <p class="text-left">
+                                  <span class="badge">Web</span>
+                                  <span class="badge">Template</span>
+                                  <span class="badge">Docs</span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix web temp">
+                      <div class="mix_sec">
+                        <div class="panel panel-default mb-0">
+                          <div class="panel-body">
+                            <div class="media">
+                              <div class="media-left">
+                                <a href="#">
+                                  <img
+                                    class="media-object"
+                                    src="./../_assets/fullscreen/images/work1.png"
+                                    alt="..."
+                                    style="width: 60px"
+                                  />
+                                </a>
+                              </div>
+                              <div class="media-body">
+                                <h4 class="media-heading">vue-element-admin</h4>
+                                <p class="text-left">
+                                  <span class="badge">Web</span>
+                                  <span class="badge">Template</span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix web temp">
+                      <div class="mix_sec">
+                        <div class="panel panel-default mb-0">
+                          <div class="panel-body">
+                            <div class="media">
+                              <div class="media-left">
+                                <a href="#">
+                                  <img
+                                    class="media-object"
+                                    src="./../_assets/fullscreen/images/work1.png"
+                                    alt="..."
+                                    style="width: 60px"
+                                  />
+                                </a>
+                              </div>
+                              <div class="media-body">
+                                <h4 class="media-heading">vanilla-ui</h4>
+                                <p class="text-left">
+                                  <span class="badge">Web</span>
+                                  <span class="badge">Template</span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix web temp">
+                      <div class="mix_sec">
+                        <div class="panel panel-default mb-0">
+                          <div class="panel-body">
+                            <div class="media">
+                              <div class="media-left">
+                                <a href="#">
+                                  <img
+                                    class="media-object"
+                                    src="./../_assets/fullscreen/images/work1.png"
+                                    alt="..."
+                                    style="width: 60px"
+                                  />
+                                </a>
+                              </div>
+                              <div class="media-body">
+                                <h4 class="media-heading">react-native-ui</h4>
+                                <p class="text-left">
+                                  <span class="badge">Web</span>
+                                  <span class="badge">Template</span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix web temp">
+                      <div class="mix_sec">
+                        <div class="panel panel-default mb-0">
+                          <div class="panel-body">
+                            <div class="media">
+                              <div class="media-left">
+                                <a href="#">
+                                  <img
+                                    class="media-object"
+                                    src="./../_assets/fullscreen/images/work1.png"
+                                    alt="..."
+                                    style="width: 60px"
+                                  />
+                                </a>
+                              </div>
+                              <div class="media-body">
+                                <h4 class="media-heading">express-server</h4>
+                                <p class="text-left">
+                                  <span class="badge">Template</span>
+                                  <span class="badge">Web</span>
+                                  <span class="badge">Node</span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix web temp">
+                      <div class="mix_sec">
+                        <div class="panel panel-default mb-0">
+                          <div class="panel-body">
+                            <div class="media">
+                              <div class="media-left">
+                                <a href="#">
+                                  <img
+                                    class="media-object"
+                                    src="./../_assets/fullscreen/images/work1.png"
+                                    alt="..."
+                                    style="width: 60px"
+                                  />
+                                </a>
+                              </div>
+                              <div class="media-body">
+                                <h4 class="media-heading">laravel-modular</h4>
+                                <p class="text-left">
+                                  <span class="badge">Template</span>
+                                  <span class="badge">Web</span>
+                                  <span class="badge">PHP</span>
+                                  <span class="badge">Laravel</span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix web temp">
+                      <div class="mix_sec">
+                        <div class="panel panel-default mb-0">
+                          <div class="panel-body">
+                            <div class="media">
+                              <div class="media-left">
+                                <a href="#">
+                                  <img
+                                    class="media-object"
+                                    src="./../_assets/fullscreen/images/work1.png"
+                                    alt="..."
+                                    style="width: 60px"
+                                  />
+                                </a>
+                              </div>
+                              <div class="media-body">
+                                <h4 class="media-heading">
+                                  grafana-echarts-panel
+                                </h4>
+                                <p class="text-left">
+                                  <span class="badge">Template</span>
+                                  <span class="badge">Web</span>
+                                  <span class="badge">Package</span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix web temp">
+                      <div class="mix_sec">
+                        <div class="panel panel-default mb-0">
+                          <div class="panel-body">
+                            <div class="media">
+                              <div class="media-left">
+                                <a href="#">
+                                  <img
+                                    class="media-object"
+                                    src="./../_assets/fullscreen/images/work1.png"
+                                    alt="..."
+                                    style="width: 60px"
+                                  />
+                                </a>
+                              </div>
+                              <div class="media-body">
+                                <h4 class="media-heading">vue-audio-player</h4>
+                                <p class="text-left">
+                                  <span class="badge">Template</span>
+                                  <span class="badge">Web</span>
+                                  <span class="badge">Package</span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix web uniapp">
+                      <div class="mix_sec">
+                        <div class="panel panel-default mb-0">
+                          <div class="panel-body">
+                            <div class="media">
+                              <div class="media-left">
+                                <a href="#">
+                                  <img
+                                    class="media-object"
+                                    src="./../_assets/fullscreen/images/work1.png"
+                                    alt="..."
+                                    style="width: 60px"
+                                  />
+                                </a>
+                              </div>
+                              <div class="media-body">
+                                <h4 class="media-heading">uni-sudoku</h4>
+                                <p class="text-left">
+                                  <span class="badge">Web</span>
+                                  <span class="badge">UniApp</span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix web uniapp">
+                      <div class="mix_sec">
+                        <div class="panel panel-default mb-0">
+                          <div class="panel-body">
+                            <div class="media">
+                              <div class="media-left">
+                                <a href="#">
+                                  <img
+                                    class="media-object"
+                                    src="./../_assets/fullscreen/images/work1.png"
+                                    alt="..."
+                                    style="width: 60px"
+                                  />
+                                </a>
+                              </div>
+                              <div class="media-body">
+                                <h4 class="media-heading">
+                                  simple-audio-player
+                                </h4>
+                                <p class="text-left">
+                                  <span class="badge">Web</span>
+                                  <span class="badge">Vue</span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix php redev">
+                      <div class="mix_sec">
+                        <div class="panel panel-default mb-0">
+                          <div class="panel-body">
+                            <div class="media">
+                              <div class="media-left">
+                                <a href="#">
+                                  <img
+                                    class="media-object"
+                                    src="./../_assets/fullscreen/images/work1.png"
+                                    alt="..."
+                                    style="width: 60px"
+                                  />
+                                </a>
+                              </div>
+                              <div class="media-body">
+                                <h4 class="media-heading">oneindex</h4>
+                                <p class="text-left">
+                                  <span class="badge">PHP</span>
+                                  <span class="badge">Re-Develop</span>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix web">
+                      <div class="mix_sec">
+                        <div class="imageContainer">
+                          <img
+                            class="sec"
+                            src="./../_assets/fullscreen/images/work1.png"
+                            alt="work"
+                          />
+                          <a
+                            class="overlayText fancybox"
+                            href="./../_assets/fullscreen/images/work1.png"
+                            data-fancybox-group="gallery"
+                          >
+                            <h4>Photo Chelenge</h4>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetuer
+                              adipiscing elit. Aenean commodo ligula eget dolor.
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix brand">
+                      <div class="mix_sec">
+                        <div class="imageContainer">
+                          <img
+                            class="sec"
+                            src="./../_assets/fullscreen/images/work2.png"
+                            alt="work"
+                          />
+                          <a
+                            class="overlayText fancybox"
+                            href="./../_assets/fullscreen/images/work2.png"
+                            data-fancybox-group="gallery"
+                          >
+                            <h4>Photo Chelenge</h4>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetuer
+                              adipiscing elit. Aenean commodo ligula eget dolor.
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix design">
+                      <div class="mix_sec">
+                        <div class="imageContainer">
+                          <img
+                            class="sec"
+                            src="./../_assets/fullscreen/images/work3.png"
+                            alt="work"
+                          />
+                          <a
+                            class="overlayText fancybox"
+                            href="./../_assets/fullscreen/images/work3.png"
+                            data-fancybox-group="gallery"
+                          >
+                            <h4>Photo Chelenge</h4>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetuer
+                              adipiscing elit. Aenean commodo ligula eget dolor.
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix web">
+                      <div class="mix_sec">
+                        <div class="imageContainer">
+                          <img
+                            class="sec"
+                            src="./../_assets/fullscreen/images/work4.png"
+                            alt="work"
+                          />
+                          <a
+                            class="overlayText fancybox"
+                            href="./../_assets/fullscreen/images/work4.png"
+                            data-fancybox-group="gallery"
+                          >
+                            <h4>Photo Chelenge</h4>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetuer
+                              adipiscing elit. Aenean commodo ligula eget dolor.
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix brand">
+                      <div class="mix_sec">
+                        <div class="imageContainer">
+                          <img
+                            class="sec"
+                            src="./../_assets/fullscreen/images/work5.png"
+                            alt="work"
+                          />
+                          <a
+                            class="overlayText fancybox"
+                            href="./../_assets/fullscreen/images/work5.png"
+                            data-fancybox-group="gallery"
+                          >
+                            <h4>Photo Chelenge</h4>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetuer
+                              adipiscing elit. Aenean commodo ligula eget dolor.
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix web">
+                      <div class="mix_sec">
+                        <div class="imageContainer">
+                          <img
+                            class="sec"
+                            src="./../_assets/fullscreen/images/work2.png"
+                            alt="work"
+                          />
+                          <a
+                            class="overlayText fancybox"
+                            href="./../_assets/fullscreen/images/work2.png"
+                            data-fancybox-group="gallery"
+                          >
+                            <h4>Photo Chelenge</h4>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetuer
+                              adipiscing elit. Aenean commodo ligula eget dolor.
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix photography">
+                      <div class="mix_sec">
+                        <div class="imageContainer">
+                          <img
+                            class="sec"
+                            src="./../_assets/fullscreen/images/work4.png"
+                            alt="work"
+                          />
+                          <a
+                            class="overlayText fancybox"
+                            href="./../_assets/fullscreen/images/work4.png"
+                            data-fancybox-group="gallery"
+                          >
+                            <h4>Photo Chelenge</h4>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetuer
+                              adipiscing elit. Aenean commodo ligula eget dolor.
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix photography">
+                      <div class="mix_sec">
+                        <div class="imageContainer">
+                          <img
+                            class="sec"
+                            src="./../_assets/fullscreen/images/work5.png"
+                            alt="work"
+                          />
+                          <a
+                            class="overlayText fancybox"
+                            href="./../_assets/fullscreen/images/work5.png"
+                            data-fancybox-group="gallery"
+                          >
+                            <h4>Photo Chelenge</h4>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetuer
+                              adipiscing elit. Aenean commodo ligula eget dolor.
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix design">
+                      <div class="mix_sec">
+                        <div class="imageContainer">
+                          <img
+                            class="sec"
+                            src="./../_assets/fullscreen/images/work1.png"
+                            alt="work"
+                          />
+                          <a
+                            class="overlayText fancybox"
+                            href="./../_assets/fullscreen/images/work1.png"
+                            data-fancybox-group="gallery"
+                          >
+                            <h4>Photo Chelenge</h4>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetuer
+                              adipiscing elit. Aenean commodo ligula eget dolor.
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mix photography">
+                      <div class="mix_sec">
+                        <div class="imageContainer">
+                          <img
+                            class="sec"
+                            src="./../_assets/fullscreen/images/work3.png"
+                            alt="work"
+                          />
+                          <a
+                            class="overlayText fancybox"
+                            href="./../_assets/fullscreen/images/work3.png"
+                            data-fancybox-group="gallery"
+                          >
+                            <h4>Photo Chelenge</h4>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetuer
+                              adipiscing elit. Aenean commodo ligula eget dolor.
+                            </p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 title text-center">
+              <div class="animate fadeInRight">
+                <h1>Are You Ready to Start Your Project Now?</h1>
+                <div class="getin">
+                  <a class="scroll" href="#contactme" data-target="contactme"
+                    >Get In Touch</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- contact me -->
-  <div id="contactme" class="row section">
-    <div class="container contact">
-      <div class="row">
-        <div class="col-xs-12 text-center">
-          <div class="animate fadeInRight">
-            <div class="heading">
-              <h1>Contact Me</h1>
-              <p>Maecenas bibendum lacus gravida placerat consequat. Vivamus quis hendrerit mauris. Vestibulum laoreet felis sed consectetur sollicitudin.</p>
-            </div>
-          </div>
-          <div class="col-md-7 col-sm-12 col-xs-12 field">
-            <div class="animate bounceInLeft">
-              <form>
-                <div class="user">
-                  <input type="text" placeholder="Name" />
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                </div>
-                <div class="user">
-                  <input type="text" placeholder="Email" />
-                  <i class="fa fa-envelope" aria-hidden="true"></i>
-                </div>
-                <textarea name="Message" placeholder="Message here"></textarea>
-                <input type="submit" placeholder="Submit Now" />
-              </form>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-8 col-xs-12 contact_info">
-            <div class="animate bounceInRight">
-              <h3> Get In Touch</h3>
-              <div class="contact_sec">
-                <ul>
-                  <li><i class="fa fa-home" aria-hidden="true"></i><span>3340 King St, London W6 0RR, UK</span></li>
-                  <li><i class="fa fa-phone" aria-hidden="true"></i><span>Phone: +44 (0)20 9493 89819</span></li>
-                  <li><i class="fa fa-cloud" aria-hidden="true"></i><span>Fax: +44 (0)20 9493 89810</span></li>
-                  <li><i class="fa fa-envelope-o" aria-hidden="true"></i><span>Email: <a href="#."> hello@themesindustry.com</a></span></li>
-                </ul>
-              </div>
-              <!-- Social Icons -->
-              <div class="contact_icons">
-                <ul>
-                  <li><a href="#." class="fa fb"><i class="fa fa-fw fa-facebook"></i></a></li>
-                  <li><a href="#." class="fa tw"><i class="fa fa-fw fa-twitter"></i></a></li>
-                  <li><a href="#." class="fa gp"><i class="fa fa-fw fa-google-plus"></i></a></li>
-                  <li><a href="#." class="fa in"><i class="fa fa-fw fa-linkedin"></i></a></li>
-                  <li><a href="#." class="fa pin"><i class="fa fa-fw fa-pinterest-p"></i></a></li>
-                </ul>
+    <!-- contact me -->
+    <div id="contactme" class="row section">
+      <div class="container contact">
+        <div class="row">
+          <div class="col-xs-12 text-center">
+            <div class="animate fadeInRight">
+              <div class="heading">
+                <h1>Contact Me</h1>
+                <p>
+                  Maecenas bibendum lacus gravida placerat consequat. Vivamus
+                  quis hendrerit mauris. Vestibulum laoreet felis sed
+                  consectetur sollicitudin.
+                </p>
               </div>
             </div>
-          </div>
-          <div class="col-xs-12 footer text-center">
-            <div class="animate fadeInLeft">
-              <p>Copyright &copy; 2018.Company name All rights reserved.<a target="_blank" href="http://www.cssmoban.com/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+            <div class="col-md-7 col-sm-12 col-xs-12 field">
+              <div class="animate bounceInLeft">
+                <form>
+                  <div class="user">
+                    <input type="text" placeholder="Name" />
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                  </div>
+                  <div class="user">
+                    <input type="text" placeholder="Email" />
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                  </div>
+                  <textarea
+                    name="Message"
+                    placeholder="Message here"
+                  ></textarea>
+                  <input type="submit" placeholder="Submit Now" />
+                </form>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-8 col-xs-12 contact_info">
+              <div class="animate bounceInRight">
+                <h3>Get In Touch</h3>
+                <div class="contact_sec">
+                  <ul>
+                    <li>
+                      <i class="fa fa-home" aria-hidden="true"></i
+                      ><span>3340 King St, London W6 0RR, UK</span>
+                    </li>
+                    <li>
+                      <i class="fa fa-phone" aria-hidden="true"></i
+                      ><span>Phone: +44 (0)20 9493 89819</span>
+                    </li>
+                    <li>
+                      <i class="fa fa-cloud" aria-hidden="true"></i
+                      ><span>Fax: +44 (0)20 9493 89810</span>
+                    </li>
+                    <li>
+                      <i class="fa fa-envelope-o" aria-hidden="true"></i
+                      ><span
+                        >Email: <a href="#."> hello@themesindustry.com</a></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <!-- Social Icons -->
+                <div class="contact_icons">
+                  <ul>
+                    <li>
+                      <a href="#." class="fa fb"
+                        ><i class="fa fa-fw fa-facebook"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="#." class="fa tw"
+                        ><i class="fa fa-fw fa-twitter"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="#." class="fa gp"
+                        ><i class="fa fa-fw fa-google-plus"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="#." class="fa in"
+                        ><i class="fa fa-fw fa-linkedin"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="#." class="fa pin"
+                        ><i class="fa fa-fw fa-pinterest-p"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 footer text-center">
+              <div class="animate fadeInLeft">
+                <p>
+                  Copyright &copy; 2018.Company name All rights reserved.<a
+                    target="_blank"
+                    href="http://www.cssmoban.com/"
+                    >&#x7F51;&#x9875;&#x6A21;&#x677F;</a
+                  >
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <a href="#." class="cd-top">TOP</a>
-  <!--JS File-->
+    <a href="#." class="cd-top">TOP</a>
+    <!--JS File-->
 
-  <script type="text/javascript" src="./../.storage/lib/jquery/2.2.3/jquery.js"></script>
-  <script type="text/javascript" src="./../.storage/lib/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="./fullscreen/js/jquery.circliful.min.js"></script>
-  <script type="text/javascript" src="./fullscreen/js/jquery.mixitup.min.js"></script>
-  <script type="text/javascript" src="./fullscreen/js/jquery.fancybox.js"></script>
-  <script type="text/javascript" src="./fullscreen/js/waypoints.js"></script>
-  <script type="text/javascript" src="./fullscreen/js/jquery.appear.js"></script>
-  <script type="text/javascript" src="./fullscreen/js/jpushmenu.js"></script>
-  <script type="text/javascript" src="./fullscreen/js/owl.carousel.js"></script>
-  <script type="text/javascript" src="./fullscreen/js/functions.js"></script>
-</body>
+    <script
+      type="text/javascript"
+      src="./../_storage/lib/jquery/2.2.3/jquery.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./../_storage/lib/bootstrap/3.3.6/js/bootstrap.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./../_assets/fullscreen/js/jquery.circliful.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./../_assets/fullscreen/js/jquery.mixitup.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./../_assets/fullscreen/js/jquery.fancybox.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./../_assets/fullscreen/js/waypoints.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./../_assets/fullscreen/js/jquery.appear.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./../_assets/fullscreen/js/jpushmenu.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./../_assets/fullscreen/js/owl.carousel.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./../_assets/fullscreen/js/functions.js"
+    ></script>
 
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/langnang/storage/lib/perfect-scrollbar/1.5.3/js/perfect-scrollbar.min.js"
+    ></script>
+
+    <script>
+      // new PerfectScrollbar("#app");
+    </script>
+  </body>
 </html>

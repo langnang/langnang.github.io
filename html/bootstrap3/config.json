@@ -1,5 +1,19 @@
 {
   "name": "Langnang.Chen",
   "nameCn": "陈朗朗",
-  "email": "langnang.chen@outlook.com"
+  "email": "langnang.chen@outlook.com",
+  "sites": [],
+  "frames": [
+    {
+      "title": "Langnang",
+      "type": "site",
+      "src": ""
+    },
+    {
+      "title": "Document",
+      "type": "category",
+      "src": "",
+      "children": []
+    }
+  ]
 }

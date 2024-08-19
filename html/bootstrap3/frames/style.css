@@ -50,6 +50,7 @@ body {
 .sidebar .nav-link {
     font-weight: 600;
     color: #333;
+    cursor: pointer;
 }
 
 .sidebar .nav-link .feather {
@@ -64,6 +65,12 @@ body {
 .sidebar .nav-link:hover .feather,
 .sidebar .nav-link.active .feather {
     color: inherit;
+}
+
+.sidebar .nav-link.disabled {
+    color: #6c757d;
+    pointer-events: none;
+    cursor: default;
 }
 
 .sidebar-heading {

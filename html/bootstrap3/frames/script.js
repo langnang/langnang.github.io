@@ -25,3 +25,7 @@ const iFrameOnLoad = (element) => {
 //   $('#sidebarMenu .nav-link').removeClass('active')
 //   $(element.target).addClass('active')
 // })
+
+const app = new Vue({
+
+})

@@ -81,7 +81,7 @@
             .filter((v) => v)
             .reduce((t, v) => t + makeBreadcrumb(v, data) + makeCardGroup(v, data), "");
         }
-        fetch("./../langnang/.env?" + Date.now())
+        fetch("./.env?" + Date.now())
           .then((response) => response.text())
           .then((res) => {
             const iniObject = new SimpleIni(function () {

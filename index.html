@@ -20,49 +20,51 @@
     <script src="https://unpkg.com/simple-ini@1.0.4/lib/simple-ini.js"></script>
     <script>
       $(function () {
-        function makeBreadcrumb(data, root) {
+        function makeBreadcrumb(key, root) {
+          console.log(key);
           return `<nav aria-label="breadcrumb">
         <ol class="breadcrumb py-2 mb-2">
-          <li class="breadcrumb-ite" aria-current="page">${data}</li>
+          <li class="breadcrumb-ite" aria-current="page">${key}</li>
         </ol>
       </nav>`;
         }
-        function makeCardGroup(data, root) {
-          if (!data["CHILDREN"]) return "";
-          console.log(data["CHILDREN"]);
+        function makeCardGroup(key, root) {
+          console.log(key);
+          console.log(root[key]);
+          const data = root[key] || {};
           return (
-            `<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">` +
+            `<div class="row row-cols-1 row-cols-sm-3 row-cols-md-5">` +
             (data["CHILDREN"] || "")
               .split(",")
-              .slice(0, -1)
-              .reduce((t, v) => t + makeCard(v), "") +
+              .filter((v) => v)
+              .reduce((t, v) => t + makeCard(v, key, root), "") +
             ` </div>`
           );
         }
-        function makeCard(data, root) {
-          if (!data) return "";
+        function makeCard(key, parentKey, root) {
+          const data = root[parentKey + "::" + key] || {};
           console.log(data);
           return `<div class="col d-flex flex-column align-items-center">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="text-secondary" style="width: 5rem">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="text-secondary" style="width: 4.5rem">
             <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
           </svg>
-          <h5>${data}</h5>
+          <h6>${key}</h6>
         </div>`;
         }
-        function makeHtml(data, childrenKey = "CHILDREN") {
+        function makeHtml(data) {
           return (data["CHILDREN"] || "")
             .split(",")
-            .slice(0, -1)
-            .reduce((t, v) => t + makeBreadcrumb(v, data) + makeCardGroup(data[v], data), "");
+            .filter((v) => v)
+            .reduce((t, v) => t + makeBreadcrumb(v, data) + makeCardGroup(v, data), "");
         }
         fetch("./../langnang/.env?" + Date.now())
           .then((response) => response.text())
           .then((res) => {
             const iniObject = new SimpleIni(function () {
-              return res;
+              return res.replace(/\r/g, "");
             });
-            console.log(iniObject["CHILDREN"].split(",").slice(0, -1));
             console.log(iniObject);
+            console.log(iniObject["CHILDREN"].split(",").slice(0, -1));
             $("#app").html(makeHtml(iniObject));
           });
       });

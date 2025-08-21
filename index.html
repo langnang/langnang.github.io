@@ -36,7 +36,7 @@
       }
       $(function () {
         function makeBreadcrumb(key, root) {
-          console.log(key);
+          // console.log(key);
           return `<nav aria-label="breadcrumb">
         <ol class="breadcrumb py-2 mb-2">
           <li class="breadcrumb-ite" aria-current="page">${key}</li>
@@ -44,9 +44,9 @@
       </nav>`;
         }
         function makeCardGroup(key, root) {
-          console.log(key);
-          console.log(root[key]);
-          const data = root[key] || {};
+          // console.log(key);
+          // console.log(root[key]);
+          const data = { ...(root[key] || {}) };
           return (
             `<div class="row row-cols-1 row-cols-sm-3 row-cols-md-5">` +
             (data["CHILDREN"] || "")
@@ -57,14 +57,13 @@
           );
         }
         function makeCard(key, parentKey, root) {
-          const data = root[parentKey + "::" + key] || {};
-          console.log(key, parentKey, isEmpty(data.NAME));
-          console.log(data);
+          const data = { ...(root[parentKey + "::" + key] || {}) };
+          // console.log(key, parentKey, isEmpty(data.NAME));
+          // console.log(data);
           if (isEmpty(data.NAME)) {
-            console.log(data.NAME);
             data.NAME = key;
           }
-          console.log(data);
+          // console.log(data);
           return (
             (isEmpty(data.HREF) ? "" : `<a class="text-decoration-none" target="_blank" href="${data.HREF}">`) +
             `<div class="col d-flex flex-column align-items-center">
@@ -88,9 +87,9 @@
             const iniObject = new SimpleIni(function () {
               return res.replace(/\r/g, "");
             });
-            console.log(iniObject);
-            console.log(iniObject["CHILDREN"].split(",").slice(0, -1));
-            $("#app").html(makeHtml(iniObject));
+            // console.log(iniObject);
+            // console.log(iniObject["CHILDREN"].split(",").slice(0, -1));
+            $("#app").html(makeHtml({ ...iniObject }));
           });
       });
     </script>

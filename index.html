@@ -37,9 +37,11 @@
       $(function () {
         function makeBreadcrumb(key, root) {
           // console.log(key);
+          const data = { ...(root[key] || {}) };
+          if (isEmpty(data.NAME)) data.NAME = key;
           return `<nav aria-label="breadcrumb">
         <ol class="breadcrumb py-2 mb-2">
-          <li class="breadcrumb-ite" aria-current="page">${key}</li>
+          <li class="breadcrumb-ite" aria-current="page">${data.NAME}</li>
         </ol>
       </nav>`;
         }
@@ -60,19 +62,18 @@
           const data = { ...(root[parentKey + "::" + key] || {}) };
           // console.log(key, parentKey, isEmpty(data.NAME));
           // console.log(data);
-          if (isEmpty(data.NAME)) {
-            data.NAME = key;
-          }
+          if (isEmpty(data.NAME)) data.NAME = key;
           // console.log(data);
           return (
-            (isEmpty(data.HREF) ? "" : `<a class="text-decoration-none" target="_blank" href="${data.HREF}">`) +
+            (isEmpty(data.URL) ? "" : `<a class="text-decoration-none" target="_blank" href="${data.URL}">`) +
+            `` +
             `<div class="col d-flex flex-column align-items-center">
           <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="text-secondary" style="width: 4.5rem">
             <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
           </svg>
           <h6>${data.NAME}</h6>
         </div>` +
-            (isEmpty(data.HREF) ? "" : `</a>`)
+            (isEmpty(data.URL) ? "" : `</a>`)
           );
         }
         function makeHtml(data) {

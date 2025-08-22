@@ -9,7 +9,17 @@
     </script>
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
-    <style></style>
+    <style>
+      @media (min-width: 1480px) {
+        .container,
+        .container-lg,
+        .container-md,
+        .container-sm,
+        .container-xl {
+          max-width: 1400px;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="app" class="container d-flex flex-column justify-content-center" style="min-height: 100dvh"></div>

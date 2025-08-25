@@ -1,0 +1,23 @@
+{
+  "type": "grade",
+  "children": [
+    {
+      "type": "category",
+      "children": [
+        {
+          "type": "layer",
+          "children": [
+            {
+              "type": "group",
+              "children": [
+                {
+                  "type": "set"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -17,12 +17,12 @@
     <div id="app" class="container-fluid">
       <aside id="app-sidebar"></aside>
       <main id="app-main" class="container">
-        <div class="jumbotron text-center">
-          <h1 id="app-time" class="strong display-4">Hello, world!</h1>
-          <p id="app-date" class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-          <hr class="my-4" />
-          <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <div class="jumbotron text-center p-0">
+          <h1 id="app-time" class="strong display-4">--:--:--</h1>
+          <p id="app-date" class="lead">---- -- --</p>
+        </div>
+        <div class="container">
+          <div class="row"></div>
         </div>
       </main>
     </div>
@@ -31,10 +31,21 @@
     <script src="https://unpkg.com/jquery@3.5.1/dist/jquery.slim.js"></script>
     <script src="https://unpkg.com/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script src="https://unpkg.com/moment@2.30.1/min/moment.min.js"></script>
+    <script src="https://unpkg.com/moment@2.30.1/min/locales.min.js"></script>
+    <script src="https://unpkg.com/moment-lunar@0.0.4/moment-lunar.js"></script>
+
     <script src="https://unpkg.com/simple-ini@1.0.4/lib/simple-ini.js"></script>
 
     <script src="script.js"></script>
     <script>
+      moment.locale("zh-CN");
+      $(function () {
+        setInterval(function () {
+          $("#app-time").text(moment().format("HH:mm:ss"));
+        }, 500);
+        $("#app-date").text(moment().format("M月D日 dddd") + " " + moment().lunar().format("MMMMDo"));
+      });
       function getTime() {
         var date = new Date();
 
@@ -52,6 +63,7 @@
         var element = document.getElementById("app-time");
         element.innerText = "" + year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
       }
+
       // setInterval("getTime()", 1000);
       function isEmpty(value) {
         // 判断 null 或 undefined

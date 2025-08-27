@@ -1,9 +1,57 @@
+html {
+    height: 100%;
+    overflow: hidden;
+    --primary-color: #1890ff;
+    --search-height: 46px;
+    --search-radius: 23px;
+    --search-bgColor: rgba(var(--alpha-bg), 0.5);
+    --icon-radius: 13.795555555555556px;
+    --icon-size: 51.733333333333334px;
+    --icon-gap-x: 25.866666666666667px;
+    --icon-gap-y: 25.866666666666667px;
+    --icon-max-width: 1350px;
+    --icon-opacity: 1;
+    --icon-name: block;
+    --icon-nameSize: 12px;
+    --icon-nameColor: #fff;
+    --time-size: 64px;
+    --time-font: HarmonyOS_Sans;
+    --time-color: #fff;
+    --time-fontWeight: 600;
+    --time-month: inline;
+    --time-week: inline;
+    --time-lunar: inline;
+    --time-sec: inline;
+    --sidebar-width: 50px;
+    --sidebar-opacity: 0.4;
+    --wall-mask: 0;
+    --wall-blur: 0px;
+}
+
+body {
+    position: relative;
+    height: 100%;
+}
+
 .pt-100 {
     padding-top: 100%;
 }
 
+.px-2\.5 {
+    padding-left: .75rem;
+    padding-right: .75rem;
+}
+
+.border.pt-100 {
+    padding-top: calc(100% - 2px);
+}
+
 .h-0 {
     height: 0;
+}
+
+.rounded\:3 {
+    border-radius: .75rem;
 }
 
 .rounded\:4 {
@@ -16,6 +64,50 @@
 
 .rounded\:8 {
     border-radius: 2rem;
+}
+
+.top\:0 {
+    top: 0;
+}
+
+.right\:0 {
+    right: 0;
+}
+
+.right\:3 {
+    right: .75rem;
+}
+
+.bottom\:0 {
+    bottom: 0;
+}
+
+.left\:0 {
+    left: 0;
+}
+
+.left\:1 {
+    left: .25rem;
+}
+
+.left\:2 {
+    left: .5rem;
+}
+
+.left\:3 {
+    left: .75rem;
+}
+
+.wallpaper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transition: background .3s, transform .3s, height .3s;
+    background-size: cover;
+    background-position: 50%;
+    z-index: -1;
 }
 
 @media (min-width: 1480px) {

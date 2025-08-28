@@ -1,5 +1,4 @@
-(function ($, window, document, undefined) { })
-{
+(function ($, window, document, undefined) {
 
     $.fn.setCurrentTime = function (format = "hh:mm:ss") {
         var date = new Date();
@@ -23,4 +22,7 @@
     }
     $.fn.setCurrentData = function () { }
 
-} (jQuery, window, document)
+    $.fn.render = function (data, options) { }
+    $.fn.renderTab = function (data, options) { }
+    $.fn.renderTabContent = function (data, options) { }
+})(jQuery, window, document)

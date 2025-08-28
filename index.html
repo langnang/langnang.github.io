@@ -280,43 +280,56 @@
             const { navs } = res;
             let tabHtml = ``;
             let tabContentHtml = ``;
-            navs.forEach((nav, i) => {
-              tabHtml += `
-                        <li class="nav-item" role="presentation">
-                          <button class="nav-link btn-block text-light font-weight-bolder ${i == 0 ? "active" : ""}" id="${nav.slug}-tab" data-toggle="tab" data-target="#${nav.slug}" type="button" role="tab" aria-controls="${nav.slug}" aria-selected="true">
-                            ${nav.name || _.upperFirst(nav.slug)}
-                          </button>
-                        </li>
-                        `;
+            navs
+              .filter((v) => v.slug)
+              .forEach((nav, i) => {
+                tabHtml += `
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link btn-block text-light font-weight-bolder ${i == 0 ? "active" : ""}" id="${nav.slug}-tab" data-toggle="tab" data-target="#${nav.slug}" type="button" role="tab" aria-controls="${nav.slug}" aria-selected="true">
+                    ${nav.name || _.upperFirst(nav.slug)}
+                  </button>
+                </li>
+                `;
 
-              tabContentHtml += `<div class="tab-pane fade ${i == 0 ? "show active" : ""}" id="${nav.slug}" role="tabpanel" aria-labelledby="${nav.slug}-tab"> <div class="row row-cols-16 row-cols-sm-10 row-cols-md-12 text-center masonry">`;
-              tabContentHtml += `<div class="col col--1 row--1 masonry-item px-0 text-decoration-none" data-id="0"></div>`;
-              (nav.children || []).forEach((child, index) => {
-                tabContentHtml += `<div class="col col--${child.col || 1} row--${child.row || 1} masonry-item px-0 text-decoration-none" data-id="${index + 1}">`;
+                tabContentHtml += `<div class="tab-pane fade ${i == 0 ? "show active" : ""}" id="${nav.slug}" role="tabpanel" aria-labelledby="${nav.slug}-tab">`;
+                tabContentHtml += `<nav aria-label="breadcrumb">
+                  <ol class="breadcrumb py-0 justify-content-center bg-dark--4">
+                    <li class="breadcrumb-item active"><a href="#" class="badge badge-pill badge-primary">ALL</a></li>
+                  </ol>
+                </nav>`;
+                tabContentHtml += ` <div class="row row-cols-16 row-cols-sm-10 row-cols-md-12 text-center masonry">`;
+                tabContentHtml += `<div class="col col--1 row--1 masonry-item px-0 text-decoration-none" data-id="0"></div>`;
+                (nav.children || [])
+                  .filter((v) => v.slug)
+                  .forEach((child, index) => {
+                    tabContentHtml += `<div class="col col--${child.col || 1} row--${child.row || 1} masonry-item px-0 text-decoration-none" data-id="${index + 1}">`;
 
-                if (child.type == "link") {
-                  tabContentHtml += `
+                    if (child.type == "link") {
+                      tabContentHtml += `
                   <a class="card border-0" target="_blank" href="${child.url}" style="">
-                    <div class="card-body bg-light p-0 position-absolute" style="background-image: url(${child.ico || ""}); background-size: contain">
+                    <div class="card-body bg-light p-0 position-absolute" style="background-image: url(${child.ico || ""}); background-size: cover">
                     </div>
                     <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${child.title || child.name || _.upperFirst(child.slug)}</div>
                   </a>`;
-                } else if (child.type == "category") {
-                  tabContentHtml +=
-                    ` <div class="card border-0"  style="">
-                            <div class="card-body p-0 position-absolute" style="background-image: url(${child.ico || ""}); background-size: contain">` +
-                    `     <div class="row row-cols-3 mx-0 align-items-center" style="height: 100%;" data-toggle="modal" data-target="#${nav.slug}--${index}">` +
-                    (child.children || []).slice(0, 3).reduce(
-                      (tol, chd) =>
-                        tol +
-                        `<div class="col col--1 row--1 px-1">
-                              <div class="card border-0 bg-light" style="background-image: url(${chd.ico || ""}); background-size: contain">
+                    } else if (child.type == "category") {
+                      tabContentHtml +=
+                        ` <div class="card border-0"  style="">
+                            <div class="card-body p-0 position-absolute" style="background-image: url(${child.ico || ""}); background-size: cover">` +
+                        `     <div class="row row-cols-3 mx-0 align-items-center" style="height: 100%;" data-toggle="modal" data-target="#${nav.slug}--${index}">` +
+                        (child.children || [])
+                          .filter((v) => v.slug)
+                          .slice(0, 3)
+                          .reduce(
+                            (tol, chd) =>
+                              tol +
+                              `<div class="col col--1 row--1 px-1">
+                              <div class="card border-0 bg-light" style="background-image: url(${chd.ico || ""}); background-size: cover">
                               </div>
                              </div>`,
-                      ``
-                    ) +
-                    `     </div>` +
-                    `<div class="modal fade" id="${nav.slug}--${index}" tabindex="-1" aria-labelledby="${nav.slug}--${index}--label" aria-hidden="true">
+                            ``
+                          ) +
+                        `     </div>` +
+                        `<div class="modal fade" id="${nav.slug}--${index}" tabindex="-1" aria-labelledby="${nav.slug}--${index}--label" aria-hidden="true">
                         <div class="modal-dialog modal-lg modal-dialog-centered">
                           <div class="modal-content bg-transparent">
                             <div class="modal-body" style="background-color: rgba(255, 255, 255, .4);">
@@ -324,23 +337,24 @@
                           </div>
                         </div>
                       </div>` +
-                    `   </div>
+                        `   </div>
                             <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${child.title || child.name || _.upperFirst(child.slug)}</div>
                           </div>`;
-                } else {
-                  tabContentHtml += ` 
+                    } else {
+                      tabContentHtml += ` 
                   <div class="card border-0" style="">
-                    <div class="card-body bg-light p-0 position-absolute" style="background-image: url(${child.ico || ""}); background-size: contain">   </div>
+                    <div class="card-body bg-light p-0 position-absolute" style="background-image: url(${child.ico || ""}); background-size: cover">   </div>
                     <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${child.title || child.name || _.upperFirst(child.slug)}</div>
                   </div>`;
-                }
-                tabContentHtml += `</div>`;
+                    }
+                    tabContentHtml += `</div>`;
+                  });
+                tabContentHtml += `</div> </div>`;
               });
-              tabContentHtml += `</div> </div>`;
-            });
             $("#app-tab").html(tabHtml);
             $("#app-tab-content").html(tabContentHtml);
-            $(".masonry:nth-child(1)").masonry({
+            console.log($(".masonry").eq(0));
+            $(".masonry").eq(0).masonry({
               // options
               itemSelector: ".masonry-item",
               percentPosition: true,

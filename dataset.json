@@ -425,14 +425,99 @@
             "type": "category",
             "children": [
                 {
-                    "slug": "github"
+                    "slug": "github",
+                    "url": "https://github.com/",
+                    "ico": "https://github.com/favicon.ico",
+                    "type": "link"
                 },
                 {
-                    "slug": "gitlab"
+                    "slug": "gitlab",
+                    "url": "https://gitlab.com/",
+                    "ico": "https://gitlab.com/favicon.ico",
+                    "type": "link"
                 },
                 {
-                    "slug": "Byet"
-                }
+                    "slug": "gitee",
+                    "url": "https://gitee.com/",
+                    "ico": "https://gitee.com/favicon.ico",
+                    "type": "link"
+                },
+                {
+                    "slug": "bitbucket",
+                    "url": "https://bitbucket.org/",
+                    "ico": "https://bitbucket.org/favicon.ico",
+                    "type": "link"
+                },
+                {
+                    "slug": "Byet",
+                    "url": "https://byet.host/",
+                    "ico": "https://byet.host/favicon.ico",
+                    "type": "link"
+                },
+                {
+                    "slug": "codepen",
+                    "url": "https://codepen.io/",
+                    "ico": "https://codepen.io/favicon.ico",
+                    "type": "link"
+                },
+                {
+                    "slug": "codesandbox",
+                    "url": "https://codesandbox.io/",
+                    "ico": "https://codesandbox.io/favicon.ico",
+                    "type": "link"
+                },
+                {
+                    "slug": "vercel",
+                    "url": "https://vercel.com/",
+                    "ico": "https://vercel.com/favicon.ico",
+                    "type": "link"
+                },
+                {
+                    "slug": "cloudflare",
+                    "url": "https://www.cloudflare-cn.com/",
+                    "ico": "https://www.cloudflare-cn.com/favicon.ico",
+                    "type": "link"
+                },
+                {
+                    "slug": "zeabur",
+                    "url": "https://zeabur.com/",
+                    "ico": "https://zeabur.com/favicon-32x32.png",
+                    "type": "link"
+                },
+                {
+                    "slug": "netlify",
+                    "url": "https://www.netlify.com/",
+                    "ico": "https://www.netlify.com/favicon.ico",
+                    "type": "link"
+                },
+                {
+                    "slug": "railway",
+                    "url": "https://railway.com/",
+                    "ico": "https://railway.com/favicon.ico",
+                    "type": "link"
+                },
+                {
+                    "slug": "render",
+                    "url": "https://render.com/",
+                    "ico": "https://render.com/icon.svg",
+                    "type": "link"
+                },
+                {
+                    "slug": "fly.io",
+                    "url": "https://fly.io/",
+                    "ico": "https://fly.io/phx/ui/images/favicon/favicon-32x32-803ad2058b86df3f8a9f8af1505a59d2.png",
+                    "type": "link"
+                },
+                {
+                    "slug": "coolify",
+                    "url": "https://coolify.io/",
+                    "ico": "https://coolify.io/favicon.ico",
+                    "type": "link"
+                },
+                { "slug": "", "url": "", "ico": "", "type": "link" },
+                { "slug": "", "url": "", "ico": "", "type": "link" },
+                { "slug": "", "url": "", "ico": "", "type": "link" },
+                { "slug": "", "url": "", "ico": "", "type": "link" }
             ]
         },
         {
@@ -465,30 +550,57 @@
                 },
                 {
                     "slug": "jekyll",
-                    "url": "https://jekyllcn.com/"
+                    "url": "https://jekyllcn.com/",
+                    "ico": "https://jekyllcn.com/favicon.ico",
+                    "type": "link"
                 },
                 {
                     "slug": "Jenkins",
-                    "ico": "https://simpleicons.org/icons/jenkins.svg"
+                    "url": "https://www.jenkins.io/zh/",
+                    "ico": "https://www.jenkins.io/favicon.ico",
+                    "type": "link"
                 },
-                { "slug": "MediaWiki", "ico": "" },
+                {
+                    "slug": "MediaWiki",
+                    "url": "https://www.mediawiki.org/",
+                    "ico": "https://www.mediawiki.org/favicon.ico",
+                    "type": "link"
+                },
                 {
                     "slug": "Monsta-FTP",
-                    "ico": ""
+                    "url": "https://www.monstaftp.com/",
+                    "ico": "https://www.monstaftp.com/favicon.ico",
+                    "type": "link"
                 },
                 {
                     "slug": "SkyCaiji",
-                    "ico": ""
+                    "url": "https://www.skycaiji.com/",
+                    "ico": "https://www.skycaiji.com/favicon.ico",
+                    "type": "link"
                 },
                 {
                     "slug": "Typecho",
-                    "ico": ""
+                    "url": "https://typecho.org/",
+                    "ico": "https://typecho.org/usr/themes/bluecode/img/typecho-logo.png",
+                    "type": "link"
                 },
                 {
                     "slug": "WordPress",
-                    "ico": "https://simpleicons.org/icons/wordpress.svg"
+                    "url": "https://cn.wordpress.org/",
+                    "ico": "https://cn.wordpress.org/favicon.ico",
+                    "type": "link"
+                },
+                {
+                    "slug": "softaculous",
+                    "url": "https://www.softaculous.com/",
+                    "ico": "https://www.softaculous.com/favicon.ico",
+                    "type": "link"
                 }
             ]
+        },
+        {
+            "slug": "solution",
+            "type": "category"
         }
     ],
     "links": [],
@@ -505,9 +617,11 @@
         "grid": {
             "cols-12": {},
             "cols-14": {},
+            "cols-15": {},
             "cols-16": {},
             "cols-18": {},
             "cols-20": {},
+            "cols-21": {},
             "cols-22": {},
             "cols-24": {}
         },

@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "metas": [
+  "navs": [
     {
       "slug": "langnang",
       "name": "~",
@@ -41,56 +41,81 @@
         { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
         { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
         { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
+        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
         { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 }
+      ]
+    },
+    { "slug": "application", "name": "", "type": "category", "children": [] },
+    {
+      "slug": "framework",
+      "name": "",
+      "type": "category",
+      "children": []
+    },
+    { "slug": "icon", "name": "", "type": "category", "children": [] },
+    { "slug": "platform", "name": "", "type": "category", "children": [] },
+    { "slug": "software", "name": "", "type": "category", "children": [] },
+    { "slug": "langnang", "name": "", "type": "category", "children": [] },
+    { "slug": "langnang", "name": "", "type": "category", "children": [] }
+  ],
+  "metas": [
+    {
+      "slug": "langnang",
+      "name": "~",
+      "type": "category",
+      "children": [
+        { "slug": "docs", "title": "", "url": "https://langnang.github.io/docs/", "ico": "./favicon.ico", "type": "link", "row": 1, "col": 1 },
+        { "slug": "docs", "title": "", "url": "https://langnang.github.io/docs/", "ico": "./favicon.ico", "row": 1, "col": 1 },
+        { "slug": "langnang_database", "name": "Database", "type": "category", "row": 1, "col": 2, "children": [] },
+        {
+          "slug": "langnang_device",
+          "name": "Device",
+          "type": "category",
+          "row": 1,
+          "col": 2,
+          "children": [
+            { "slug": "laptop", "ico": "./favicon.ico" },
+            { "slug": "desktop", "ico": "./favicon.ico" },
+            { "slug": "fnos", "ico": "./favicon.ico" },
+            { "slug": "vm-wss-2016", "ico": "./favicon.ico" }
+          ]
+        }
       ]
     },
     {
       "slug": "application",
       "type": "category",
       "children": [
-        { "slug": "langnang_database", "type": "category", "row": 1, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 }
+        { "slug": "cpolar", "title": "", "url": "https://www.cpolar.com/", "ico": "https://dashboard.cpolar.com/static/img/favicon.ico", "row": 1, "col": 1 },
+        { "slug": "fnos", "title": "fnOS", "url": "https://fnnas.com/", "ico": "https://fnnas.com/favicon.ico", "row": 1, "col": 1 }
       ]
     },
-    { "slug": "framework", "type": "category" },
-    { "slug": "icon", "type": "category", "children": ["bootstrap-icons"] },
-    { "slug": "platform", "type": "category" },
+    {
+      "slug": "framework",
+      "type": "category",
+      "children": [
+        { "slug": "laravel", "title": "Laravel", "url": "https://laravel.com/", "ico": "https://laravel.com/img/favicon/favicon.ico", "row": 1, "col": 1 },
+        { "slug": "lumen", "title": "Lumen", "url": "https://lumen.golaravel.com/", "ico": "https://lumen.golaravel.com/img/favicons/favicon-32x32.png", "row": 1, "col": 1 }
+      ]
+    },
+    {
+      "slug": "package",
+      "type": "category",
+      "children": [
+        { "slug": "bootstrap-icons", "title": "Bootstrap 图标库 · Bootstrap 官方开源图标（icon）库", "url": "https://icons.bootcss.com/", "ico": "https://icons.bootcss.com/favicon.ico" },
+        { "slug": "simple-icons", "title": "Simple Icons", "url": "https://simpleicons.org/", "ico": "https://simpleicons.org/favicon.ico" }
+      ]
+    },
+    { "slug": "platform", "type": "category", "children": [{ "slug": "github" }, { "slug": "gitlab" }, { "slug": "Byet" }] },
     {
       "slug": "software",
       "type": "category",
-      "children": [
-        { "slug": "langnang_database", "type": "category", "row": 1, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 }
-      ]
+      "children": [{ "slug": "Jenkins" }, { "slug": "MediaWiki" }, { "slug": "Monsta-FTP" }, { "slug": "SkyCaiji" }, { "slug": "Typecho" }, { "slug": "WordPress" }]
     }
   ],
-  "links": [{ "slug": "docs", "title": "", "url": "https://langnang.github.io/docs/", "ico": "", "row": 1, "col": 1 }, { "slug": "cpolar", "title": "", "url": "https://www.cpolar.com/", "ico": "https://dashboard.cpolar.com/static/img/favicon.ico", "row": 1, "col": 1 }, { "slug": "fnos", "title": "fnOS", "url": "https://fnnas.com/", "ico": "https://fnnas.com/favicon.ico", "row": 1, "col": 1 }, { "slug": "mysql", "title": "MySQL", "url": "https://langnang.github.io/docs/", "ico": "", "row": 1, "col": 1 }, { "slug": "laravel", "title": "Laravel", "url": "https://laravel.com/", "ico": "https://laravel.com/img/favicon/favicon.ico", "row": 1, "col": 1 }, { "slug": "lumen", "title": "Lumen", "url": "https://lumen.golaravel.com/", "ico": "https://lumen.golaravel.com/img/favicons/favicon-32x32.png", "row": 1, "col": 1 }, { "slug": "Jenkins" }, { "slug": "MediaWiki" }, { "slug": "Monsta-FTP" }, { "slug": "SkyCaiji" }, { "slug": "Typecho" }, { "slug": "WordPress" }, { "slug": "Byet" }, { "slug": "bootstrap-icons", "title": "Bootstrap 图标库 · Bootstrap 官方开源图标（icon）库", "url": "https://icons.bootcss.com/" }, { "slug": "" }, { "slug": "" }, { "slug": "" }, { "slug": "" }, { "slug": "" }, { "slug": "" }, { "slug": "" }],
+  "links": [{ "slug": "mysql", "title": "MySQL", "url": "https://langnang.github.io/docs/", "ico": "./favicon.ico", "row": 1, "col": 1 }],
 
   "relationships": [
-    { "meta": "langnang", "link": "docs" },
     { "meta": "application", "link": "cpolar" },
     { "meta": "application", "link": "fnos" },
     { "meta": "database", "link": "mysql" },

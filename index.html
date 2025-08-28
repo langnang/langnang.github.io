@@ -153,8 +153,9 @@
     <script src="https://unpkg.com/moment@2.30.1/min/locales.min.js"></script>
     <script src="https://unpkg.com/moment-lunar@0.0.4/moment-lunar.js"></script>
 
+    <script src="https://unpkg.com/js-calendar-converter@0.0.7/dist/js-calendar-converter.js"></script>
     <script src="https://unpkg.com/lodash@4.17.21/lodash.min.js"></script>
-    <script src="https://unpkg.com/simple-ini@1.0.4/lib/simple-ini.js"></script>
+    <!-- <script src="https://unpkg.com/simple-ini@1.0.4/lib/simple-ini.js"></script> -->
 
     <script src="./script.js"></script>
     <script>
@@ -163,7 +164,10 @@
         setInterval(function () {
           $("#app-time").text(moment().format("HH:mm:ss"));
         }, 500);
-        $("#app-date").text(moment().format("M月D日 dddd") + " " + moment().lunar().format("MMMMDo"));
+        console.log([moment().year(), moment().month() + 1, moment().date()]);
+        const currentLunar = calendar.solar2lunar(moment().year(), moment().month() + 1, moment().date());
+        console.log(currentLunar);
+        $("#app-date").text(moment().format("M月D日 dddd") + " " + currentLunar.IMonthCn + currentLunar.IDayCn);
       });
       function getTime() {
         var date = new Date();
@@ -294,7 +298,7 @@
                 tabContentHtml += `<div class="tab-pane fade ${i == 0 ? "show active" : ""}" id="${nav.slug}" role="tabpanel" aria-labelledby="${nav.slug}-tab">`;
                 tabContentHtml += `<nav aria-label="breadcrumb">
                   <ol class="breadcrumb py-0 justify-content-center bg-dark--4">
-                    <li class="breadcrumb-item active"><a href="#" class="badge badge-pill badge-primary">ALL</a></li>
+                    <li class="breadcrumb-item active"><a href="#" class="badge badge-primary">ALL</a></li>
                   </ol>
                 </nav>`;
                 tabContentHtml += ` <div class="row row-cols-16 row-cols-sm-10 row-cols-md-12 text-center masonry">`;
@@ -307,14 +311,14 @@
                     if (child.type == "link") {
                       tabContentHtml += `
                   <a class="card border-0" target="_blank" href="${child.url}" style="">
-                    <div class="card-body bg-light p-0 position-absolute" style="background-image: url(${child.ico || ""}); background-size: cover">
+                    <div class="card-body bg-light p-0 position-absolute" style="background-image: url(${child.ico || ""}); ">
                     </div>
                     <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${child.title || child.name || _.upperFirst(child.slug)}</div>
                   </a>`;
                     } else if (child.type == "category") {
                       tabContentHtml +=
                         ` <div class="card border-0"  style="">
-                            <div class="card-body p-0 position-absolute" style="background-image: url(${child.ico || ""}); background-size: cover">` +
+                            <div class="card-body p-0 position-absolute" style="background-image: url(${child.ico || ""}); ">` +
                         `     <div class="row row-cols-3 mx-0 align-items-center" style="height: 100%;" data-toggle="modal" data-target="#${nav.slug}--${index}">` +
                         (child.children || [])
                           .filter((v) => v.slug)
@@ -323,7 +327,7 @@
                             (tol, chd) =>
                               tol +
                               `<div class="col col--1 row--1 px-1">
-                              <div class="card border-0 bg-light" style="background-image: url(${chd.ico || ""}); background-size: cover">
+                              <div class="card border-0 bg-light" style="background-image: url(${chd.ico || ""}); ">
                               </div>
                              </div>`,
                             ``
@@ -331,8 +335,24 @@
                         `     </div>` +
                         `<div class="modal fade" id="${nav.slug}--${index}" tabindex="-1" aria-labelledby="${nav.slug}--${index}--label" aria-hidden="true">
                         <div class="modal-dialog modal-lg modal-dialog-centered">
-                          <div class="modal-content bg-transparent">
-                            <div class="modal-body" style="background-color: rgba(255, 255, 255, .4);">
+                          <div class="modal-content bg-transparent border-0">
+                            <div class="modal-body rounded" style="background-color: rgba(255, 255, 255, .4);">
+                              ${
+                                `<div class="row row-cols-10">` +
+                                (child.children || [])
+                                  .filter((v) => v.slug)
+                                  .reduce(
+                                    (tol, chd, ind) =>
+                                      tol +
+                                      `<div class="col px-1"><a class="card border-0" target="_blank" href="${chd.url}">
+                                <div class="card-body bg-light p-0 position-absolute" style="background-image: url(${chd.ico || ""}); ">
+                    </div>
+                    <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${chd.title || chd.name || _.upperFirst(chd.slug)}</div>
+                                </a></div>`,
+                                    ""
+                                  ) +
+                                `</div>`
+                              }
                             </div>
                           </div>
                         </div>
@@ -341,9 +361,9 @@
                             <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${child.title || child.name || _.upperFirst(child.slug)}</div>
                           </div>`;
                     } else {
-                      tabContentHtml += ` 
+                      tabContentHtml += `
                   <div class="card border-0" style="">
-                    <div class="card-body bg-light p-0 position-absolute" style="background-image: url(${child.ico || ""}); background-size: cover">   </div>
+                    <div class="card-body bg-light p-0 position-absolute" style="background-image: url(${child.ico || ""}); ">   </div>
                     <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${child.title || child.name || _.upperFirst(child.slug)}</div>
                   </div>`;
                     }

@@ -1,648 +1,649 @@
 {
-    "type": "grade",
-    "children": [
+  "type": "grade",
+  "children": [
+    {
+      "type": "category",
+      "children": [
         {
-            "type": "category",
-            "children": [
+          "type": "layer",
+          "children": [
+            {
+              "type": "group",
+              "children": [
                 {
-                    "type": "layer",
-                    "children": [
-                        {
-                            "type": "group",
-                            "children": [
-                                {
-                                    "type": "set"
-                                }
-                            ]
-                        }
-                    ]
+                  "type": "set"
                 }
-            ]
+              ]
+            }
+          ]
         }
-    ],
-    "navs": [
-        {
-            "slug": "langnang",
-            "name": "~",
-            "type": "category",
-            "children": [
-                {
-                    "slug": "docs",
-                    "title": "",
-                    "url": "https://langnang.github.io/docs/",
-                    "ico": "https://simpleicons.org/icons/jekyll.svg",
-                    "type": "link"
-                },
-                {
-                    "slug": "langnang_database",
-                    "name": "Database",
-                    "type": "category",
-                    "row": 1,
-                    "col": 2,
-                    "children": [
-                        {
-                            "slug": "sqlite3",
-                            "ico": "https://simpleicons.org/icons/sqlite.svg"
-                        },
-                        {
-                            "slug": "mysql",
-                            "ico": "https://simpleicons.org/icons/mysql.svg"
-                        },
-                        {
-                            "slug": "postgresql",
-                            "ico": "https://simpleicons.org/icons/postgresql.svg"
-                        }
-                    ]
-                },
-                {
-                    "slug": "langnang_device",
-                    "name": "Device",
-                    "type": "category",
-                    "row": 1,
-                    "col": 2,
-                    "children": [
-                        {
-                            "slug": "laptop",
-                            "ico": ""
-                        },
-                        {
-                            "slug": "desktop",
-                            "ico": ""
-                        },
-                        {
-                            "slug": "fnos",
-                            "ico": ""
-                        },
-                        {
-                            "slug": "vm-wss-2016",
-                            "ico": ""
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "slug": "application",
-            "type": "category",
-            "children": [
-                {
-                    "slug": "cpolar",
-                    "title": "",
-                    "url": "https://www.cpolar.com/",
-                    "ico": "https://dashboard.cpolar.com/static/img/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "fnos",
-                    "title": "fnOS",
-                    "url": "https://fnnas.com/",
-                    "ico": "https://fnnas.com/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "git",
-                    "title": "Git",
-                    "url": "https://git-scm.com/",
-                    "ico": "https://git-scm.com/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "AndroidStudio",
-                    "title": "",
-                    "url": "https://android-docs.cn/",
-                    "ico": "https://android-docs.cn/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "7-zip",
-                    "title": "7-Zip",
-                    "url": "https://www.7-zip.org/",
-                    "ico": "https://www.7-zip.org/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "BaiduNetDisk",
-                    "title": "",
-                    "url": "https://pan.baidu.com/",
-                    "ico": "https://nd-static.bdstatic.com/m-static/v20-main/favicon-main.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "Composer",
-                    "title": "",
-                    "url": "https://getcomposer.org/",
-                    "ico": "https://getcomposer.org/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "DiskGenius",
-                    "title": "数据恢复软件，硬盘分区工具，系统备份软件 - DiskGenius官方网站",
-                    "url": "https://www.diskgenius.cn/",
-                    "ico": "https://www.diskgenius.cn/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "Everything",
-                    "title": "",
-                    "url": "https://www.voidtools.com/zh-cn/",
-                    "ico": "https://www.voidtools.com/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "FileZilla",
-                    "title": "",
-                    "url": "https://filezilla-project.org/",
-                    "ico": "https://filezilla-project.org/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "Foxmail",
-                    "title": "",
-                    "url": "https://www.foxmail.com/",
-                    "ico": "https://www.foxmail.com/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "GoogleChrome",
-                    "title": "",
-                    "url": "https://www.google.cn/chrome/",
-                    "ico": "https://www.google.cn/chrome/static/images/favicons/favicon-32x32.png",
-                    "type": "link"
-                },
-                {
-                    "slug": "NotePad++",
-                    "title": "",
-                    "url": "http://www.notepadplus.com.cn/",
-                    "ico": "http://www.notepadplus.com.cn/index_files/29018445_29018445_1477567217625.jpg",
-                    "type": "link"
-                },
-                {
-                    "slug": "Nutstore",
-                    "title": "",
-                    "url": "https://www.jianguoyun.com/",
-                    "ico": "https://www.jianguoyun.com/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "Phpts",
-                    "title": "",
-                    "url": "https://www.phpts.com/",
-                    "ico": "https://cdn.phpts.cn/phpts/www/static/images/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "PotPlayer",
-                    "title": "",
-                    "url": "http://www.potplayercn.com/",
-                    "ico": "http://www.potplayercn.com/wp-content/themes/pot/images/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "ScreenToGif",
-                    "title": "",
-                    "url": "https://www.screentogif.com/",
-                    "ico": "https://www.screentogif.com/logos/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "Snipaste",
-                    "title": "",
-                    "url": "https://zh.snipaste.com/",
-                    "ico": "https://zh.snipaste.com/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "Stream",
-                    "title": "",
-                    "url": "https://store.steampowered.com/",
-                    "ico": "https://store.steampowered.com/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "TeleportUltra",
-                    "title": "",
-                    "url": "",
-                    "ico": ""
-                },
-                {
-                    "slug": "Thunder",
-                    "title": "",
-                    "url": "https://dl.xunlei.com/",
-                    "ico": "https://dl.xunlei.com/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "TortoiseGit",
-                    "title": "",
-                    "url": "https://tortoisegit.org/",
-                    "ico": "https://tortoisegit.org/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "TortoiseSVN",
-                    "title": "",
-                    "url": "https://tortoisesvn.cn/",
-                    "ico": "https://tortoisesvn.cn/assets/img/favicons/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "Typora",
-                    "title": "",
-                    "url": "https://typoraio.cn/",
-                    "ico": "https://typoraio.cn/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "VeraCrypt",
-                    "title": "",
-                    "url": "https://veracrypt.io/",
-                    "ico": "https://veracrypt.io/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "Vmr",
-                    "title": "",
-                    "url": "",
-                    "ico": "",
-                    "type": "link"
-                },
-                {
-                    "slug": "VMwareWorkstation",
-                    "title": "",
-                    "url": "https://www.vmware.com/",
-                    "ico": "https://www.vmware.com/vm-favicon.png",
-                    "type": "link"
-                },
-                {
-                    "name": "JetBrains",
-                    "type": "category",
-                    "col": 2,
-                    "children": [
-                        {
-                            "slug": "WebStorm",
-                            "title": "",
-                            "url": "https://www.jetbrains.com/webstorm/",
-                            "ico": "https://www.jetbrains.com/webstorm/favicon.ico",
-                            "type": "link"
-                        },
-                        {
-                            "slug": "PhpStorm",
-                            "title": "",
-                            "url": "https://www.jetbrains.com/phpstorm/",
-                            "ico": "https://www.jetbrains.com/phpstorm/favicon.ico",
-                            "type": "link"
-                        }
-                    ]
-                },
-                {
-                    "slug": "JianPian",
-                    "title": "",
-                    "url": "https://www.jianpian.com/",
-                    "ico": "https://www.jianpian.com/assets/favicon-CAXq-URH.ico",
-                    "type": "link"
-                },
-                {
-                    "name": "Microsoft",
-                    "type": "category",
-                    "col": 2,
-                    "children": [
-                        {
-                            "slug": "Edge",
-                            "title": "",
-                            "url": "https://www.microsoft.com/zh-cn/edge/",
-                            "ico": "https://edgestatic.azureedge.net/welcome/static/favicon.png",
-                            "type": "link"
-                        },
-                        {
-                            "slug": "OneDrive",
-                            "title": "",
-                            "url": "https://www.microsoft.com/zh-cn/microsoft-365/onedrive/online-cloud-storage",
-                            "ico": "https://www.microsoft.com/favicon.ico",
-                            "type": "link"
-                        },
-                        {
-                            "slug": "VisualStudio",
-                            "title": "",
-                            "url": "https://visualstudio.microsoft.com/zh-hans/",
-                            "ico": "https://visualstudio.microsoft.com/favicon.ico",
-                            "type": "link"
-                        },
-                        {
-                            "slug": "VisualStudioCode",
-                            "title": "",
-                            "url": "https://code.visualstudio.com/",
-                            "ico": "https://code.visualstudio.com/favicon.ico",
-                            "type": "link"
-                        }
-                    ]
-                },
-                {
-                    "slug": "WindowsTerminal",
-                    "title": "",
-                    "url": "",
-                    "ico": ""
-                },
-                {
-                    "slug": "WinMerge",
-                    "title": "",
-                    "url": "https://winmerge.org/",
-                    "ico": "https://winmerge.org/favicon.ico",
-                    "type": "link"
-                }
-            ]
-        },
-        {
-            "slug": "framework",
-            "type": "category",
-            "children": [
-                {
-                    "slug": "html",
-                    "type": "category",
-                    "col": 3,
-                    "children": []
-                },
-                {
-                    "slug": "node",
-                    "type": "category",
-                    "col": 3,
-                    "children": []
-                },
-                {
-                    "slug": "php",
-                    "type": "category",
-                    "col": 3,
-                    "children": []
-                },
-                {
-                    "slug": "composer",
-                    "type": "category",
-                    "col": 3,
-                    "children": []
-                },
-                {
-                    "slug": "laravel",
-                    "title": "Laravel",
-                    "url": "https://laravel.com/",
-                    "ico": "https://laravel.com/img/favicon/favicon.ico"
-                },
-                {
-                    "slug": "lumen",
-                    "title": "Lumen",
-                    "url": "https://lumen.golaravel.com/",
-                    "ico": "https://lumen.golaravel.com/img/favicons/favicon-32x32.png"
-                }
-            ]
-        },
-        {
-            "slug": "package",
-            "type": "category",
-            "children": [
-                {
-                    "slug": "icon",
-                    "name": "Icon",
-                    "type": "category",
-                    "row": 1,
-                    "col": 2,
-                    "children": [
-                        {
-                            "slug": "bootstrap-icons",
-                            "title": "Bootstrap 图标库 · Bootstrap 官方开源图标（icon）库",
-                            "url": "https://icons.bootcss.com/",
-                            "ico": "https://icons.bootcss.com/favicon.ico"
-                        },
-                        {
-                            "slug": "simple-icons",
-                            "title": "Simple Icons",
-                            "url": "https://simpleicons.org/",
-                            "ico": "https://simpleicons.org/favicon.ico"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "slug": "platform",
-            "type": "category",
-            "children": [
-                {
-                    "slug": "github",
-                    "url": "https://github.com/",
-                    "ico": "https://github.com/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "gitlab",
-                    "url": "https://gitlab.com/",
-                    "ico": "https://gitlab.com/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "gitee",
-                    "url": "https://gitee.com/",
-                    "ico": "https://gitee.com/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "bitbucket",
-                    "url": "https://bitbucket.org/",
-                    "ico": "https://bitbucket.org/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "Byet",
-                    "url": "https://byet.host/",
-                    "ico": "https://byet.host/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "codepen",
-                    "url": "https://codepen.io/",
-                    "ico": "https://codepen.io/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "codesandbox",
-                    "url": "https://codesandbox.io/",
-                    "ico": "https://codesandbox.io/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "vercel",
-                    "url": "https://vercel.com/",
-                    "ico": "https://vercel.com/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "cloudflare",
-                    "url": "https://www.cloudflare-cn.com/",
-                    "ico": "https://www.cloudflare-cn.com/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "zeabur",
-                    "url": "https://zeabur.com/",
-                    "ico": "https://zeabur.com/favicon-32x32.png",
-                    "type": "link"
-                },
-                {
-                    "slug": "netlify",
-                    "url": "https://www.netlify.com/",
-                    "ico": "https://www.netlify.com/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "railway",
-                    "url": "https://railway.com/",
-                    "ico": "https://railway.com/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "render",
-                    "url": "https://render.com/",
-                    "ico": "https://render.com/icon.svg",
-                    "type": "link"
-                },
-                {
-                    "slug": "fly.io",
-                    "url": "https://fly.io/",
-                    "ico": "https://fly.io/phx/ui/images/favicon/favicon-32x32-803ad2058b86df3f8a9f8af1505a59d2.png",
-                    "type": "link"
-                },
-                {
-                    "slug": "coolify",
-                    "url": "https://coolify.io/",
-                    "ico": "https://coolify.io/favicon.ico",
-                    "type": "link"
-                },
-                { "slug": "", "url": "", "ico": "", "type": "link" },
-                { "slug": "", "url": "", "ico": "", "type": "link" },
-                { "slug": "", "url": "", "ico": "", "type": "link" },
-                { "slug": "", "url": "", "ico": "", "type": "link" }
-            ]
-        },
-        {
-            "slug": "software",
-            "type": "category",
-            "children": [
-                {
-                    "slug": "html",
-                    "type": "category",
-                    "col": 3,
-                    "children": []
-                },
-                {
-                    "slug": "node",
-                    "type": "category",
-                    "col": 3,
-                    "children": []
-                },
-                {
-                    "slug": "php",
-                    "type": "category",
-                    "col": 3,
-                    "children": []
-                },
-                {
-                    "slug": "composer",
-                    "type": "category",
-                    "col": 3,
-                    "children": []
-                },
-                {
-                    "slug": "jekyll",
-                    "url": "https://jekyllcn.com/",
-                    "ico": "https://jekyllcn.com/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "Jenkins",
-                    "url": "https://www.jenkins.io/zh/",
-                    "ico": "https://www.jenkins.io/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "MediaWiki",
-                    "url": "https://www.mediawiki.org/",
-                    "ico": "https://www.mediawiki.org/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "Monsta-FTP",
-                    "url": "https://www.monstaftp.com/",
-                    "ico": "https://www.monstaftp.com/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "SkyCaiji",
-                    "url": "https://www.skycaiji.com/",
-                    "ico": "https://www.skycaiji.com/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "Typecho",
-                    "url": "https://typecho.org/",
-                    "ico": "https://typecho.org/usr/themes/bluecode/img/typecho-logo.png",
-                    "type": "link"
-                },
-                {
-                    "slug": "WordPress",
-                    "url": "https://cn.wordpress.org/",
-                    "ico": "https://cn.wordpress.org/favicon.ico",
-                    "type": "link"
-                },
-                {
-                    "slug": "softaculous",
-                    "url": "https://www.softaculous.com/",
-                    "ico": "https://www.softaculous.com/favicon.ico",
-                    "type": "link"
-                }
-            ]
-        },
-        {
-            "slug": "solution",
-            "type": "category"
-        }
-    ],
-    "links": [],
-    "relationships": [],
-    "options": {
-        "layout": {},
-        "sidebar": {},
-        "header": {},
-        "aside": {},
-        "main": {},
-        "container": {},
-        "footer": {},
-        "engines": [{ "name": "baidu" }, { "name": "bing" }],
-        "grid": {
-            "cols-12": {},
-            "cols-14": {},
-            "cols-15": {},
-            "cols-16": {},
-            "cols-18": {},
-            "cols-20": {},
-            "cols-21": {},
-            "cols-22": {},
-            "cols-24": {}
-        },
-        "card": {
-            "1x1": {},
-            "1x2": {},
-            "1x3": {},
-            "1x4": {},
-            "2x1": {},
-            "2x2": {},
-            "2x3": {},
-            "2x4": {},
-            "3x1": {},
-            "3x2": {},
-            "3x3": {},
-            "3x4": {},
-            "4x1": {},
-            "4x2": {},
-            "4x3": {},
-            "4x4": {}
-        },
-        "modal": {}
+      ]
     }
+  ],
+  "navs": [
+    {
+      "slug": "langnang",
+      "name": "~",
+      "type": "category",
+      "children": [
+        {
+          "slug": "docs",
+          "title": "",
+          "url": "https://langnang.github.io/docs/",
+          "ico": "https://simpleicons.org/icons/jekyll.svg",
+          "type": "link"
+        },
+        {
+          "slug": "langnang_database",
+          "name": "Database",
+          "type": "category",
+          "row": 1,
+          "col": 2,
+          "children": [
+            {
+              "slug": "sqlite3",
+              "ico": "https://simpleicons.org/icons/sqlite.svg"
+            },
+            {
+              "slug": "mysql",
+              "ico": "https://simpleicons.org/icons/mysql.svg"
+            },
+            {
+              "slug": "postgresql",
+              "ico": "https://simpleicons.org/icons/postgresql.svg"
+            }
+          ]
+        },
+        {
+          "slug": "langnang_device",
+          "name": "Device",
+          "type": "category",
+          "row": 1,
+          "col": 2,
+          "children": [
+            {
+              "slug": "laptop",
+              "ico": ""
+            },
+            {
+              "slug": "desktop",
+              "ico": ""
+            },
+            {
+              "slug": "fnos",
+              "ico": ""
+            },
+            {
+              "slug": "vm-wss-2016",
+              "ico": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "application",
+      "type": "category",
+      "children": [
+        {
+          "slug": "cpolar",
+          "title": "",
+          "url": "https://www.cpolar.com/",
+          "ico": "https://dashboard.cpolar.com/static/img/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "fnos",
+          "title": "fnOS",
+          "url": "https://fnnas.com/",
+          "ico": "https://fnnas.com/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "git",
+          "title": "Git",
+          "url": "https://git-scm.com/",
+          "ico": "https://git-scm.com/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "AndroidStudio",
+          "title": "",
+          "url": "https://android-docs.cn/",
+          "ico": "https://android-docs.cn/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "7-zip",
+          "title": "7-Zip",
+          "url": "https://www.7-zip.org/",
+          "ico": "https://www.7-zip.org/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "BaiduNetDisk",
+          "title": "",
+          "url": "https://pan.baidu.com/",
+          "ico": "https://nd-static.bdstatic.com/m-static/v20-main/favicon-main.ico",
+          "type": "link"
+        },
+        {
+          "slug": "Composer",
+          "title": "",
+          "url": "https://getcomposer.org/",
+          "ico": "https://getcomposer.org/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "DiskGenius",
+          "title": "数据恢复软件，硬盘分区工具，系统备份软件 - DiskGenius官方网站",
+          "url": "https://www.diskgenius.cn/",
+          "ico": "https://www.diskgenius.cn/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "Everything",
+          "title": "",
+          "url": "https://www.voidtools.com/zh-cn/",
+          "ico": "https://www.voidtools.com/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "FileZilla",
+          "title": "",
+          "url": "https://filezilla-project.org/",
+          "ico": "https://filezilla-project.org/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "Foxmail",
+          "title": "",
+          "url": "https://www.foxmail.com/",
+          "ico": "https://www.foxmail.com/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "GoogleChrome",
+          "title": "",
+          "url": "https://www.google.cn/chrome/",
+          "ico": "https://www.google.cn/chrome/static/images/favicons/favicon-32x32.png",
+          "type": "link"
+        },
+        {
+          "slug": "NotePad++",
+          "title": "",
+          "url": "http://www.notepadplus.com.cn/",
+          "ico": "http://www.notepadplus.com.cn/index_files/29018445_29018445_1477567217625.jpg",
+          "type": "link"
+        },
+        {
+          "slug": "Nutstore",
+          "title": "",
+          "url": "https://www.jianguoyun.com/",
+          "ico": "https://www.jianguoyun.com/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "Phpts",
+          "title": "",
+          "url": "https://www.phpts.com/",
+          "ico": "https://cdn.phpts.cn/phpts/www/static/images/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "PotPlayer",
+          "title": "",
+          "url": "http://www.potplayercn.com/",
+          "ico": "http://www.potplayercn.com/wp-content/themes/pot/images/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "ScreenToGif",
+          "title": "",
+          "url": "https://www.screentogif.com/",
+          "ico": "https://www.screentogif.com/logos/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "Snipaste",
+          "title": "",
+          "url": "https://zh.snipaste.com/",
+          "ico": "https://zh.snipaste.com/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "Stream",
+          "title": "",
+          "url": "https://store.steampowered.com/",
+          "ico": "https://store.steampowered.com/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "TeleportUltra",
+          "title": "",
+          "url": "",
+          "ico": ""
+        },
+        {
+          "slug": "Thunder",
+          "title": "",
+          "url": "https://dl.xunlei.com/",
+          "ico": "https://dl.xunlei.com/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "TortoiseGit",
+          "title": "",
+          "url": "https://tortoisegit.org/",
+          "ico": "https://tortoisegit.org/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "TortoiseSVN",
+          "title": "",
+          "url": "https://tortoisesvn.cn/",
+          "ico": "https://tortoisesvn.cn/assets/img/favicons/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "Typora",
+          "title": "",
+          "url": "https://typoraio.cn/",
+          "ico": "https://typoraio.cn/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "VeraCrypt",
+          "title": "",
+          "url": "https://veracrypt.io/",
+          "ico": "https://veracrypt.io/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "Vmr",
+          "title": "",
+          "url": "",
+          "ico": "",
+          "type": "link"
+        },
+        {
+          "slug": "VMwareWorkstation",
+          "title": "",
+          "url": "https://www.vmware.com/",
+          "ico": "https://www.vmware.com/vm-favicon.png",
+          "type": "link"
+        },
+        {
+          "name": "JetBrains",
+          "type": "category",
+          "col": 2,
+          "children": [
+            {
+              "slug": "WebStorm",
+              "title": "",
+              "url": "https://www.jetbrains.com/webstorm/",
+              "ico": "https://www.jetbrains.com/webstorm/favicon.ico",
+              "type": "link"
+            },
+            {
+              "slug": "PhpStorm",
+              "title": "",
+              "url": "https://www.jetbrains.com/phpstorm/",
+              "ico": "https://www.jetbrains.com/phpstorm/favicon.ico",
+              "type": "link"
+            }
+          ]
+        },
+        {
+          "slug": "JianPian",
+          "title": "",
+          "url": "https://www.jianpian.com/",
+          "ico": "https://www.jianpian.com/assets/favicon-CAXq-URH.ico",
+          "type": "link"
+        },
+        {
+          "name": "Microsoft",
+          "type": "category",
+          "col": 2,
+          "children": [
+            {
+              "slug": "Edge",
+              "title": "",
+              "url": "https://www.microsoft.com/zh-cn/edge/",
+              "ico": "https://edgestatic.azureedge.net/welcome/static/favicon.png",
+              "type": "link"
+            },
+            {
+              "slug": "OneDrive",
+              "title": "",
+              "url": "https://www.microsoft.com/zh-cn/microsoft-365/onedrive/online-cloud-storage",
+              "ico": "https://www.microsoft.com/favicon.ico",
+              "type": "link"
+            },
+            {
+              "slug": "VisualStudio",
+              "title": "",
+              "url": "https://visualstudio.microsoft.com/zh-hans/",
+              "ico": "https://visualstudio.microsoft.com/favicon.ico",
+              "type": "link"
+            },
+            {
+              "slug": "VisualStudioCode",
+              "title": "",
+              "url": "https://code.visualstudio.com/",
+              "ico": "https://code.visualstudio.com/favicon.ico",
+              "type": "link"
+            }
+          ]
+        },
+        {
+          "slug": "WindowsTerminal",
+          "title": "",
+          "url": "",
+          "ico": ""
+        },
+        {
+          "slug": "WinMerge",
+          "title": "",
+          "url": "https://winmerge.org/",
+          "ico": "https://winmerge.org/favicon.ico",
+          "type": "link"
+        }
+      ]
+    },
+    { "slug": "Extension", "type": "category", "children": [] },
+    {
+      "slug": "framework",
+      "type": "category",
+      "children": [
+        {
+          "slug": "html",
+          "type": "category",
+          "col": 3,
+          "children": []
+        },
+        {
+          "slug": "node",
+          "type": "category",
+          "col": 3,
+          "children": []
+        },
+        {
+          "slug": "php",
+          "type": "category",
+          "col": 3,
+          "children": []
+        },
+        {
+          "slug": "composer",
+          "type": "category",
+          "col": 3,
+          "children": []
+        },
+        {
+          "slug": "laravel",
+          "title": "Laravel",
+          "url": "https://laravel.com/",
+          "ico": "https://laravel.com/img/favicon/favicon.ico"
+        },
+        {
+          "slug": "lumen",
+          "title": "Lumen",
+          "url": "https://lumen.golaravel.com/",
+          "ico": "https://lumen.golaravel.com/img/favicons/favicon-32x32.png"
+        }
+      ]
+    },
+    {
+      "slug": "package",
+      "type": "category",
+      "children": [
+        {
+          "slug": "icon",
+          "name": "Icon",
+          "type": "category",
+          "row": 1,
+          "col": 2,
+          "children": [
+            {
+              "slug": "bootstrap-icons",
+              "title": "Bootstrap 图标库 · Bootstrap 官方开源图标（icon）库",
+              "url": "https://icons.bootcss.com/",
+              "ico": "https://icons.bootcss.com/favicon.ico"
+            },
+            {
+              "slug": "simple-icons",
+              "title": "Simple Icons",
+              "url": "https://simpleicons.org/",
+              "ico": "https://simpleicons.org/favicon.ico"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "platform",
+      "type": "category",
+      "children": [
+        {
+          "slug": "github",
+          "url": "https://github.com/",
+          "ico": "https://github.com/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "gitlab",
+          "url": "https://gitlab.com/",
+          "ico": "https://gitlab.com/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "gitee",
+          "url": "https://gitee.com/",
+          "ico": "https://gitee.com/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "bitbucket",
+          "url": "https://bitbucket.org/",
+          "ico": "https://bitbucket.org/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "Byet",
+          "url": "https://byet.host/",
+          "ico": "https://byet.host/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "codepen",
+          "url": "https://codepen.io/",
+          "ico": "https://codepen.io/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "codesandbox",
+          "url": "https://codesandbox.io/",
+          "ico": "https://codesandbox.io/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "vercel",
+          "url": "https://vercel.com/",
+          "ico": "https://vercel.com/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "cloudflare",
+          "url": "https://www.cloudflare-cn.com/",
+          "ico": "https://www.cloudflare-cn.com/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "zeabur",
+          "url": "https://zeabur.com/",
+          "ico": "https://zeabur.com/favicon-32x32.png",
+          "type": "link"
+        },
+        {
+          "slug": "netlify",
+          "url": "https://www.netlify.com/",
+          "ico": "https://www.netlify.com/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "railway",
+          "url": "https://railway.com/",
+          "ico": "https://railway.com/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "render",
+          "url": "https://render.com/",
+          "ico": "https://render.com/icon.svg",
+          "type": "link"
+        },
+        {
+          "slug": "fly.io",
+          "url": "https://fly.io/",
+          "ico": "https://fly.io/phx/ui/images/favicon/favicon-32x32-803ad2058b86df3f8a9f8af1505a59d2.png",
+          "type": "link"
+        },
+        {
+          "slug": "coolify",
+          "url": "https://coolify.io/",
+          "ico": "https://coolify.io/favicon.ico",
+          "type": "link"
+        },
+        { "slug": "", "url": "", "ico": "", "type": "link" },
+        { "slug": "", "url": "", "ico": "", "type": "link" },
+        { "slug": "", "url": "", "ico": "", "type": "link" },
+        { "slug": "", "url": "", "ico": "", "type": "link" }
+      ]
+    },
+    {
+      "slug": "software",
+      "type": "category",
+      "children": [
+        {
+          "slug": "html",
+          "type": "category",
+          "col": 3,
+          "children": []
+        },
+        {
+          "slug": "node",
+          "type": "category",
+          "col": 3,
+          "children": []
+        },
+        {
+          "slug": "php",
+          "type": "category",
+          "col": 3,
+          "children": []
+        },
+        {
+          "slug": "composer",
+          "type": "category",
+          "col": 3,
+          "children": []
+        },
+        {
+          "slug": "jekyll",
+          "url": "https://jekyllcn.com/",
+          "ico": "https://jekyllcn.com/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "Jenkins",
+          "url": "https://www.jenkins.io/zh/",
+          "ico": "https://www.jenkins.io/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "MediaWiki",
+          "url": "https://www.mediawiki.org/",
+          "ico": "https://www.mediawiki.org/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "Monsta-FTP",
+          "url": "https://www.monstaftp.com/",
+          "ico": "https://www.monstaftp.com/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "SkyCaiji",
+          "url": "https://www.skycaiji.com/",
+          "ico": "https://www.skycaiji.com/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "Typecho",
+          "url": "https://typecho.org/",
+          "ico": "https://typecho.org/usr/themes/bluecode/img/typecho-logo.png",
+          "type": "link"
+        },
+        {
+          "slug": "WordPress",
+          "url": "https://cn.wordpress.org/",
+          "ico": "https://cn.wordpress.org/favicon.ico",
+          "type": "link"
+        },
+        {
+          "slug": "softaculous",
+          "url": "https://www.softaculous.com/",
+          "ico": "https://www.softaculous.com/favicon.ico",
+          "type": "link"
+        }
+      ]
+    },
+    {
+      "slug": "solution",
+      "type": "category"
+    }
+  ],
+  "links": [],
+  "relationships": [],
+  "options": {
+    "layout": {},
+    "sidebar": {},
+    "header": {},
+    "aside": {},
+    "main": {},
+    "container": {},
+    "footer": {},
+    "engines": [{ "name": "baidu" }, { "name": "bing" }],
+    "grid": {
+      "cols-12": {},
+      "cols-14": {},
+      "cols-15": {},
+      "cols-16": {},
+      "cols-18": {},
+      "cols-20": {},
+      "cols-21": {},
+      "cols-22": {},
+      "cols-24": {}
+    },
+    "card": {
+      "1x1": {},
+      "1x2": {},
+      "1x3": {},
+      "1x4": {},
+      "2x1": {},
+      "2x2": {},
+      "2x3": {},
+      "2x4": {},
+      "3x1": {},
+      "3x2": {},
+      "3x3": {},
+      "3x4": {},
+      "4x1": {},
+      "4x2": {},
+      "4x3": {},
+      "4x4": {}
+    },
+    "modal": {}
+  }
 }

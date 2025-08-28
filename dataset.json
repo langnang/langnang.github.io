@@ -61,10 +61,22 @@
                     "row": 1,
                     "col": 2,
                     "children": [
-                        { "slug": "laptop", "ico": "" },
-                        { "slug": "desktop", "ico": "" },
-                        { "slug": "fnos", "ico": "" },
-                        { "slug": "vm-wss-2016", "ico": "" }
+                        {
+                            "slug": "laptop",
+                            "ico": ""
+                        },
+                        {
+                            "slug": "desktop",
+                            "ico": ""
+                        },
+                        {
+                            "slug": "fnos",
+                            "ico": ""
+                        },
+                        {
+                            "slug": "vm-wss-2016",
+                            "ico": ""
+                        }
                     ]
                 }
             ]
@@ -324,7 +336,6 @@
                         }
                     ]
                 },
-
                 {
                     "slug": "WindowsTerminal",
                     "title": "",
@@ -356,7 +367,12 @@
                     "col": 3,
                     "children": []
                 },
-                { "slug": "php", "type": "category", "col": 3, "children": [] },
+                {
+                    "slug": "php",
+                    "type": "category",
+                    "col": 3,
+                    "children": []
+                },
                 {
                     "slug": "composer",
                     "type": "category",
@@ -408,9 +424,15 @@
             "slug": "platform",
             "type": "category",
             "children": [
-                { "slug": "github" },
-                { "slug": "gitlab" },
-                { "slug": "Byet" }
+                {
+                    "slug": "github"
+                },
+                {
+                    "slug": "gitlab"
+                },
+                {
+                    "slug": "Byet"
+                }
             ]
         },
         {
@@ -429,22 +451,39 @@
                     "col": 3,
                     "children": []
                 },
-                { "slug": "php", "type": "category", "col": 3, "children": [] },
+                {
+                    "slug": "php",
+                    "type": "category",
+                    "col": 3,
+                    "children": []
+                },
                 {
                     "slug": "composer",
                     "type": "category",
                     "col": 3,
                     "children": []
                 },
-                { "slug": "jekyll", "url": "https://jekyllcn.com/" },
+                {
+                    "slug": "jekyll",
+                    "url": "https://jekyllcn.com/"
+                },
                 {
                     "slug": "Jenkins",
                     "ico": "https://simpleicons.org/icons/jenkins.svg"
                 },
                 { "slug": "MediaWiki", "ico": "" },
-                { "slug": "Monsta-FTP", "ico": "" },
-                { "slug": "SkyCaiji", "ico": "" },
-                { "slug": "Typecho", "ico": "" },
+                {
+                    "slug": "Monsta-FTP",
+                    "ico": ""
+                },
+                {
+                    "slug": "SkyCaiji",
+                    "ico": ""
+                },
+                {
+                    "slug": "Typecho",
+                    "ico": ""
+                },
                 {
                     "slug": "WordPress",
                     "ico": "https://simpleicons.org/icons/wordpress.svg"
@@ -453,10 +492,27 @@
         }
     ],
     "links": [],
-
     "relationships": [],
     "options": {
-        "card": {},
+        "engines": [{ "name": "baidu" }, { "name": "bing" }],
+        "card": {
+            "1x1": {},
+            "1x2": {},
+            "1x3": {},
+            "1x4": {},
+            "2x1": {},
+            "2x2": {},
+            "2x3": {},
+            "2x4": {},
+            "3x1": {},
+            "3x2": {},
+            "3x3": {},
+            "3x4": {},
+            "4x1": {},
+            "4x2": {},
+            "4x3": {},
+            "4x4": {}
+        },
         "modal": {}
     }
 }

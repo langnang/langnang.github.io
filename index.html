@@ -119,7 +119,7 @@
           <div class="col col--1 px-0"><div class="card border-0"></div></div>
         </div>
         <div class="row justify-content-center mb-3">
-          <div class="col--8">
+          <div class="col-8">
             <div class="input-group input-group-lg rounded-pill mb-0">
               <div class="input-group-prepend">
                 <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Engine</button>
@@ -289,7 +289,7 @@
                         </li>
                         `;
 
-              tabContentHtml += `<div class="tab-pane fade ${i == 0 ? "show active" : ""}" id="${nav.slug}" role="tabpanel" aria-labelledby="${nav.slug}-tab"> <div class="row row-cols-12 row-cols-sm-10 row-cols-md-12 text-center masonry">`;
+              tabContentHtml += `<div class="tab-pane fade ${i == 0 ? "show active" : ""}" id="${nav.slug}" role="tabpanel" aria-labelledby="${nav.slug}-tab"> <div class="row row-cols-16 row-cols-sm-10 row-cols-md-12 text-center masonry">`;
               tabContentHtml += `<div class="col col--1 row--1 masonry-item px-0 text-decoration-none" data-id="0"></div>`;
               (nav.children || []).forEach((child, index) => {
                 tabContentHtml += `<div class="col col--${child.col || 1} row--${child.row || 1} masonry-item px-0 text-decoration-none" data-id="${index + 1}">`;
@@ -316,19 +316,14 @@
                       ``
                     ) +
                     `     </div>` +
-                    (child.type == "category"
-                      ? `<div class="modal fade" id="${nav.slug}--${index}" tabindex="-1" aria-labelledby="${nav.slug}--${index}--label" aria-hidden="true">
+                    `<div class="modal fade" id="${nav.slug}--${index}" tabindex="-1" aria-labelledby="${nav.slug}--${index}--label" aria-hidden="true">
                         <div class="modal-dialog modal-lg modal-dialog-centered">
                           <div class="modal-content bg-transparent">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="${nav.slug}--${index}--label">Modal title</h5>
-                            </div>
                             <div class="modal-body" style="background-color: rgba(255, 255, 255, .4);">
                             </div>
                           </div>
                         </div>
-                      </div>`
-                      : ``) +
+                      </div>` +
                     `   </div>
                             <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${child.title || child.name || _.upperFirst(child.slug)}</div>
                           </div>`;

@@ -39,6 +39,12 @@ body {
     max-width: calc(100% / 12);
 }
 
+.row-cols-16>* {
+    -ms-flex: 0 0 calc(100% / 16);
+    flex: 0 0 calc(100% / 16);
+    max-width: calc(100% / 16);
+}
+
 .col {}
 
 .masonry .col .card {
@@ -59,6 +65,12 @@ body {
     max-width: calc(100% / 6);
 }
 
+.row-cols-16>.col--2 {
+    -ms-flex: 0 0 calc(100% / 16 * 2);
+    flex: 0 0 calc(100% / 16 * 2);
+    max-width: calc(100% / 16 * 2);
+}
+
 .masonry .col--2.row--1>.card {
     padding-top: 50%;
 }
@@ -69,6 +81,12 @@ body {
     max-width: calc(100% / 4);
 }
 
+.row-cols-16>.col--3 {
+    -ms-flex: 0 0 calc(100% / 16 * 3);
+    flex: 0 0 calc(100% / 16 * 3);
+    max-width: calc(100% / 16 * 3);
+}
+
 .masonry .col--3.row--1>.card {
     padding-top: calc(100% / 3);
 }
@@ -77,6 +95,12 @@ body {
     -ms-flex: 0 0 calc(100% / 3);
     flex: 0 0 calc(100% / 3);
     max-width: calc(100% / 3);
+}
+
+.row-cols-16>.col--3 {
+    -ms-flex: 0 0 calc(100% / 16 * 4);
+    flex: 0 0 calc(100% / 16 * 4);
+    max-width: calc(100% / 16 * 4);
 }
 
 .col--6 {
@@ -224,6 +248,6 @@ max-width: calc(8.33% - .5px); */
     .container-md,
     .container-sm,
     .container-xl {
-        /* max-width: 1400px; */
+        max-width: 1400px;
     }
 }

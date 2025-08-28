@@ -97,8 +97,8 @@
                 {
                     "slug": "AndroidStudio",
                     "title": "",
-                    "url": "",
-                    "ico": "",
+                    "url": "https://android-docs.cn/",
+                    "ico": "https://android-docs.cn/favicon.ico",
                     "type": "link"
                 },
                 {
@@ -108,12 +108,18 @@
                     "ico": "https://www.7-zip.org/favicon.ico",
                     "type": "link"
                 },
-                { "slug": "BaiduNetDisk" },
+                {
+                    "slug": "BaiduNetDisk",
+                    "title": "",
+                    "url": "https://pan.baidu.com/",
+                    "ico": "https://nd-static.bdstatic.com/m-static/v20-main/favicon-main.ico",
+                    "type": "link"
+                },
                 {
                     "slug": "Composer",
                     "title": "",
-                    "url": "",
-                    "ico": "",
+                    "url": "https://getcomposer.org/",
+                    "ico": "https://getcomposer.org/favicon.ico",
                     "type": "link"
                 },
                 {
@@ -148,14 +154,14 @@
                     "slug": "GoogleChrome",
                     "title": "",
                     "url": "https://www.google.cn/chrome/",
-                    "ico": "https://www.google.cn/chrome/favicon.ico",
+                    "ico": "https://www.google.cn/chrome/static/images/favicons/favicon-32x32.png",
                     "type": "link"
                 },
                 {
                     "slug": "NotePad++",
                     "title": "",
                     "url": "http://www.notepadplus.com.cn/",
-                    "ico": "http://www.notepadplus.com.cn/favicon.ico",
+                    "ico": "http://www.notepadplus.com.cn/index_files/29018445_29018445_1477567217625.jpg",
                     "type": "link"
                 },
                 {
@@ -169,21 +175,21 @@
                     "slug": "Phpts",
                     "title": "",
                     "url": "https://www.phpts.com/",
-                    "ico": "https://www.phpts.com/favicon.ico",
+                    "ico": "https://cdn.phpts.cn/phpts/www/static/images/favicon.ico",
                     "type": "link"
                 },
                 {
                     "slug": "PotPlayer",
                     "title": "",
                     "url": "http://www.potplayercn.com/",
-                    "ico": "http://www.potplayercn.com/favicon.ico",
+                    "ico": "http://www.potplayercn.com/wp-content/themes/pot/images/favicon.ico",
                     "type": "link"
                 },
                 {
                     "slug": "ScreenToGif",
                     "title": "",
                     "url": "https://www.screentogif.com/",
-                    "ico": "https://www.screentogif.com/favicon.ico",
+                    "ico": "https://www.screentogif.com/logos/favicon.ico",
                     "type": "link"
                 },
                 {
@@ -204,42 +210,41 @@
                     "slug": "TeleportUltra",
                     "title": "",
                     "url": "",
-                    "ico": "",
-                    "type": "link"
+                    "ico": ""
                 },
                 {
                     "slug": "Thunder",
                     "title": "",
-                    "url": "",
-                    "ico": "",
+                    "url": "https://dl.xunlei.com/",
+                    "ico": "https://dl.xunlei.com/favicon.ico",
                     "type": "link"
                 },
                 {
                     "slug": "TortoiseGit",
                     "title": "",
-                    "url": "",
-                    "ico": "",
+                    "url": "https://tortoisegit.org/",
+                    "ico": "https://tortoisegit.org/favicon.ico",
                     "type": "link"
                 },
                 {
                     "slug": "TortoiseSVN",
                     "title": "",
-                    "url": "",
-                    "ico": "",
+                    "url": "https://tortoisesvn.cn/",
+                    "ico": "https://tortoisesvn.cn/assets/img/favicons/favicon.ico",
                     "type": "link"
                 },
                 {
                     "slug": "Typora",
                     "title": "",
-                    "url": "",
-                    "ico": "",
+                    "url": "https://typoraio.cn/",
+                    "ico": "https://typoraio.cn/favicon.ico",
                     "type": "link"
                 },
                 {
                     "slug": "VeraCrypt",
                     "title": "",
-                    "url": "",
-                    "ico": "",
+                    "url": "https://veracrypt.io/",
+                    "ico": "https://veracrypt.io/favicon.ico",
                     "type": "link"
                 },
                 {
@@ -252,8 +257,8 @@
                 {
                     "slug": "VMwareWorkstation",
                     "title": "",
-                    "url": "",
-                    "ico": "",
+                    "url": "https://www.vmware.com/",
+                    "ico": "https://www.vmware.com/vm-favicon.png",
                     "type": "link"
                 },
                 {
@@ -264,15 +269,15 @@
                         {
                             "slug": "WebStorm",
                             "title": "",
-                            "url": "",
-                            "ico": "",
+                            "url": "https://www.jetbrains.com/webstorm/",
+                            "ico": "https://www.jetbrains.com/webstorm/favicon.ico",
                             "type": "link"
                         },
                         {
                             "slug": "PhpStorm",
                             "title": "",
-                            "url": "",
-                            "ico": "",
+                            "url": "https://www.jetbrains.com/phpstorm/",
+                            "ico": "https://www.jetbrains.com/phpstorm/favicon.ico",
                             "type": "link"
                         }
                     ]
@@ -280,8 +285,8 @@
                 {
                     "slug": "JianPian",
                     "title": "",
-                    "url": "",
-                    "ico": "",
+                    "url": "https://www.jianpian.com/",
+                    "ico": "https://www.jianpian.com/favicon.ico",
                     "type": "link"
                 },
                 {
@@ -292,45 +297,45 @@
                         {
                             "slug": "Edge",
                             "title": "",
-                            "url": "",
-                            "ico": "",
+                            "url": "https://www.microsoft.com/zh-cn/edge/",
+                            "ico": "https://edgestatic.azureedge.net/welcome/static/favicon.png",
                             "type": "link"
                         },
                         {
                             "slug": "OneDrive",
                             "title": "",
-                            "url": "",
-                            "ico": "",
+                            "url": "https://www.microsoft.com/zh-cn/microsoft-365/onedrive/online-cloud-storage",
+                            "ico": "https://www.microsoft.com/favicon.ico",
+                            "type": "link"
+                        },
+                        {
+                            "slug": "VisualStudio",
+                            "title": "",
+                            "url": "https://visualstudio.microsoft.com/zh-hans/",
+                            "ico": "https://visualstudio.microsoft.com/favicon.ico",
+                            "type": "link"
+                        },
+                        {
+                            "slug": "VisualStudioCode",
+                            "title": "",
+                            "url": "https://code.visualstudio.com/",
+                            "ico": "https://code.visualstudio.com/favicon.ico",
                             "type": "link"
                         }
                     ]
                 },
-                {
-                    "slug": "VisualStudio",
-                    "title": "",
-                    "url": "",
-                    "ico": "",
-                    "type": "link"
-                },
-                {
-                    "slug": "VisualStudioCode",
-                    "title": "",
-                    "url": "",
-                    "ico": "",
-                    "type": "link"
-                },
+
                 {
                     "slug": "WindowsTerminal",
                     "title": "",
                     "url": "",
-                    "ico": "",
-                    "type": "link"
+                    "ico": ""
                 },
                 {
                     "slug": "WinMerge",
                     "title": "",
-                    "url": "",
-                    "ico": "",
+                    "url": "https://winmerge.org/",
+                    "ico": "https://winmerge.org/favicon.ico",
                     "type": "link"
                 }
             ]
@@ -450,5 +455,8 @@
     "links": [],
 
     "relationships": [],
-    "options": {}
+    "options": {
+        "card": {},
+        "modal": {}
+    }
 }

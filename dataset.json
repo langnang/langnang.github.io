@@ -298,7 +298,7 @@
                     "slug": "JianPian",
                     "title": "",
                     "url": "https://www.jianpian.com/",
-                    "ico": "https://www.jianpian.com/favicon.ico",
+                    "ico": "https://www.jianpian.com/assets/favicon-CAXq-URH.ico",
                     "type": "link"
                 },
                 {
@@ -494,7 +494,23 @@
     "links": [],
     "relationships": [],
     "options": {
+        "layout": {},
+        "sidebar": {},
+        "header": {},
+        "aside": {},
+        "main": {},
+        "container": {},
+        "footer": {},
         "engines": [{ "name": "baidu" }, { "name": "bing" }],
+        "grid": {
+            "cols-12": {},
+            "cols-14": {},
+            "cols-16": {},
+            "cols-18": {},
+            "cols-20": {},
+            "cols-22": {},
+            "cols-24": {}
+        },
         "card": {
             "1x1": {},
             "1x2": {},

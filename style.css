@@ -97,7 +97,7 @@ body {
     max-width: calc(100% / 3);
 }
 
-.row-cols-16>.col--3 {
+.row-cols-16>.col--4 {
     -ms-flex: 0 0 calc(100% / 16 * 4);
     flex: 0 0 calc(100% / 16 * 4);
     max-width: calc(100% / 16 * 4);

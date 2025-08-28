@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <nav charset="UTF-8" />
+    <nav name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
       document.title = location.host;
@@ -277,29 +277,26 @@
           .then((response) => response.json())
           .then((res) => {
             console.log(res);
-            const { navs, metas, links, relationships } = res;
+            const { navs } = res;
             let tabHtml = ``;
             let tabContentHtml = ``;
-            metas.forEach((meta, i) => {
+            navs.forEach((nav, i) => {
               tabHtml += `
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link btn-block text-light font-weight-bolder ${i == 0 ? "active" : ""}" id="${meta.slug}-tab" data-toggle="tab" data-target="#${meta.slug}" type="button" role="tab" aria-controls="${meta.slug}" aria-selected="true">
-                      ${meta.name || _.upperFirst(meta.slug)}
+                    <button class="nav-link btn-block text-light font-weight-bolder ${i == 0 ? "active" : ""}" id="${nav.slug}-tab" data-toggle="tab" data-target="#${nav.slug}" type="button" role="tab" aria-controls="${nav.slug}" aria-selected="true">
+                      ${nav.name || _.upperFirst(nav.slug)}
                     </button>
                   </li>
                   `;
-              const relation_link_keys = relationships.filter((relationship) => relationship.meta == meta.slug).map((v) => v.link);
-              // console.log(relation_link_keys);
-              const relation_links = links.filter((v) => relation_link_keys.includes(v.slug));
-              // console.log(relation_links);
 
-              tabContentHtml += `<div class="tab-pane fade ${i == 0 ? "show active" : ""}" id="${meta.slug}" role="tabpanel" aria-labelledby="${meta.slug}-tab"> <div class="row row-cols-12 row-cols-sm-10 row-cols-md-12 text-center masonry">`;
-              (meta.children || []).forEach((child, index) => {
+              tabContentHtml += `<div class="tab-pane fade ${i == 0 ? "show active" : ""}" id="${nav.slug}" role="tabpanel" aria-labelledby="${nav.slug}-tab"> <div class="row row-cols-12 row-cols-sm-10 row-cols-md-12 text-center masonry">`;
+              tabContentHtml += `<div class="col col--1 row--1 masonry-item px-0 text-decoration-none" data-id="0"></div>`;
+              (nav.children || []).forEach((child, index) => {
                 tabContentHtml +=
-                  `<div class="col col--${child.col || 1} row--${child.row || 1} masonry-item px-0 text-decoration-none" data-id="${index}">` +
+                  `<div class="col col--${child.col || 1} row--${child.row || 1} masonry-item px-0 text-decoration-none" data-id="${index + 1}">` +
                   ` <div class="card border-0" style="">
                       <div class="card-body p-0 position-absolute" style="background-image: url(${child.ico || ""}); background-size: contain">` +
-                  `     <div class="row row-cols-3">` +
+                  `     <div class="row row-cols-3 mx-0 align-items-center" style="height: 100%;">` +
                   (child.children || []).slice(0, 3).reduce(
                     (tol, chd) =>
                       tol +
@@ -315,21 +312,6 @@
                     </div>` +
                   `</div>`;
               });
-              // relation_links.forEach((link) => {
-              //   tabContentHtml += `
-              //   <div class="col col--${link.col || 1} row--${link.row || 1}  px-0 text-decoration-none" target="_blank" href="${link.url || ""}">
-              //     <div class="card border-0" style="background-color: rgba(0, 0, 0, .4);">
-              //       <div class="card-body py-0 px-1 position-absolute" style="top: 0; width: 100%;background-image: url(${link.ico || ""}); background-size: contain"></div>
-              //       <div class="card-footer py-0 position-absolute text-light" style="bottom: 0; width: 100%">${link.title || _.upperFirst(link.slug)}</div>
-              //     </div>
-              //     <div class="pt-100 h-0 bg-white rounded:3 d-none" style="background-image: url(${link.ico || ""}); background-size: contain">
-              //     ${link.ico ? "" : `<i class="bi bi-boxes d-none" style="position: absolute;top: calc(50% - 1.5rem);left: calc(50% - 1.5rem);font-size: 3rem;line-height: 1;"></i> <span class="d-block text-truncate" style="margin-top:calc(-.5rem - 50%)">${link.slug}</span>`}
-              //     </div>
-              //     <p class="mb-0 font-weight-bolder text-white text-truncate  d-none" style="margin: 0 -0.75rem;">${link.title || _.upperFirst(link.slug)}</p>
-              //   </div>
-              //   `;
-              // });
-
               tabContentHtml += `</div> </div>`;
             });
             $("#app-tab").html(tabHtml);

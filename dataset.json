@@ -26,47 +26,19 @@
       "name": "~",
       "type": "category",
       "children": [
-        { "slug": "langnang_database", "type": "category", "row": 1, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 },
-        { "slug": "langnang_device", "type": "category", "row": 2, "col": 2 }
-      ]
-    },
-    { "slug": "application", "name": "", "type": "category", "children": [] },
-    {
-      "slug": "framework",
-      "name": "",
-      "type": "category",
-      "children": []
-    },
-    { "slug": "icon", "name": "", "type": "category", "children": [] },
-    { "slug": "platform", "name": "", "type": "category", "children": [] },
-    { "slug": "software", "name": "", "type": "category", "children": [] },
-    { "slug": "langnang", "name": "", "type": "category", "children": [] },
-    { "slug": "langnang", "name": "", "type": "category", "children": [] }
-  ],
-  "metas": [
-    {
-      "slug": "langnang",
-      "name": "~",
-      "type": "category",
-      "children": [
-        { "slug": "docs", "title": "", "url": "https://langnang.github.io/docs/", "ico": "./favicon.ico", "type": "link", "row": 1, "col": 1 },
-        { "slug": "docs", "title": "", "url": "https://langnang.github.io/docs/", "ico": "./favicon.ico", "row": 1, "col": 1 },
-        { "slug": "langnang_database", "name": "Database", "type": "category", "row": 1, "col": 2, "children": [] },
+        { "slug": "docs", "title": "", "url": "https://langnang.github.io/docs/", "ico": "https://simpleicons.org/icons/jekyll.svg", "type": "link", "row": 1, "col": 1 },
+        {
+          "slug": "langnang_database",
+          "name": "Database",
+          "type": "category",
+          "row": 1,
+          "col": 2,
+          "children": [
+            { "slug": "sqlite3", "ico": "https://simpleicons.org/icons/sqlite.svg" },
+            { "slug": "mysql", "ico": "https://simpleicons.org/icons/mysql.svg" },
+            { "slug": "postgresql", "ico": "https://simpleicons.org/icons/postgresql.svg" }
+          ]
+        },
         {
           "slug": "langnang_device",
           "name": "Device",
@@ -74,10 +46,10 @@
           "row": 1,
           "col": 2,
           "children": [
-            { "slug": "laptop", "ico": "./favicon.ico" },
-            { "slug": "desktop", "ico": "./favicon.ico" },
-            { "slug": "fnos", "ico": "./favicon.ico" },
-            { "slug": "vm-wss-2016", "ico": "./favicon.ico" }
+            { "slug": "laptop", "ico": "" },
+            { "slug": "desktop", "ico": "" },
+            { "slug": "fnos", "ico": "" },
+            { "slug": "vm-wss-2016", "ico": "" }
           ]
         }
       ]
@@ -102,35 +74,40 @@
       "slug": "package",
       "type": "category",
       "children": [
-        { "slug": "bootstrap-icons", "title": "Bootstrap 图标库 · Bootstrap 官方开源图标（icon）库", "url": "https://icons.bootcss.com/", "ico": "https://icons.bootcss.com/favicon.ico" },
-        { "slug": "simple-icons", "title": "Simple Icons", "url": "https://simpleicons.org/", "ico": "https://simpleicons.org/favicon.ico" }
+        {
+          "slug": "icon",
+          "name": "Icon",
+          "type": "category",
+          "row": 1,
+          "col": 2,
+          "children": [
+            { "slug": "bootstrap-icons", "title": "Bootstrap 图标库 · Bootstrap 官方开源图标（icon）库", "url": "https://icons.bootcss.com/", "ico": "https://icons.bootcss.com/favicon.ico" },
+            { "slug": "simple-icons", "title": "Simple Icons", "url": "https://simpleicons.org/", "ico": "https://simpleicons.org/favicon.ico" }
+          ]
+        }
       ]
     },
     { "slug": "platform", "type": "category", "children": [{ "slug": "github" }, { "slug": "gitlab" }, { "slug": "Byet" }] },
     {
       "slug": "software",
       "type": "category",
-      "children": [{ "slug": "Jenkins" }, { "slug": "MediaWiki" }, { "slug": "Monsta-FTP" }, { "slug": "SkyCaiji" }, { "slug": "Typecho" }, { "slug": "WordPress" }]
+      "children": [
+        { "slug": "php", "type": "category", "col": 3, "children": [] },
+        { "slug": "composer", "type": "category", "col": 3, "children": [] },
+        { "slug": "html", "type": "category", "col": 3, "children": [] },
+        { "slug": "node", "type": "category", "col": 3, "children": [] },
+        { "slug": "jekyll", "url": "https://jekyllcn.com/" },
+        { "slug": "Jenkins", "ico": "https://simpleicons.org/icons/jenkins.svg" },
+        { "slug": "MediaWiki", "ico": "" },
+        { "slug": "Monsta-FTP", "ico": "" },
+        { "slug": "SkyCaiji", "ico": "" },
+        { "slug": "Typecho", "ico": "" },
+        { "slug": "WordPress", "ico": "https://simpleicons.org/icons/wordpress.svg" }
+      ]
     }
   ],
-  "links": [{ "slug": "mysql", "title": "MySQL", "url": "https://langnang.github.io/docs/", "ico": "./favicon.ico", "row": 1, "col": 1 }],
+  "links": [],
 
-  "relationships": [
-    { "meta": "application", "link": "cpolar" },
-    { "meta": "application", "link": "fnos" },
-    { "meta": "database", "link": "mysql" },
-    { "meta": "framework", "link": "laravel" },
-    { "meta": "framework", "link": "lumen" },
-    { "meta": "icon", "link": "bootstrap-icons" },
-    { "meta": "platform", "link": "Byet" },
-    { "meta": "software", "link": "Jenkins" },
-    { "meta": "software", "link": "MediaWiki" },
-    { "meta": "software", "link": "Monsta-FTP" },
-    { "meta": "software", "link": "SkyCaiji" },
-    { "meta": "software", "link": "Typecho" },
-    { "meta": "software", "link": "WordPress" },
-    { "meta": "software", "link": "bootstrap-icons" },
-    { "meta": "software", "link": "laravel" }
-  ],
+  "relationships": [],
   "options": {}
 }

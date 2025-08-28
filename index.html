@@ -319,10 +319,10 @@
                       tabContentHtml +=
                         ` <div class="card border-0"  style="">
                             <div class="card-body p-0 position-absolute" style="background-image: url(${child.ico || ""}); ">` +
-                        `     <div class="row row-cols-3 mx-0 align-items-center" style="height: 100%;" data-toggle="modal" data-target="#${nav.slug}--${index}">` +
+                        `     <div class="row row-cols-${(child.col || 0) + 1} mx-0 align-items-center" style="height: 100%;" data-toggle="modal" data-target="#${nav.slug}--${index}">` +
                         (child.children || [])
                           .filter((v) => v.slug)
-                          .slice(0, 3)
+                          .slice(0, (child.col || 0) + 1)
                           .reduce(
                             (tol, chd) =>
                               tol +

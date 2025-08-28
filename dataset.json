@@ -30,7 +30,7 @@
           "slug": "docs",
           "title": "",
           "url": "https://langnang.github.io/docs/",
-          "ico": "https://simpleicons.org/icons/jekyll.svg",
+          "ico": "https://jekyllcn.com/favicon.ico",
           "type": "link"
         },
         {
@@ -75,6 +75,30 @@
             },
             {
               "slug": "vm-wss-2016",
+              "ico": ""
+            },
+            {
+              "slug": "vm-wss-2019",
+              "ico": ""
+            },
+            {
+              "slug": "vm-wss-2022",
+              "ico": ""
+            },
+            {
+              "slug": "vm-centos-8",
+              "ico": ""
+            },
+            {
+              "slug": "vm-debine-24",
+              "ico": ""
+            },
+            {
+              "slug": "vm-debine-server-24",
+              "ico": ""
+            },
+            {
+              "slug": "vm-fnos",
               "ico": ""
             }
           ]
@@ -403,7 +427,7 @@
           "name": "Icon",
           "type": "category",
           "row": 1,
-          "col": 2,
+          "col": 3,
           "children": [
             {
               "slug": "bootstrap-icons",
@@ -416,7 +440,88 @@
               "title": "Simple Icons",
               "url": "https://simpleicons.org/",
               "ico": "https://simpleicons.org/favicon.ico"
-            }
+            },
+            {
+              "slug": "font-awesome",
+              "title": "",
+              "url": "https://fontawesome.com/",
+              "ico": "https://fontawesome.com/favicon.ico",
+              "type": "link"
+            },
+            {
+              "slug": "ionicons",
+              "title": "",
+              "url": "http://ionicons.com/",
+              "ico": "",
+              "type": "link"
+            },
+            {
+              "slug": "flagicons",
+              "title": "",
+              "url": "https://flagicons.lipis.dev/",
+              "ico": "",
+              "type": "link"
+            },
+            {
+              "slug": "MaterialDesign",
+              "title": "",
+              "url": "https://pictogrammers.com/library/mdi/",
+              "ico": "",
+              "type": "link"
+            },
+            {
+              "slug": "feathericons",
+              "title": "",
+              "url": "https://feathericons.com/",
+              "ico": "",
+              "type": "link"
+            },
+            {
+              "slug": "material-design-icons",
+              "title": "",
+              "url": "https://developers.google.com/fonts/docs/material_icons?hl=zh-cn",
+              "ico": "",
+              "type": "link"
+            },
+            {
+              "slug": "nerdfonts",
+              "title": "",
+              "url": "https://www.nerdfonts.com/",
+              "ico": "",
+              "type": "link"
+            },
+            {
+              "slug": "heroicons",
+              "title": "",
+              "url": "https://heroicons.com/",
+              "ico": "",
+              "type": "link"
+            },
+            {
+              "slug": "tabler",
+              "title": "",
+              "url": "https://tabler.io/icons",
+              "ico": "",
+              "type": "link"
+            },
+            {
+              "slug": "lucide",
+              "title": "",
+              "url": "https://lucide.dev/",
+              "ico": "",
+              "type": "link"
+            },
+            {
+              "slug": "dashy",
+              "title": "",
+              "url": "https://dashy.to/",
+              "ico": "",
+              "type": "link"
+            },
+            { "slug": "", "title": "", "url": "", "ico": "", "type": "link" },
+            { "slug": "", "title": "", "url": "", "ico": "", "type": "link" },
+            { "slug": "", "title": "", "url": "", "ico": "", "type": "link" },
+            { "slug": "", "title": "", "url": "", "ico": "", "type": "link" }
           ]
         }
       ]

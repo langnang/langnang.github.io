@@ -205,12 +205,12 @@
           const data = { ...(root[key] || {}) };
           if (isEmpty(data.NAME)) data.NAME = key;
           return `<div class="row">
-          <nav class="col px-2.5" aria-label="breadcrumb">
-            <ol class="breadcrumb py-2">
-              <li class="breadcrumb-ite" aria-current="page">${data.NAME}</li>
-            </ol>
-          </nav>
-          </div>`;
+                <nav class="col px-2.5" aria-label="breadcrumb">
+                  <ol class="breadcrumb py-2">
+                    <li class="breadcrumb-ite" aria-current="page">${data.NAME}</li>
+                  </ol>
+                </nav>
+                </div>`;
         }
         function makeCardGroup(key, root) {
           // console.log(key);
@@ -235,19 +235,19 @@
             (isEmpty(data.URL) ? "" : `<a class="text-decoration-none" target="_blank" href="${data.URL}">`) +
             `` +
             `<div class="col px-2.5">
-              <div class="card border-0">
-              <div class="card-body px-2.5 py-2">
-                <div class="media">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="align-self-center mr-1 text-secondary" style="width: 1.5rem">
-                  <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                <div class="media-body">
-                  <h5 class="my-0">${data.NAME}</h5>
-                </div>
-              </div>
-              </div>
-              </div>
-            </div>` +
+                    <div class="card border-0">
+                    <div class="card-body px-2.5 py-2">
+                      <div class="media">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="align-self-center mr-1 text-secondary" style="width: 1.5rem">
+                        <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                      </svg>
+                      <div class="media-body">
+                        <h5 class="my-0">${data.NAME}</h5>
+                      </div>
+                    </div>
+                    </div>
+                    </div>
+                  </div>` +
             (isEmpty(data.URL) ? "" : `</a>`)
           );
         }
@@ -282,35 +282,64 @@
             let tabContentHtml = ``;
             navs.forEach((nav, i) => {
               tabHtml += `
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link btn-block text-light font-weight-bolder ${i == 0 ? "active" : ""}" id="${nav.slug}-tab" data-toggle="tab" data-target="#${nav.slug}" type="button" role="tab" aria-controls="${nav.slug}" aria-selected="true">
-                      ${nav.name || _.upperFirst(nav.slug)}
-                    </button>
-                  </li>
-                  `;
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link btn-block text-light font-weight-bolder ${i == 0 ? "active" : ""}" id="${nav.slug}-tab" data-toggle="tab" data-target="#${nav.slug}" type="button" role="tab" aria-controls="${nav.slug}" aria-selected="true">
+                            ${nav.name || _.upperFirst(nav.slug)}
+                          </button>
+                        </li>
+                        `;
 
               tabContentHtml += `<div class="tab-pane fade ${i == 0 ? "show active" : ""}" id="${nav.slug}" role="tabpanel" aria-labelledby="${nav.slug}-tab"> <div class="row row-cols-12 row-cols-sm-10 row-cols-md-12 text-center masonry">`;
               tabContentHtml += `<div class="col col--1 row--1 masonry-item px-0 text-decoration-none" data-id="0"></div>`;
               (nav.children || []).forEach((child, index) => {
-                tabContentHtml +=
-                  `<div class="col col--${child.col || 1} row--${child.row || 1} masonry-item px-0 text-decoration-none" data-id="${index + 1}">` +
-                  ` <div class="card border-0" style="">
-                      <div class="card-body p-0 position-absolute" style="background-image: url(${child.ico || ""}); background-size: contain">` +
-                  `     <div class="row row-cols-3 mx-0 align-items-center" style="height: 100%;">` +
-                  (child.children || []).slice(0, 3).reduce(
-                    (tol, chd) =>
-                      tol +
-                      `<div class="col col--1 row--1 px-2">
-                        <div class="card border-0 bg-light" style="background-image: url(${chd.ico || ""}); background-size: contain">
+                tabContentHtml += `<div class="col col--${child.col || 1} row--${child.row || 1} masonry-item px-0 text-decoration-none" data-id="${index + 1}">`;
+
+                if (child.type == "link") {
+                  tabContentHtml += `
+                  <a class="card border-0" target="_blank" href="${child.url}" style="">
+                    <div class="card-body bg-light p-0 position-absolute" style="background-image: url(${child.ico || ""}); background-size: contain">
+                    </div>
+                    <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${child.title || child.name || _.upperFirst(child.slug)}</div>
+                  </a>`;
+                } else if (child.type == "category") {
+                  tabContentHtml +=
+                    ` <div class="card border-0"  style="">
+                            <div class="card-body p-0 position-absolute" style="background-image: url(${child.ico || ""}); background-size: contain">` +
+                    `     <div class="row row-cols-3 mx-0 align-items-center" style="height: 100%;" data-toggle="modal" data-target="#${nav.slug}--${index}">` +
+                    (child.children || []).slice(0, 3).reduce(
+                      (tol, chd) =>
+                        tol +
+                        `<div class="col col--1 row--1 px-2">
+                              <div class="card border-0 bg-light" style="background-image: url(${chd.ico || ""}); background-size: contain">
+                              </div>
+                             </div>`,
+                      ``
+                    ) +
+                    `     </div>` +
+                    (child.type == "category"
+                      ? `<div class="modal fade" id="${nav.slug}--${index}" tabindex="-1" aria-labelledby="${nav.slug}--${index}--label" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                          <div class="modal-content bg-transparent">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="${nav.slug}--${index}--label">Modal title</h5>
+                            </div>
+                            <div class="modal-body" style="background-color: rgba(255, 255, 255, .4);">
+                            </div>
+                          </div>
                         </div>
-                       </div>`,
-                    ``
-                  ) +
-                  `     </div>` +
-                  `   </div>
-                      <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${child.title || child.name || _.upperFirst(child.slug)}</div>  
-                    </div>` +
-                  `</div>`;
+                      </div>`
+                      : ``) +
+                    `   </div>
+                            <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${child.title || child.name || _.upperFirst(child.slug)}</div>
+                          </div>`;
+                } else {
+                  tabContentHtml += ` 
+                  <div class="card border-0" style="">
+                    <div class="card-body bg-light p-0 position-absolute" style="background-image: url(${child.ico || ""}); background-size: contain">   </div>
+                    <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${child.title || child.name || _.upperFirst(child.slug)}</div>
+                  </div>`;
+                }
+                tabContentHtml += `</div>`;
               });
               tabContentHtml += `</div> </div>`;
             });
@@ -322,10 +351,10 @@
               percentPosition: true,
             });
             $('button[data-toggle="tab"]').on("shown.bs.tab", function (event) {
-              console.log(event.target);
-              console.log(event.relatedTarget);
-              console.log($(event.target).data("target"));
-              console.log($(event.relatedTarget).data("target"));
+              // console.log(event.target);
+              // console.log(event.relatedTarget);
+              // console.log($(event.target).data("target"));
+              // console.log($(event.relatedTarget).data("target"));
               $($(event.target).data("target") + ">.masonry").masonry({
                 // options
                 itemSelector: ".masonry-item",

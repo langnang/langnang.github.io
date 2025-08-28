@@ -423,6 +423,22 @@
       "type": "category",
       "children": [
         {
+          "slug": "jquery",
+          "title": "",
+          "url": "https://jquery.com/",
+          "ico": "",
+          "type": "link"
+        },
+        {
+          "slug": "normalize.css",
+          "title": "",
+          "url": "",
+          "ico": "https://necolas.github.io/normalize.css",
+          "type": "link"
+        },
+        { "slug": "vue", "title": "", "url": "", "ico": "", "type": "link" },
+        { "slug": "react", "title": "", "url": "", "ico": "", "type": "link" },
+        {
           "slug": "icon",
           "name": "Icon",
           "type": "category",
@@ -523,7 +539,77 @@
             { "slug": "", "title": "", "url": "", "ico": "", "type": "link" },
             { "slug": "", "title": "", "url": "", "ico": "", "type": "link" }
           ]
-        }
+        },
+
+        {
+          "slug": "animate.css",
+          "title": "",
+          "url": "https://animate.style/",
+          "ico": "",
+          "type": "link"
+        },
+        {
+          "slug": "Sass",
+          "title": "",
+          "url": "//www.sass.hk/",
+          "ico": "",
+          "type": "link"
+        },
+        {
+          "slug": "PostCSS",
+          "title": "",
+          "url": "//postcss.org/",
+          "ico": "",
+          "type": "link"
+        },
+        {
+          "slug": "Less",
+          "title": "",
+          "url": "//lesscss.org/",
+          "ico": "",
+          "type": "link"
+        },
+        { "slug": "Stylus", "title": "", "url": "", "ico": "", "type": "link" },
+        {
+          "slug": "Tailwind CSS",
+          "title": "",
+          "url": "",
+          "ico": "",
+          "type": "link"
+        },
+        {
+          "slug": "PureCSS",
+          "title": "",
+          "url": "",
+          "ico": "",
+          "type": "link"
+        },
+        {
+          "slug": "Ant Design",
+          "title": "",
+          "url": "",
+          "ico": "",
+          "type": "link"
+        },
+        {
+          "slug": "Bootstrap",
+          "title": "",
+          "url": "",
+          "ico": "",
+          "type": "link"
+        },
+        { "slug": "", "title": "", "url": "", "ico": "", "type": "link" },
+        { "slug": "", "title": "", "url": "", "ico": "", "type": "link" },
+        { "slug": "", "title": "", "url": "", "ico": "", "type": "link" },
+        { "slug": "", "title": "", "url": "", "ico": "", "type": "link" },
+        { "slug": "", "title": "", "url": "", "ico": "", "type": "link" },
+        { "slug": "", "title": "", "url": "", "ico": "", "type": "link" },
+        { "slug": "", "title": "", "url": "", "ico": "", "type": "link" },
+        { "slug": "", "title": "", "url": "", "ico": "", "type": "link" },
+        { "slug": "", "title": "", "url": "", "ico": "", "type": "link" },
+        { "slug": "", "title": "", "url": "", "ico": "", "type": "link" },
+        { "slug": "", "title": "", "url": "", "ico": "", "type": "link" },
+        { "slug": "", "title": "", "url": "", "ico": "", "type": "link" }
       ]
     },
     {

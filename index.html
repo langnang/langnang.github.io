@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
 
+    <link rel="stylesheet" href="https://unpkg.com/fontawesome-free@1.0.4/css/all.min.css" />
+
     <link rel="stylesheet" href="./style.css" />
     <style>
       #app-main .container p {
@@ -308,7 +310,7 @@
                   .forEach((child, index) => {
                     tabContentHtml += `<div class="col col--${child.col || 1} row--${child.row || 1} masonry-item px-0 text-decoration-none" data-id="${index + 1}">`;
 
-                    if (child.type == "link") {
+                    if (child.type == "link" && child.url) {
                       tabContentHtml += `
                   <a class="card border-0" target="_blank" href="${child.url}" style="">
                     <div class="card-body bg-light p-0 position-absolute" style="background-image: url(${child.ico || ""}); ">

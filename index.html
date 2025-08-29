@@ -161,32 +161,32 @@
 
     <script src="./script.js"></script>
     <script>
-      moment.locale("zh-CN");
+      moment.locale('zh-CN');
       $(function () {
         setInterval(function () {
-          $("#app-time").text(moment().format("HH:mm:ss"));
+          $('#app-time').text(moment().format('HH:mm:ss'));
         }, 500);
         console.log([moment().year(), moment().month() + 1, moment().date()]);
         const currentLunar = calendar.solar2lunar(moment().year(), moment().month() + 1, moment().date());
         console.log(currentLunar);
-        $("#app-date").text(moment().format("M月D日 dddd") + " " + currentLunar.IMonthCn + currentLunar.IDayCn);
+        $('#app-date').text(moment().format('M月D日 dddd') + ' ' + currentLunar.IMonthCn + currentLunar.IDayCn);
       });
       function getTime() {
         var date = new Date();
 
         // 年、月、日
         var year = date.getFullYear();
-        var month = ("00" + (date.getMonth() + 1)).slice(-2);
-        var day = ("00" + date.getDate()).slice(-2);
+        var month = ('00' + (date.getMonth() + 1)).slice(-2);
+        var day = ('00' + date.getDate()).slice(-2);
 
         // 时、分、秒
-        var hour = ("00" + date.getHours()).slice(-2);
-        var minute = ("00" + date.getMinutes()).slice(-2);
-        var second = ("00" + date.getSeconds()).slice(-2);
+        var hour = ('00' + date.getHours()).slice(-2);
+        var minute = ('00' + date.getMinutes()).slice(-2);
+        var second = ('00' + date.getSeconds()).slice(-2);
 
         // 实时显示
-        var element = document.getElementById("app-time");
-        element.innerText = "" + year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
+        var element = document.getElementById('app-time');
+        element.innerText = '' + year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second;
       }
 
       // setInterval("getTime()", 1000);
@@ -195,13 +195,13 @@
         if (value === null || value === undefined) return true;
 
         // 判断空字符串
-        if (typeof value === "string" && value.trim() === "") return true;
+        if (typeof value === 'string' && value.trim() === '') return true;
 
         // 判断空数组
         if (Array.isArray(value) && value.length === 0) return true;
 
         // 判断空对象
-        if (typeof value === "object" && Object.keys(value).length === 0) return true;
+        if (typeof value === 'object' && Object.keys(value).length === 0) return true;
 
         return false;
       }
@@ -224,21 +224,21 @@
           const data = { ...(root[key] || {}) };
           return (
             `<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">` +
-            (data["CHILDREN"] || "")
-              .split(",")
-              .filter((v) => v)
-              .reduce((t, v) => t + makeCard(v, key, root), "") +
+            (data['CHILDREN'] || '')
+              .split(',')
+              .filter(v => v)
+              .reduce((t, v) => t + makeCard(v, key, root), '') +
             ` </div>`
           );
         }
         function makeCard(key, parentKey, root) {
-          const data = { ...(root[parentKey + "::" + key] || {}) };
+          const data = { ...(root[parentKey + '::' + key] || {}) };
           // console.log(key, parentKey, isEmpty(data.NAME));
           // console.log(data);
           if (isEmpty(data.NAME)) data.NAME = key;
           // console.log(data);
           return (
-            (isEmpty(data.URL) ? "" : `<a class="text-decoration-none" target="_blank" href="${data.URL}">`) +
+            (isEmpty(data.URL) ? '' : `<a class="text-decoration-none" target="_blank" href="${data.URL}">`) +
             `` +
             `<div class="col px-2.5">
                     <div class="card border-0">
@@ -254,50 +254,50 @@
                     </div>
                     </div>
                   </div>` +
-            (isEmpty(data.URL) ? "" : `</a>`)
+            (isEmpty(data.URL) ? '' : `</a>`)
           );
         }
         function makeHtml(data) {
-          return (data["CHILDREN"] || "")
-            .split(",")
-            .filter((v) => v)
-            .reduce((t, v) => t + makeBreadcrumb(v, data) + makeCardGroup(v, data), "");
+          return (data['CHILDREN'] || '')
+            .split(',')
+            .filter(v => v)
+            .reduce((t, v) => t + makeBreadcrumb(v, data) + makeCardGroup(v, data), '');
         }
         function loadHtml() {
-          fetch("./.env?" + Date.now())
-            .then((response) => response.text())
-            .then((res) => {
+          fetch('./.env?' + Date.now())
+            .then(response => response.text())
+            .then(res => {
               const iniObject = new SimpleIni(function () {
-                return res.replace(/\r/g, "");
+                return res.replace(/\r/g, '');
               });
               // console.log(iniObject);
               // console.log(iniObject["CHILDREN"].split(",").slice(0, -1));
-              $("#app").html(makeHtml({ ...iniObject }));
+              $('#app').html(makeHtml({ ...iniObject }));
             });
         }
 
         // loadHtml();
       });
       $(function () {
-        fetch("./dataset.json?" + Date.now())
-          .then((response) => response.json())
-          .then((res) => {
+        fetch('./dataset.json?' + Date.now())
+          .then(response => response.json())
+          .then(res => {
             console.log(res);
             const { navs } = res;
             let tabHtml = ``;
             let tabContentHtml = ``;
             navs
-              .filter((v) => v.slug)
+              .filter(v => v.slug)
               .forEach((nav, i) => {
                 tabHtml += `
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link btn-block text-light font-weight-bolder ${i == 0 ? "active" : ""}" id="${nav.slug}-tab" data-toggle="tab" data-target="#${nav.slug}" type="button" role="tab" aria-controls="${nav.slug}" aria-selected="true">
+                  <button class="nav-link btn-block text-light font-weight-bolder ${i == 0 ? 'active' : ''}" id="${nav.slug}-tab" data-toggle="tab" data-target="#${nav.slug}" type="button" role="tab" aria-controls="${nav.slug}" aria-selected="true">
                     ${nav.name || _.upperFirst(nav.slug)}
                   </button>
                 </li>
                 `;
 
-                tabContentHtml += `<div class="tab-pane fade ${i == 0 ? "show active" : ""}" id="${nav.slug}" role="tabpanel" aria-labelledby="${nav.slug}-tab">`;
+                tabContentHtml += `<div class="tab-pane fade ${i == 0 ? 'show active' : ''}" id="${nav.slug}" role="tabpanel" aria-labelledby="${nav.slug}-tab">`;
                 tabContentHtml += `<nav aria-label="breadcrumb">
                   <ol class="breadcrumb py-0 justify-content-center bg-dark--4">
                     <li class="breadcrumb-item active"><a href="#" class="badge badge-primary">ALL</a></li>
@@ -306,94 +306,97 @@
                 tabContentHtml += ` <div class="row row-cols-16 row-cols-sm-10 row-cols-md-12 text-center masonry">`;
                 tabContentHtml += `<div class="col col--1 row--1 masonry-item px-0 text-decoration-none" data-id="0"></div>`;
                 (nav.children || [])
-                  .filter((v) => v.slug)
+                  .filter(v => v.slug)
                   .forEach((child, index) => {
                     tabContentHtml += `<div class="col col--${child.col || 1} row--${child.row || 1} masonry-item px-0 text-decoration-none" data-id="${index + 1}">`;
 
-                    if (child.type == "link" && child.url) {
-                      tabContentHtml += `
-                  <a class="card border-0" target="_blank" href="${child.url}" style="">
-                    <div class="card-body bg-light p-0 position-absolute" style="background-image: url(${child.ico || ""}); ">
-                    </div>
-                    <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${child.title || child.name || _.upperFirst(child.slug)}</div>
-                  </a>`;
-                    } else if (child.type == "category") {
-                      tabContentHtml +=
-                        ` <div class="card border-0"  style="">
-                            <div class="card-body p-0 position-absolute" style="background-image: url(${child.ico || ""}); ">` +
-                        `     <div class="row row-cols-${(child.col || 0) + 1} mx-0 align-items-center" style="height: 100%;" data-toggle="modal" data-target="#${nav.slug}--${index}">` +
-                        (child.children || [])
-                          .filter((v) => v.slug)
-                          .slice(0, (child.col || 0) + 1)
-                          .reduce(
-                            (tol, chd) =>
-                              tol +
-                              `<div class="col col--1 row--1 px-1">
-                              <div class="card border-0 bg-light" style="background-image: url(${chd.ico || ""}); ">
-                              </div>
-                             </div>`,
-                            ``
-                          ) +
-                        `     </div>` +
-                        `<div class="modal fade" id="${nav.slug}--${index}" tabindex="-1" aria-labelledby="${nav.slug}--${index}--label" aria-hidden="true">
-                        <div class="modal-dialog modal-lg modal-dialog-centered">
-                          <div class="modal-content bg-transparent border-0">
-                            <div class="modal-body rounded" style="background-color: rgba(255, 255, 255, .4);">
-                              ${
-                                `<div class="row row-cols-10">` +
-                                (child.children || [])
-                                  .filter((v) => v.slug)
-                                  .reduce(
-                                    (tol, chd, ind) =>
-                                      tol +
-                                      `<div class="col px-1"><a class="card border-0" target="_blank" href="${chd.url}">
-                                <div class="card-body bg-light p-0 position-absolute" style="background-image: url(${chd.ico || ""}); ">
-                    </div>
-                    <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${chd.title || chd.name || _.upperFirst(chd.slug)}</div>
-                                </a></div>`,
-                                    ""
-                                  ) +
-                                `</div>`
-                              }
-                            </div>
-                          </div>
-                        </div>
-                      </div>` +
-                        `   </div>
-                            <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${child.title || child.name || _.upperFirst(child.slug)}</div>
-                          </div>`;
-                    } else {
-                      tabContentHtml += `
-                  <div class="card border-0" style="">
-                    <div class="card-body bg-light p-0 position-absolute" style="background-image: url(${child.ico || ""}); ">   </div>
-                    <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${child.title || child.name || _.upperFirst(child.slug)}</div>
-                  </div>`;
-                    }
+                    tabContentHtml += makeCard(child, index);
+
+                    //   if (child.type == 'link' && child.url) {
+                    //     tabContentHtml += `
+                    // <a class="card border-0 text-muted" target="_blank" href="${child.url}" style="">
+                    //   <div class="card-body bg-light p-0 position-absolute" style="background-image: url(${child.ico || ''}); ">
+                    //   <i class="fas fa-link position-absolute right-0 bottom-0"></i>
+                    //     </div>
+                    //   <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${child.title || child.name || _.upperFirst(child.slug)}</div>
+                    // </a>`;
+                    //   } else if (child.type == 'category') {
+                    //     tabContentHtml +=
+                    //       ` <div class="card border-0"  style="">
+                    //           <div class="card-body p-0 position-absolute" style="background-image: url(${child.ico || ''}); ">` +
+                    //       `     <div class="row row-cols-${(child.col || 0) + 1} mx-0 align-items-center" style="height: 100%;" data-toggle="modal" data-target="#${nav.slug}--${index}">` +
+                    //       (child.children || [])
+                    //         .filter(v => v.slug)
+                    //         .slice(0, (child.col || 0) + 1)
+                    //         .reduce(
+                    //           (tol, chd) =>
+                    //             tol +
+                    //             `<div class="col col--1 row--1 px-1">
+                    //             <div class="card border-0 bg-light" style="background-image: url(${chd.ico || ''}); ">
+                    //             </div>
+                    //            </div>`,
+                    //           ``
+                    //         ) +
+                    //       `     </div>` +
+                    //       `<div class="modal fade" id="${nav.slug}--${index}" tabindex="-1" aria-labelledby="${nav.slug}--${index}--label" aria-hidden="true">
+                    //       <div class="modal-dialog modal-lg modal-dialog-centered">
+                    //         <div class="modal-content bg-transparent border-0">
+                    //           <div class="modal-body rounded" style="background-color: rgba(255, 255, 255, .4);">
+                    //             ${
+                    //               `<div class="row row-cols-10">` +
+                    //               (child.children || [])
+                    //                 .filter(v => v.slug)
+                    //                 .reduce(
+                    //                   (tol, chd, ind) =>
+                    //                     tol +
+                    //                     `<div class="col px-1"><a class="card border-0" target="_blank" href="${chd.url}">
+                    //               <div class="card-body bg-light p-0 position-absolute" style="background-image: url(${chd.ico || ''}); ">
+                    //   </div>
+                    //   <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${chd.title || chd.name || _.upperFirst(chd.slug)}</div>
+                    //               </a></div>`,
+                    //                   ''
+                    //                 ) +
+                    //               `</div>`
+                    //             }
+                    //           </div>
+                    //         </div>
+                    //       </div>
+                    //     </div>` +
+                    //       `   </div>
+                    //           <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${child.title || child.name || _.upperFirst(child.slug)}</div>
+                    //         </div>`;
+                    //   } else {
+                    //     tabContentHtml += `
+                    // <div class="card border-0" style="">
+                    //   <div class="card-body bg-light p-0 position-absolute" style="background-image: url(${child.ico || ''}); ">   </div>
+                    //   <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${child.title || child.name || _.upperFirst(child.slug)}</div>
+                    // </div>`;
+                    //   }
                     tabContentHtml += `</div>`;
                   });
                 tabContentHtml += `</div> </div>`;
               });
-            $("#app-tab").html(tabHtml);
-            $("#app-tab-content").html(tabContentHtml);
-            console.log($(".masonry").eq(0));
-            $(".masonry").eq(0).masonry({
+            $('#app-tab').html(tabHtml);
+            $('#app-tab-content').html(tabContentHtml);
+            console.log($('.masonry').eq(0));
+            $('.masonry').eq(0).masonry({
               // options
-              itemSelector: ".masonry-item",
-              percentPosition: true,
+              itemSelector: '.masonry-item',
+              percentPosition: true
             });
-            $('button[data-toggle="tab"]').on("shown.bs.tab", function (event) {
+            $('button[data-toggle="tab"]').on('shown.bs.tab', function (event) {
               // console.log(event.target);
               // console.log(event.relatedTarget);
               // console.log($(event.target).data("target"));
               // console.log($(event.relatedTarget).data("target"));
-              $($(event.target).data("target") + ">.masonry").masonry({
+              $($(event.target).data('target') + '>.masonry').masonry({
                 // options
-                itemSelector: ".masonry-item",
-                percentPosition: true,
+                itemSelector: '.masonry-item',
+                percentPosition: true
               });
             });
           })
-          .then((res) => {});
+          .then(res => {});
       });
     </script>
   </body>

@@ -20,6 +20,12 @@
       ]
     }
   ],
+  "apis": {
+    "background-image": {
+      "url": "https://api.codelife.cc/wallpaper/random?lang=cn",
+      "selector": "json::data"
+    }
+  },
   "navs": [
     {
       "slug": "langnang",

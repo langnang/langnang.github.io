@@ -33,6 +33,20 @@ const makeCard = function (item, index) {
     if (ico != 'favicon') return ico;
     return '';
   }
+
+  const makeBadge = (data) => {
+    let $return = '';
+    if (data.disabled == true) {
+      $return += `<i class="fa-solid fa-ban position-center display-5 text-danger"></i>`;
+    }
+
+    if (data.type == 'link' && data.url) {
+      $return += `<span class="badge badge-light p-0 position-absolute right-0 bottom-0 text-primary">
+            <i class="fas fa-link"></i>
+          </span>`;
+    }
+    return $return;
+  }
   let $return = '';
   if (item.type == 'category') {
     $return += ` 
@@ -48,6 +62,7 @@ const makeCard = function (item, index) {
               <div class="col col--1 row--1 px-1">
                 <div class="card border-0 bg-light">
                   <img class="position-absolute top-0" src="${getIcoPath(chd.ico, chd.url)}" style="height: 100%;" onerror="event.srcElement.src='https://unpkg.com/@fortawesome/fontawesome-free@7.0.0/svgs/solid/earth-america.svg';event.srcElement.onerror=null;"/>
+                  ${makeBadge(chd)}
                 </div>
               </div>`,
           ``
@@ -76,9 +91,7 @@ const makeCard = function (item, index) {
       <a class="card border-0 text-muted" target="_blank" href="${item.url}" style="">
         <div class="card-body bg-light p-0 position-absolute overflow-hidden" style="">
           <img src="${getIcoPath(item.ico, item.url)}" style="height: 100%;" onerror="event.srcElement.src='https://unpkg.com/@fortawesome/fontawesome-free@7.0.0/svgs/solid/earth-america.svg';event.srcElement.onerror=null;"/>
-          <span class="badge badge-light p-0 position-absolute right-0 bottom-0 text-primary">
-            <i class="fas fa-link"></i>
-          </span>
+          ${makeBadge(item)}
         </div>
         <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${item.title || item.name || _.upperFirst(item.slug)}</div>
       </a>

@@ -239,7 +239,6 @@
           "slug": "icon",
           "name": "Icon",
           "type": "category",
-          "row": 1,
           "col": 2,
           "children": [
             { "slug": "bootstrap-icons", "title": "Bootstrap 图标库 · Bootstrap 官方开源图标（icon）库", "url": "https://icons.bootcss.com/", "ico": "https://icons.bootcss.com/favicon.ico", "type": "link" },
@@ -261,6 +260,22 @@
             { "slug": "", "title": "", "url": "", "ico": "favicon", "type": "link" }
           ]
         },
+        {
+          "slug": "jquery",
+          "name": "",
+          "type": "category",
+          "col": 2,
+          "children": [
+            { "slug": "jquery-contextmenu", "title": "", "url": "https://swisnl.github.io/jQuery-contextMenu/", "ico": "favicon", "type": "link", "disabled": true, "reason": "Uncaught TypeError: n.$menu.css(...)[n.animation.show] is not a function" },
+            { "slug": "", "title": "", "url": "", "ico": "favicon", "type": "link" },
+            { "slug": "", "title": "", "url": "", "ico": "favicon", "type": "link" },
+            { "slug": "", "title": "", "url": "", "ico": "favicon", "type": "link" },
+            { "slug": "", "title": "", "url": "", "ico": "favicon", "type": "link" }
+          ]
+        },
+        { "slug": "bootstrap", "name": "", "type": "category", "col": 2, "children": [] },
+        { "slug": "vue", "name": "", "type": "category", "col": 2, "children": [] },
+        { "slug": "react", "name": "", "type": "category", "col": 2, "children": [] },
         { "slug": "animate.css", "title": "", "url": "https://animate.style/", "ico": "https://animate.style/img/favicon.ico", "type": "link" },
         { "slug": "Sass", "title": "", "url": "//www.sass.hk/", "ico": "//www.sass.hk/favicon.ico", "type": "link" },
         { "slug": "PostCSS", "title": "", "url": "//postcss.org/", "ico": "https://postcss.org/assets/logo-C2ryQugb.svg", "type": "link" },

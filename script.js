@@ -28,11 +28,16 @@
 })(jQuery, window, document);
 
 const makeCard = function (item, index) {
+  const getIcoPath = (ico, url) => {
+    if (url && ico == 'favicon') return url + 'favicon.ico';
+    if (ico != 'favicon') return ico;
+    return '';
+  }
   let $return = '';
   if (item.type == 'category') {
     $return += ` 
       <div class="card border-0"  style="">
-        <div class="card-body p-0 position-absolute" style="background-image: url(${item.ico || ''}); ">
+        <div class="card-body p-0 position-absolute">
           <div class="row row-cols-${(item.col || 0) + 1} mx-0 align-items-center" style="height: 100%;" data-toggle="modal" data-target="#${item.slug}--${index}">` +
       (item.children || [])
         .filter(v => v.slug)
@@ -41,7 +46,8 @@ const makeCard = function (item, index) {
           (tol, chd) =>
             tol + `
               <div class="col col--1 row--1 px-1">
-                <div class="card border-0 bg-light" style="background-image: url(${chd.ico || ''}); ">
+                <div class="card border-0 bg-light">
+                  <img class="position-absolute top-0" src="${getIcoPath(chd.ico, chd.url)}" style="height: 100%;" onerror="event.srcElement.src='https://unpkg.com/@fortawesome/fontawesome-free@7.0.0/svgs/solid/earth-america.svg';event.srcElement.onerror=null;"/>
                 </div>
               </div>`,
           ``
@@ -68,7 +74,8 @@ const makeCard = function (item, index) {
   } else if (item.type == 'link' && item.url) {
     $return += `
       <a class="card border-0 text-muted" target="_blank" href="${item.url}" style="">
-        <div class="card-body bg-light p-0 position-absolute" style="background-image: url(${item.ico || ''}); ">
+        <div class="card-body bg-light p-0 position-absolute overflow-hidden" style="">
+          <img src="${getIcoPath(item.ico, item.url)}" style="height: 100%;" onerror="event.srcElement.src='https://unpkg.com/@fortawesome/fontawesome-free@7.0.0/svgs/solid/earth-america.svg';event.srcElement.onerror=null;"/>
           <span class="badge badge-light p-0 position-absolute right-0 bottom-0 text-primary">
             <i class="fas fa-link"></i>
           </span>
@@ -79,7 +86,9 @@ const makeCard = function (item, index) {
   } else {
     $return += `
       <div class="card border-0" style="">
-        <div class="card-body bg-light p-0 position-absolute" style="background-image: url(${item.ico || ''}); ">   </div>
+        <div class="card-body bg-light p-0 position-absolute overflow-hidden" style="">
+          <img src="${getIcoPath(item.ico, item.url)}" style="height: 100%;" onerror="event.srcElement.src='https://unpkg.com/@fortawesome/fontawesome-free@7.0.0/svgs/solid/earth-america.svg';event.srcElement.onerror=null;"/>
+        </div>
         <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${item.title || item.name || _.upperFirst(item.slug)}</div>
       </div>
       `;

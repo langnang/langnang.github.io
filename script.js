@@ -34,16 +34,26 @@ const makeCard = function (item, index) {
     return '';
   }
 
+  const makeIco = (data) => {
+    return `<img class="" src="${getIcoPath(data.ico, data.url)}" style="height: 90%;margin-top: 5%;" onerror="event.srcElement.src='https://unpkg.com/@fortawesome/fontawesome-free@7.0.0/svgs/solid/earth-america.svg';event.srcElement.onerror=null;"/>`
+  }
+
   const makeBadge = (data) => {
     let $return = '';
     if (data.disabled == true) {
-      $return += `<i class="fa-solid fa-ban position-center display-5 text-danger"></i>`;
+      $return += `<i class="fa-solid fa-ban position-center display-6 text-danger"></i>`;
     }
-
+    if (data.recommand == true) {
+      $return += `
+      <span class="badge badge-light p-0 position-absolute left-0 top-0 text-warning">
+        <i class="fa-solid fa-star"></i> 
+      </span>`;
+    }
     if (data.type == 'link' && data.url) {
-      $return += `<span class="badge badge-light p-0 position-absolute right-0 bottom-0 text-primary">
-            <i class="fas fa-link"></i>
-          </span>`;
+      $return += `
+      <span class="badge badge-light p-0 position-absolute right-0 bottom-0 text-primary">
+        <i class="fas fa-link"></i>
+      </span>`;
     }
     return $return;
   }
@@ -61,8 +71,10 @@ const makeCard = function (item, index) {
             tol + `
               <div class="col col--1 row--1 px-1">
                 <div class="card border-0 bg-light">
-                  <img class="position-absolute top-0" src="${getIcoPath(chd.ico, chd.url)}" style="height: 100%;" onerror="event.srcElement.src='https://unpkg.com/@fortawesome/fontawesome-free@7.0.0/svgs/solid/earth-america.svg';event.srcElement.onerror=null;"/>
-                  ${makeBadge(chd)}
+                  <div class="card-body bg-light p-0 left-0 position-absolute overflow-hidden w-100 h-100" style="">
+                    ${makeIco(chd)}
+                    ${makeBadge(chd)}
+                  </div>
                 </div>
               </div>`,
           ``
@@ -71,6 +83,9 @@ const makeCard = function (item, index) {
       `<div class="modal fade" id="${item.slug}--${index}" tabindex="-1" aria-labelledby="${item.slug}--${index}--label" aria-hidden="true">
           <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
+              <div class="modal-header justify-content-center border-0">
+                <h4 class="modal-title rounded-pill w-50" style="background-color: rgba(255, 255, 255, .4);">${item.name || item.title || _.upperFirst(item.slug)}</h4>
+              </div>
               <div class="modal-body rounded" style="background-color: rgba(255, 255, 255, .4);">
                 ${`<div class="row row-cols-10">` +
       (item.children || [])
@@ -88,9 +103,9 @@ const makeCard = function (item, index) {
         </div>`;
   } else if (item.type == 'link' && item.url) {
     $return += `
-      <a class="card border-0 text-muted" target="_blank" href="${item.url}" style="">
+      <a class="card border-0 text-muted" target="_blank" href="${item.url}" style="" data-toggle="tooltip" data-placement="bottom" title="${item.title || item.name || _.upperFirst(item.slug)}">
         <div class="card-body bg-light p-0 position-absolute overflow-hidden" style="">
-          <img src="${getIcoPath(item.ico, item.url)}" style="height: 100%;" onerror="event.srcElement.src='https://unpkg.com/@fortawesome/fontawesome-free@7.0.0/svgs/solid/earth-america.svg';event.srcElement.onerror=null;"/>
+          ${makeIco(item)}
           ${makeBadge(item)}
         </div>
         <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${item.title || item.name || _.upperFirst(item.slug)}</div>
@@ -99,8 +114,8 @@ const makeCard = function (item, index) {
   } else {
     $return += `
       <div class="card border-0" style="">
-        <div class="card-body bg-light p-0 position-absolute overflow-hidden" style="">
-          <img src="${getIcoPath(item.ico, item.url)}" style="height: 100%;" onerror="event.srcElement.src='https://unpkg.com/@fortawesome/fontawesome-free@7.0.0/svgs/solid/earth-america.svg';event.srcElement.onerror=null;"/>
+        <div class="card-body bg-light p-0 position-absolute overflow-hidden" style="" data-toggle="tooltip" data-placement="bottom" title="${item.title || item.name || _.upperFirst(item.slug)}">
+          ${makeIco(item)}
         </div>
         <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${item.title || item.name || _.upperFirst(item.slug)}</div>
       </div>

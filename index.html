@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="https://unpkg.com/jquery-contextmenu@2.9.2/dist/jquery.contextMenu.min.css" />
 
-    <link rel="stylesheet" href="./style.css?v=2025-08-29 18:04:04" />
+    <link rel="stylesheet" href="./style.css?v=2025-08-30 00:25:51" />
     <style>
       #app-main .container p {
         margin-left: -0.75rem;
@@ -77,7 +77,7 @@
     <script src="https://unpkg.com/lodash@4.17.21/lodash.min.js"></script>
     <!-- <script src="https://unpkg.com/simple-ini@1.0.4/lib/simple-ini.js"></script> -->
 
-    <script src="./script.js?v=2025-08-29 18:04:04"></script>
+    <script src="./script.js?v=2025-08-30 00:25:51"></script>
     <script>
       $(function () {});
     </script>
@@ -232,74 +232,14 @@
                     tabContentHtml += `<div class="col col--${child.col || 1} row--${child.row || 1} masonry-item px-0 text-decoration-none" data-id="${index + 1}">`;
 
                     tabContentHtml += makeCard(child, index);
-
-                    //   if (child.type == 'link' && child.url) {
-                    //     tabContentHtml += `
-                    // <a class="card border-0 text-muted" target="_blank" href="${child.url}" style="">
-                    //   <div class="card-body bg-light p-0 position-absolute" style="background-image: url(${child.ico || ''}); ">
-                    //   <i class="fas fa-link position-absolute right-0 bottom-0"></i>
-                    //     </div>
-                    //   <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${child.title || child.name || _.upperFirst(child.slug)}</div>
-                    // </a>`;
-                    //   } else if (child.type == 'category') {
-                    //     tabContentHtml +=
-                    //       ` <div class="card border-0"  style="">
-                    //           <div class="card-body p-0 position-absolute" style="background-image: url(${child.ico || ''}); ">` +
-                    //       `     <div class="row row-cols-${(child.col || 0) + 1} mx-0 align-items-center" style="height: 100%;" data-toggle="modal" data-target="#${nav.slug}--${index}">` +
-                    //       (child.children || [])
-                    //         .filter(v => v.slug)
-                    //         .slice(0, (child.col || 0) + 1)
-                    //         .reduce(
-                    //           (tol, chd) =>
-                    //             tol +
-                    //             `<div class="col col--1 row--1 px-1">
-                    //             <div class="card border-0 bg-light" style="background-image: url(${chd.ico || ''}); ">
-                    //             </div>
-                    //            </div>`,
-                    //           ``
-                    //         ) +
-                    //       `     </div>` +
-                    //       `<div class="modal fade" id="${nav.slug}--${index}" tabindex="-1" aria-labelledby="${nav.slug}--${index}--label" aria-hidden="true">
-                    //       <div class="modal-dialog modal-lg modal-dialog-centered">
-                    //         <div class="modal-content bg-transparent border-0">
-                    //           <div class="modal-body rounded" style="background-color: rgba(255, 255, 255, .4);">
-                    //             ${
-                    //               `<div class="row row-cols-10">` +
-                    //               (child.children || [])
-                    //                 .filter(v => v.slug)
-                    //                 .reduce(
-                    //                   (tol, chd, ind) =>
-                    //                     tol +
-                    //                     `<div class="col px-1"><a class="card border-0" target="_blank" href="${chd.url}">
-                    //               <div class="card-body bg-light p-0 position-absolute" style="background-image: url(${chd.ico || ''}); ">
-                    //   </div>
-                    //   <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${chd.title || chd.name || _.upperFirst(chd.slug)}</div>
-                    //               </a></div>`,
-                    //                   ''
-                    //                 ) +
-                    //               `</div>`
-                    //             }
-                    //           </div>
-                    //         </div>
-                    //       </div>
-                    //     </div>` +
-                    //       `   </div>
-                    //           <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${child.title || child.name || _.upperFirst(child.slug)}</div>
-                    //         </div>`;
-                    //   } else {
-                    //     tabContentHtml += `
-                    // <div class="card border-0" style="">
-                    //   <div class="card-body bg-light p-0 position-absolute" style="background-image: url(${child.ico || ''}); ">   </div>
-                    //   <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${child.title || child.name || _.upperFirst(child.slug)}</div>
-                    // </div>`;
-                    //   }
                     tabContentHtml += `</div>`;
                   });
                 tabContentHtml += `</div> </div>`;
               });
             $('#app-tab').html(tabHtml);
             $('#app-tab-content').html(tabContentHtml);
-            console.log($('.masonry').eq(0));
+            $('[data-toggle="tooltip"]').tooltip({});
+            // console.log($('.masonry').eq(0));
             $('.masonry').eq(0).masonry({
               // options
               itemSelector: '.masonry-item',

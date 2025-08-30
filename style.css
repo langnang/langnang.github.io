@@ -326,3 +326,39 @@ max-width: calc(8.33% - .5px); */
   display: flex;
   flex-direction: column;
 }
+
+.bootstrapMenu .dropdown-menu a {
+  text-decoration: none;
+}
+
+.bootstrapMenu .dropdown-menu>li:not(.divider, .dropdown-divider, .dropdown-header) {
+  display: block;
+  width: 100%;
+  padding: .25rem .5rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.bootstrapMenu .dropdown-menu>li:not(.divider, .dropdown-divider, .dropdown-header) a {
+  color: #212529;
+}
+
+.bootstrapMenu .dropdown-menu>li.divider {
+  height: 0;
+  margin: .5rem 0;
+  overflow: hidden;
+  border-top: 1px solid #e9ecef;
+}
+
+
+.bootstrapMenu .dropdown-menu>li:not(.divider, .dropdown-divider, .dropdown-header):focus,
+.bootstrapMenu .dropdown-menu>li:not(.divider, .dropdown-divider, .dropdown-header):hover {
+  color: #16181b;
+  text-decoration: none;
+  background-color: #e9ecef;
+}

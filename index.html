@@ -12,9 +12,7 @@
 
     <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@7.0.0/css/all.css" />
 
-    <link rel="stylesheet" href="https://unpkg.com/jquery-contextmenu@2.9.2/dist/jquery.contextMenu.min.css" />
-
-    <link rel="stylesheet" href="./style.css?v=2025-08-30 20:34:16" />
+    <link rel="stylesheet" href="./style.css?v=2025-08-31 01:06:19" />
     <style>
       #app-main .container p {
         margin-left: -0.75rem;
@@ -70,8 +68,7 @@
     <script src="https://unpkg.com/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- <script src="https://unpkg.com/bootstrap-menu@1.0.14/dist/BootstrapMenu.min.js"></script> -->
 
-    <script src="https://unpkg.com/jquery-contextmenu@2.9.2/dist/jquery.contextMenu.min.js"></script>
-    <script src="https://unpkg.com/jquery-contextmenu@2.9.2/dist/jquery.ui.position.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-menu@1.0.14/dist/BootstrapMenu.min.js"></script>
 
     <script src="https://unpkg.com/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
 
@@ -83,7 +80,7 @@
     <script src="https://unpkg.com/lodash@4.17.21/lodash.min.js"></script>
     <!-- <script src="https://unpkg.com/simple-ini@1.0.4/lib/simple-ini.js"></script> -->
 
-    <script src="./script.js?v=2025-08-30 20:34:16"></script>
+    <script src="./script.js?v=2025-08-31 01:06:19"></script>
     <script>
       $(function () {});
     </script>
@@ -142,7 +139,7 @@
             const navGroups = navs
               .filter(v => v.slug && v.type == 'category' && !v.hidden)
               .reduce((t, v) => {
-                const index = v.group || 0;
+                const index = v.carousel || 0;
                 if (!t[index]) t[index] = [];
                 t[index].push(v);
                 return t;
@@ -156,38 +153,38 @@
               let tabContentHtml = ``;
               group
                 .sort((a, b) => a.order - b.order)
-                .forEach((nav, i) => {
+                .forEach((nav, nav_i) => {
                   tabHtml += `
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link btn-block text-light font-weight-bolder ${i == 0 ? 'active' : ''}" id="${nav.slug}-tab" data-toggle="tab" data-target="#${nav.slug}" type="button" role="tab" aria-controls="${nav.slug}" aria-selected="true">
-                    ${nav.name || _.upperFirst(nav.slug)}
-                  </button>
-                </li>
-                `;
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link btn-block text-light font-weight-bolder ${nav_i == 0 ? 'active' : ''}" id="${nav.slug}-tab" data-toggle="tab" data-target="#${nav.slug}" type="button" role="tab" aria-controls="${nav.slug}" aria-selected="true">
+                          ${nav.name || _.upperFirst(nav.slug)}
+                        </button>
+                      </li>
+                      `;
 
-                  tabContentHtml += `<div class="tab-pane fade ${i == 0 ? 'show active' : ''}" id="${nav.slug}" role="tabpanel" aria-labelledby="${nav.slug}-tab">`;
+                  tabContentHtml += `<div class="tab-pane fade ${nav_i == 0 ? 'show active' : ''}" id="${nav.slug}" role="tabpanel" aria-labelledby="${nav.slug}-tab">`;
                   tabContentHtml += `<nav aria-label="breadcrumb">
-                  <ol class="breadcrumb mb-2 py-0 justify-content-center bg-dark--4">
-                    <li class="breadcrumb-item active"><a href="#" class="badge badge-primary">ALL</a></li>
-                  </ol>
-                </nav>`;
-                  tabContentHtml += ` <div class="row row-cols-16 row-cols-sm-10 row-cols-md-12 text-center masonry">`;
-                  tabContentHtml += `<div class="col col--1 row--1 masonry-item px-0 text-decoration-none" data-id="0"></div>`;
-                  [...(nav.children || []).filter(v => v.slug && v.recommand), ...(nav.children || []).filter(v => v.slug && !v.recommand).sort((a, b) => a.order - b.order)].forEach((child, index) => {
-                    tabContentHtml += `<div class="col col--${child.col || 1} row--${child.row || 1} masonry-item px-0 text-decoration-none" data-id="${index + 1}">`;
+                        <ol class="breadcrumb mb-2 py-0 justify-content-center bg-dark--4">
+                          <li class="breadcrumb-item active"><a href="#" class="badge badge-primary">ALL</a></li>
+                        </ol>
+                      </nav>`;
+                  tabContentHtml += ` <div class="row row-cols-16 row-cols-sm-10 row-cols-md-12 text-center mx-0 masonry">`;
+                  tabContentHtml += `<div class="col col--1 row--1 masonry-item px-0 text-decoration-none"></div>`;
+                  [...(nav.children || []).filter(v => v.slug && v.recommand), ...(nav.children || []).filter(v => v.slug && !v.recommand).sort((a, b) => a.order - b.order)].forEach((child, child_i) => {
+                    tabContentHtml += `<div class="col col--${child.col || 1} row--${child.row || 1} masonry-item px-0 text-decoration-none" data-id="${child.slug}--${child_i}">`;
 
-                    tabContentHtml += makeCard(child, index);
+                    tabContentHtml += makeCard(child, child_i);
                     tabContentHtml += `</div>`;
                   });
                   tabContentHtml += `</div> </div>`;
                 });
               carouselInnerHtml += `
-              <div class="carousel-item ${g_index == 0 ? 'active' : ''}">
-                <ul id="app-tab--${g_index}" class="nav nav-pills nav-justified mb-2" role="tablist" style="background-color: rgba(0, 0, 0, 0.3)">${tabHtml}</ul>
+                    <div class="carousel-item ${g_index == 0 ? 'active' : ''}">
+                      <ul id="app-tab--${g_index}" class="nav nav-pills nav-justified mb-2" role="tablist" style="background-color: rgba(0, 0, 0, 0.3)">${tabHtml}</ul>
 
-                <div id="app-tab-content--${g_index}" class="tab-content">${tabContentHtml}</div>
+                      <div id="app-tab-content--${g_index}" class="tab-content">${tabContentHtml}</div>
 
-              </div>`;
+                    </div>`;
             });
             $('#app-carousel--indicators').html(carouselIndicatorHtml);
             $('#app-carousel--inner').html(carouselInnerHtml);
@@ -208,6 +205,103 @@
                 itemSelector: '.masonry-item',
                 percentPosition: true
               });
+            });
+            var tableRows = {
+              1: { name: 'First row', isEditable: true, isRemovable: true },
+              2: { name: 'Second row', isEditable: true, isRemovable: true },
+              3: { name: 'Third row', isEditable: true, isRemovable: true }
+            };
+
+            var menu = new BootstrapMenu('.masonry-item.col.col--1.row--1>.card', {
+              /* $rowElem is the jQuery element where the menu was opened. The
+               * returned value is the `row` argument passed to each function. */
+              fetchElementData: function ($rowElem) {
+                console.log($rowElem);
+                console.log($rowElem.data('id'));
+                return $rowElem;
+                //   var rowId = $rowElem.data('rowId');
+                //   return tableRows[rowId];
+              },
+              /* group actions by their id to make use of separators between
+               * them in the context menu. Actions not added to any group with
+               * this option will appear in a default group of their own. */
+              // actionsGroups: [['setEditable', 'setUneditable'], ['deleteRow']],
+              /* you can declare 'actions' as an object instead of an array,
+               * and its keys will be used as action ids. */
+              actions: {
+                editName: {
+                  name: 'Edit name',
+                  iconClass: 'fa-pencil',
+                  onClick: function (row) {
+                    /* ... */
+                    console.log(arguments, row);
+                  },
+                  isShown: function (row) {
+                    return false;
+                  },
+                  isEnabled: function (row) {
+                    return true;
+                  }
+                },
+                editDescription: {
+                  name: 'Edit description',
+                  iconClass: 'fa-pencil',
+                  onClick: function (row) {
+                    /* ... */
+                    console.log(arguments, row);
+                  },
+                  isShown: function (row) {
+                    return false;
+                  },
+                  isEnabled: function (row) {
+                    return true;
+                  }
+                },
+                setEditable: {
+                  name: 'Set editable',
+                  iconClass: 'fa-unlock',
+                  onClick: function (row) {
+                    /* ... */
+                    console.log(arguments, row);
+                  },
+                  isShown: function (row) {
+                    return !true;
+                  }
+                },
+                setUneditable: {
+                  name: 'Set uneditable',
+                  iconClass: 'fa-lock',
+                  onClick: function (row) {
+                    /* ... */
+                    console.log(arguments, row);
+                  },
+                  isShown: function (row) {
+                    return false;
+                  }
+                },
+                showDetail: {
+                  name: '详情',
+                  iconClass: 'fa-circle-info',
+                  onClick: function (element) {
+                    console.log(arguments, element, $(element));
+                    $('#' + element.data('id')).modal('show');
+                  }
+                },
+                deleteRow: {
+                  name: 'Delete row',
+                  iconClass: 'fa-trash-o',
+                  onClick: function (row) {
+                    /* ... */
+                    console.log(arguments, row);
+                  },
+                  isShown: function (row) {
+                    return false;
+                  },
+                  isEnabled: function (row) {
+                    return true && true;
+                  }
+                }
+              }
             });
           })
           .then(res => {});

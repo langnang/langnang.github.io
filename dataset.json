@@ -106,6 +106,7 @@
     },
     {
       "slug": "application",
+      "name": "应用",
       "type": "category",
       "children": [
         { "slug": "windows", "title": "", "url": "https://www.microsoft.com/", "ico": "favicon", "type": "link" },
@@ -199,6 +200,7 @@
     },
     {
       "slug": "dependency",
+      "name": "依赖",
       "type": "category",
       "children": [
         { "slug": "jquery", "title": "jQuery", "url": "https://jquery.com/", "ico": "https://jquery.com/wp-content/themes/jquery.com/i/favicon.ico", "type": "link", "recommand": true },
@@ -231,7 +233,7 @@
         },
         {
           "slug": "jquery",
-          "name": "",
+          "name": "jQuery",
           "type": "category",
           "col": 2,
           "children": [
@@ -387,6 +389,7 @@
     },
     {
       "slug": "Extension",
+      "name": "拓展",
       "type": "category",
       "children": [
         { "slug": "greasyfork", "title": "", "url": "https://greasyfork.wwwnav.com/", "ico": "https://greasyfork.wwwnav.com/files/greasyfork.png", "type": "link" },
@@ -405,6 +408,7 @@
     },
     {
       "slug": "framework",
+      "name": "框架",
       "type": "category",
       "children": [
         { "slug": "html", "type": "category", "col": 3, "children": [] },
@@ -418,6 +422,7 @@
 
     {
       "slug": "platform",
+      "name": "平台",
       "type": "category",
       "children": [
         { "slug": "github", "title": "", "url": "https://github.com/", "ico": "https://github.com/favicon.ico", "type": "link" },
@@ -502,6 +507,7 @@
     },
     {
       "slug": "software",
+      "name": "软件",
       "type": "category",
       "children": [
         { "slug": "html", "type": "category", "col": 2, "children": [] },
@@ -520,6 +526,7 @@
     },
     {
       "slug": "solution",
+      "name": "方案",
       "type": "category"
     }
   ],

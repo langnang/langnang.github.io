@@ -14,7 +14,7 @@
 
     <link rel="stylesheet" href="https://unpkg.com/jquery-contextmenu@2.9.2/dist/jquery.contextMenu.min.css" />
 
-    <link rel="stylesheet" href="./style.css?v=2025-08-30 00:25:51" />
+    <link rel="stylesheet" href="./style.css?v=2025-08-30 20:34:16" />
     <style>
       #app-main .container p {
         margin-left: -0.75rem;
@@ -53,10 +53,15 @@
             </div>
           </div>
         </div>
-
-        <ul id="app-tab" class="nav nav-pills nav-justified mb-2" id="myTab" role="tablist" style="background-color: rgba(0, 0, 0, 0.3)"></ul>
-
-        <div id="app-tab-content" class="tab-content" id="myTabContent"></div>
+        <div id="app-carousel" class="carousel slide flex-grow-1" data-touch="false" data-interval="false">
+          <ol id="app-carousel--indicators" class="carousel-indicators mb-0"></ol>
+          <div id="app-carousel--inner" class="carousel-inner"></div>
+        </div>
+        <footer id="app-footer" class="py-2">
+          <div class="progress" style="opacity: 0.4">
+            <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </footer>
       </main>
     </div>
     <div class="wallpaper" style="background-image: url('https://files.codelife.cc/wallhaven/full/0q/wallhaven-0qd3xd.jpg?x-oss-process=image/resize,limit_0,m_fill,w_1920,h_1080/quality,Q_93/format,webp')"></div>
@@ -78,7 +83,7 @@
     <script src="https://unpkg.com/lodash@4.17.21/lodash.min.js"></script>
     <!-- <script src="https://unpkg.com/simple-ini@1.0.4/lib/simple-ini.js"></script> -->
 
-    <script src="./script.js?v=2025-08-30 00:25:51"></script>
+    <script src="./script.js?v=2025-08-30 20:34:16"></script>
     <script>
       $(function () {});
     </script>
@@ -133,12 +138,26 @@
           .then(res => {
             console.log(res);
             const { navs } = res;
-            let tabHtml = ``;
-            let tabContentHtml = ``;
-            navs
-              .filter(v => v.slug)
-              .forEach((nav, i) => {
-                tabHtml += `
+
+            const navGroups = navs
+              .filter(v => v.slug && v.type == 'category' && !v.hidden)
+              .reduce((t, v) => {
+                const index = v.group || 0;
+                if (!t[index]) t[index] = [];
+                t[index].push(v);
+                return t;
+              }, []);
+
+            let carouselIndicatorHtml = ``;
+            let carouselInnerHtml = ``;
+            navGroups.forEach((group, g_index) => {
+              carouselIndicatorHtml += `<li data-target="#app-carousel" data-slide-to="${g_index}" class="${g_index == 0 ? 'active' : ''}"></li>`;
+              let tabHtml = ``;
+              let tabContentHtml = ``;
+              group
+                .sort((a, b) => a.order - b.order)
+                .forEach((nav, i) => {
+                  tabHtml += `
                 <li class="nav-item" role="presentation">
                   <button class="nav-link btn-block text-light font-weight-bolder ${i == 0 ? 'active' : ''}" id="${nav.slug}-tab" data-toggle="tab" data-target="#${nav.slug}" type="button" role="tab" aria-controls="${nav.slug}" aria-selected="true">
                     ${nav.name || _.upperFirst(nav.slug)}
@@ -146,24 +165,32 @@
                 </li>
                 `;
 
-                tabContentHtml += `<div class="tab-pane fade ${i == 0 ? 'show active' : ''}" id="${nav.slug}" role="tabpanel" aria-labelledby="${nav.slug}-tab">`;
-                tabContentHtml += `<nav aria-label="breadcrumb">
+                  tabContentHtml += `<div class="tab-pane fade ${i == 0 ? 'show active' : ''}" id="${nav.slug}" role="tabpanel" aria-labelledby="${nav.slug}-tab">`;
+                  tabContentHtml += `<nav aria-label="breadcrumb">
                   <ol class="breadcrumb mb-2 py-0 justify-content-center bg-dark--4">
                     <li class="breadcrumb-item active"><a href="#" class="badge badge-primary">ALL</a></li>
                   </ol>
                 </nav>`;
-                tabContentHtml += ` <div class="row row-cols-16 row-cols-sm-10 row-cols-md-12 text-center masonry">`;
-                tabContentHtml += `<div class="col col--1 row--1 masonry-item px-0 text-decoration-none" data-id="0"></div>`;
-                [...(nav.children || []).filter(v => v.slug && v.recommand), ...(nav.children || []).filter(v => v.slug && !v.recommand).sort((a, b) => a.order - b.order)].forEach((child, index) => {
-                  tabContentHtml += `<div class="col col--${child.col || 1} row--${child.row || 1} masonry-item px-0 text-decoration-none" data-id="${index + 1}">`;
+                  tabContentHtml += ` <div class="row row-cols-16 row-cols-sm-10 row-cols-md-12 text-center masonry">`;
+                  tabContentHtml += `<div class="col col--1 row--1 masonry-item px-0 text-decoration-none" data-id="0"></div>`;
+                  [...(nav.children || []).filter(v => v.slug && v.recommand), ...(nav.children || []).filter(v => v.slug && !v.recommand).sort((a, b) => a.order - b.order)].forEach((child, index) => {
+                    tabContentHtml += `<div class="col col--${child.col || 1} row--${child.row || 1} masonry-item px-0 text-decoration-none" data-id="${index + 1}">`;
 
-                  tabContentHtml += makeCard(child, index);
-                  tabContentHtml += `</div>`;
+                    tabContentHtml += makeCard(child, index);
+                    tabContentHtml += `</div>`;
+                  });
+                  tabContentHtml += `</div> </div>`;
                 });
-                tabContentHtml += `</div> </div>`;
-              });
-            $('#app-tab').html(tabHtml);
-            $('#app-tab-content').html(tabContentHtml);
+              carouselInnerHtml += `
+              <div class="carousel-item ${g_index == 0 ? 'active' : ''}">
+                <ul id="app-tab--${g_index}" class="nav nav-pills nav-justified mb-2" role="tablist" style="background-color: rgba(0, 0, 0, 0.3)">${tabHtml}</ul>
+
+                <div id="app-tab-content--${g_index}" class="tab-content">${tabContentHtml}</div>
+
+              </div>`;
+            });
+            $('#app-carousel--indicators').html(carouselIndicatorHtml);
+            $('#app-carousel--inner').html(carouselInnerHtml);
             $('[data-toggle="tooltip"]').tooltip({});
             // console.log($('.masonry').eq(0));
             $('.masonry').eq(0).masonry({

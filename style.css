@@ -307,3 +307,22 @@ max-width: calc(8.33% - .5px); */
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.opacity-1 {
+  opacity: .1;
+}
+
+.opacity-4 {
+  opacity: .4;
+}
+
+#app {
+  height: 100vh;
+  overflow: hidden;
+}
+
+#app-main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}

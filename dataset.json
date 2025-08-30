@@ -31,6 +31,7 @@
       "slug": "langnang",
       "name": "~",
       "type": "category",
+      "group": 0,
       "children": [
         { "slug": "docs", "title": "", "url": "https://langnang.github.io/docs/", "ico": "https://jekyllcn.com/favicon.ico", "type": "link" },
         {
@@ -108,6 +109,7 @@
       "slug": "application",
       "name": "应用",
       "type": "category",
+      "group": 0,
       "children": [
         { "slug": "windows", "title": "", "url": "https://www.microsoft.com/", "ico": "favicon", "type": "link" },
         { "slug": "linux", "title": "", "url": "https://www.linux.org/", "ico": "https://www.linux.org/images/logo.png", "type": "link" },
@@ -202,6 +204,7 @@
       "slug": "dependency",
       "name": "依赖",
       "type": "category",
+      "group": 0,
       "children": [
         { "slug": "jquery", "title": "jQuery", "url": "https://jquery.com/", "ico": "https://jquery.com/wp-content/themes/jquery.com/i/favicon.ico", "type": "link", "recommand": true },
         { "slug": "vue", "title": "", "url": "https://cn.vuejs.org/", "ico": "https://cn.vuejs.org/logo.svg", "type": "link", "recommand": true },
@@ -391,6 +394,7 @@
       "slug": "Extension",
       "name": "拓展",
       "type": "category",
+      "group": 0,
       "children": [
         { "slug": "greasyfork", "title": "", "url": "https://greasyfork.wwwnav.com/", "ico": "https://greasyfork.wwwnav.com/files/greasyfork.png", "type": "link" },
         { "slug": "zzzmh", "title": "", "url": "https://chrome.zzzmh.cn/", "ico": "https://chrome.zzzmh.cn/favicon.ico", "type": "link" },
@@ -410,6 +414,7 @@
       "slug": "framework",
       "name": "框架",
       "type": "category",
+      "group": 0,
       "children": [
         { "slug": "html", "type": "category", "col": 3, "children": [] },
         { "slug": "node", "type": "category", "col": 3, "children": [] },
@@ -424,6 +429,7 @@
       "slug": "platform",
       "name": "平台",
       "type": "category",
+      "group": 0,
       "children": [
         { "slug": "github", "title": "", "url": "https://github.com/", "ico": "https://github.com/favicon.ico", "type": "link" },
         { "slug": "gitlab", "title": "", "url": "https://gitlab.com/", "ico": "https://gitlab.com/favicon.ico", "type": "link" },
@@ -509,6 +515,7 @@
       "slug": "software",
       "name": "软件",
       "type": "category",
+      "group": 0,
       "children": [
         { "slug": "html", "type": "category", "col": 2, "children": [] },
         { "slug": "node", "type": "category", "col": 2, "children": [] },
@@ -524,11 +531,35 @@
         { "slug": "softaculous", "title": "", "url": "https://www.softaculous.com/", "ico": "https://www.softaculous.com/favicon.ico", "type": "link" }
       ]
     },
+    { "slug": "solution", "name": "方案", "type": "category", "group": 1, "hidden": true, "children": [] },
     {
-      "slug": "solution",
-      "name": "方案",
-      "type": "category"
-    }
+      "slug": "recipe",
+      "name": "食谱",
+      "type": "category",
+      "group": 1,
+      "hidden": true,
+      "children": [{ "title": "蛋花汤" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }, { "title": "" }]
+    },
+    { "slug": "script", "name": "脚本", "type": "category", "group": 1, "hidden": true, "children": [] },
+    { "slug": "store", "name": "市场", "type": "category", "group": 1, "hidden": true, "children": [] },
+    { "slug": "snippet", "name": "片段", "type": "category", "group": 1, "hidden": true, "children": [] },
+    { "slug": "noun", "name": "名词", "type": "category", "group": 1, "hidden": true, "children": [] },
+    { "slug": "template", "name": "模板", "type": "category", "group": 1, "hidden": true, "children": [] },
+    { "slug": "theme", "name": "主题", "type": "category", "group": 1, "hidden": true, "children": [] },
+    { "slug": "audio", "name": "音频", "type": "category", "group": 1, "hidden": true, "children": [] },
+    { "slug": "video", "name": "视频", "type": "category", "group": 1, "hidden": true, "children": [] },
+    { "slug": "comic", "name": "漫画", "type": "category", "group": 1, "hidden": true, "children": [] },
+    { "slug": "anime", "name": "动漫", "type": "category", "group": 1, "hidden": true, "children": [] },
+    { "slug": "novel", "name": "小说", "type": "category", "group": 1, "hidden": true, "children": [] },
+    { "slug": "tool", "name": "工具", "type": "category", "group": 1, "hidden": true, "children": [] },
+    { "slug": "reference", "name": "参考", "type": "category", "group": 1, "hidden": true, "children": [] },
+    { "slug": "manual", "name": "手册", "type": "category", "group": 1, "hidden": true, "children": [] },
+    { "slug": "", "name": "", "type": "category", "group": 0, "children": [] },
+    { "slug": "", "name": "", "type": "category", "group": 0, "children": [] },
+    { "slug": "", "name": "", "type": "category", "group": 0, "children": [] },
+    { "slug": "", "name": "", "type": "category", "group": 0, "children": [] },
+    { "slug": "", "name": "", "type": "category", "group": 0, "children": [] },
+    { "slug": "", "name": "", "type": "category", "group": 0, "children": [] }
   ],
   "links": [],
   "relationships": [],

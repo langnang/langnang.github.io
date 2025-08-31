@@ -220,12 +220,40 @@ max-width: calc(8.33% - .5px); */
   top: 0 !important;
 }
 
+.top-1 {
+  top: 0.25rem !important;
+}
+
+.top-2 {
+  top: 0.5rem !important;
+}
+
+.top-3 {
+  top: 0.75rem !important;
+}
+
+.top-4 {
+  top: 1rem !important;
+}
+
 .right-0 {
   right: 0 !important;
 }
 
+.right-1 {
+  right: .25rem !important;
+}
+
+.right-2 {
+  right: .5rem !important;
+}
+
 .right-3 {
   right: .75rem !important;
+}
+
+.right-4 {
+  right: 1rem !important;
 }
 
 .bottom-0 {

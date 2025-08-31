@@ -29,7 +29,7 @@
 
 const makeCard = function (item, index) {
 
-  const id = `${item.slug}--${index}`.replace(/\./g, "-")
+  const id = `${item.slug}--${index}`.replace(/\.| |\(|\)/g, "-")
   const getIcoPath = (ico, url) => {
     if (url && ico == 'favicon') return url + 'favicon.ico';
     if (ico != 'favicon') return ico;
@@ -51,6 +51,17 @@ const makeCard = function (item, index) {
         <i class="fa-solid fa-star"></i> 
       </span>`;
     }
+    if (data.status) {
+      let textColor = 'primary';
+      switch (data.status) {
+        case 'public': break;
+        case 'publish': textColor = 'info'; break;
+        case 'protect': textColor = 'warning'; break;
+        case 'private': textColor = 'danger'; break;
+        default: break;
+      }
+      $return += `<i class="fa-solid fa-circle p-0 position-absolute right-1 top-1 text-${textColor}" style="font-size: .5rem;"></i>`;
+    }
     if (data.type == 'link' && data.url) {
       $return += `
       <span class="badge badge-light p-0 position-absolute right-0 bottom-0 text-primary">
@@ -60,30 +71,37 @@ const makeCard = function (item, index) {
     return $return;
   }
   const makeModal = (data, data_i) => {
-    return `
-    <div class="modal fade" id="${id}" tabindex="-1" aria-modal="true" role="dialog">
+    $return = ` <div class="modal fade" id="${id}" tabindex="-1" aria-modal="true" role="dialog">
       <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content" style="background-color: rgba(255, 255, 255, .4);">
+        <div class="modal-content" style="background-color: rgba(255, 255, 255, .6);">
           <div class="modal-header justify-content-center border-0 p-2">
             <h5 class="modal-title">${data.name || data.title || data.slug}</h5>
           </div>
           <div class="modal-body border-0 p-2">
             <p>${data.description || ''}</p>
             <table class="table table-sm table-borderless text-left mb-0">
-              <tbody>
-                <tr>
+              <tbody>`;
+
+    if (data.repository) {
+      $return += `<tr>
                   <th scope="row">Repository</th>
                   <td>${data.repository || ''}</td>
-                </tr>
-                <tr>
+                </tr>`;
+    }
+    if (data.homepage || data.url) {
+      $return += ` <tr>
                   <th scope="row">Homepage</th>
                   <td>${data.homepage || data.url || ''}</td>
-                </tr>
-                <tr>
+                </tr>`;
+    }
+    if (data.badge) {
+      $return += ` <tr>
                   <th scope="row">Badge</th>
                   <td>${data.badge || ''}</td>
-                </tr>
-              </tbody>
+                </tr>`;
+
+    }
+    $return += `</tbody>
             </table>
           </div>
           <div class="modal-footer border-0">
@@ -94,6 +112,7 @@ const makeCard = function (item, index) {
       </div>
     </div>
     `;
+    return $return;
   }
   let $return = '';
   if (item.type == 'category') {
@@ -156,6 +175,7 @@ const makeCard = function (item, index) {
       <div class="card border-0" style="">
         <div class="card-body bg-light p-0 position-absolute overflow-hidden" style="" data-id="${id}" data-toggle="tooltip" data-placement="bottom" title="${item.title || item.name || _.upperFirst(item.slug)}">
           ${makeIco(item)}
+          ${makeBadge(item)}
         </div>
         <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${item.title || item.name || _.upperFirst(item.slug)}</div>
       </div>

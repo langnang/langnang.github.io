@@ -37,7 +37,7 @@ const makeCard = function (item, index) {
   }
 
   const makeIco = (data) => {
-    return `<img class="" src="${getIcoPath(data.ico, data.url)}" style="height: 90%;margin-top: 5%;" onerror="event.srcElement.src='https://unpkg.com/@fortawesome/fontawesome-free@7.0.0/svgs/solid/earth-america.svg';event.srcElement.onerror=null;"/>`
+    return `<img class="lazy" data-original="${getIcoPath(data.ico, data.url)}" style="height: 90%;margin-top: 5%;" onerror="event.srcElement.src='https://unpkg.com/@fortawesome/fontawesome-free@7.0.0/svgs/solid/earth-america.svg';event.srcElement.onerror=null;"/>`
   }
 
   const makeBadge = (data) => {
@@ -83,23 +83,36 @@ const makeCard = function (item, index) {
               <tbody>`;
 
     if (data.repository) {
-      $return += `<tr>
-                  <th scope="row">Repository</th>
-                  <td>${data.repository || ''}</td>
-                </tr>`;
+      $return += `
+      <tr>
+        <th scope="row">Repository</th>
+        <td>${data.repository || ''}</td>
+      </tr>
+      `;
     }
     if (data.homepage || data.url) {
-      $return += ` <tr>
-                  <th scope="row">Homepage</th>
-                  <td>${data.homepage || data.url || ''}</td>
-                </tr>`;
+      $return += ` 
+      <tr>
+        <th scope="row">Homepage</th>
+        <td>${data.homepage || data.url || ''}</td>
+      </tr>
+      `;
     }
     if (data.badge) {
-      $return += ` <tr>
-                  <th scope="row">Badge</th>
-                  <td>${data.badge || ''}</td>
-                </tr>`;
-
+      $return += ` 
+      <tr>
+        <th scope="row">Badge</th>
+        <td>${data.badge || ''}</td>
+      </tr>
+      `;
+    }
+    if (data.content) {
+      $return += ` 
+      <tr>
+        <th scope="row">Content</th>
+        <td>${data.content || ''}</td>
+      </tr>
+      `;
     }
     $return += `</tbody>
             </table>
@@ -143,7 +156,7 @@ const makeCard = function (item, index) {
           <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content bg-transparent border-0">
               <div class="modal-header justify-content-center border-0">
-                <h4 class="modal-title rounded-pill w-50" style="background-color: rgba(255, 255, 255, .4);">${item.name || item.title || _.upperFirst(item.slug)}</h4>
+                <h4 class="modal-title rounded-pill w-50" style="background-color: rgba(255, 255, 255, .4);">${item.name || item.title || item.slug}</h4>
               </div>
               <div class="modal-body rounded" style="background-color: rgba(255, 255, 255, .4);">
                 ${`<div class="row row-cols-10">` +
@@ -157,27 +170,27 @@ const makeCard = function (item, index) {
           </div>
         </div>` +
         `   </div>
-          <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${item.title || item.name || _.upperFirst(item.slug)}</div>
+          <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${item.title || item.name || item.slug}</div>
         </div>`;
   } else if (item.type == 'link' && item.url) {
     $return += `
-      <a class="card border-0 text-muted" target="_blank" href="${item.url}" style="" data-id="${id}" data-toggle="tooltip" data-placement="bottom" title="${item.title || item.name || _.upperFirst(item.slug)}">
+      <a class="card border-0 text-muted" target="_blank" href="${item.url}" style="" data-id="${id}" data-toggle="tooltip" data-placement="bottom" title="${item.title || item.name || item.slug}">
         <div class="card-body bg-light p-0 position-absolute overflow-hidden" style="">
           ${makeIco(item)}
           ${makeBadge(item)}
         </div>
-        <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${item.title || item.name || _.upperFirst(item.slug)}</div>
+        <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${item.title || item.name || item.slug}</div>
       </a>
       ${makeModal(item, index)}
       `;
   } else {
     $return += `
       <div class="card border-0" style="">
-        <div class="card-body bg-light p-0 position-absolute overflow-hidden" style="" data-id="${id}" data-toggle="tooltip" data-placement="bottom" title="${item.title || item.name || _.upperFirst(item.slug)}">
+        <div class="card-body bg-light p-0 position-absolute overflow-hidden" style="" data-id="${id}" data-toggle="tooltip" data-placement="bottom" title="${item.title || item.name || item.slug}">
           ${makeIco(item)}
           ${makeBadge(item)}
         </div>
-        <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${item.title || item.name || _.upperFirst(item.slug)}</div>
+        <div class="card-footer p-0 position-absolute text-light text-truncate" style="bottom: 0; width: 100%">${item.title || item.name || item.slug}</div>
       </div>
       ${makeModal(item, index)}
       `;

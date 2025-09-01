@@ -12,15 +12,15 @@
 
     <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@7.0.0/css/all.css" />
 
-    <link rel="stylesheet" href="./style.css?v=2025-08-31 12:04:29" />
-    <style>
-      #app-main .container p {
-        margin-left: -0.75rem;
-        margin-right: -0.75rem;
-        /* display: none; */
-        line-height: 24px;
-      }
-    </style>
+    <script>
+      (function () {
+        var style = document.createElement('link');
+        style.rel = 'stylesheet';
+        style.href = './style.css?v=' + Date.now();
+        document.head.appendChild(style);
+      })();
+    </script>
+    <style></style>
     <script>
       document.title = location.host;
     </script>
@@ -68,6 +68,8 @@
     <script src="https://unpkg.com/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- <script src="https://unpkg.com/bootstrap-menu@1.0.14/dist/BootstrapMenu.min.js"></script> -->
 
+    <script src="https://unpkg.com/jquery-lazyload@1.9.7/jquery.lazyload.js"></script>
+
     <script src="https://unpkg.com/bootstrap-menu@1.0.14/dist/BootstrapMenu.min.js"></script>
 
     <script src="https://unpkg.com/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
@@ -80,7 +82,13 @@
     <script src="https://unpkg.com/lodash@4.17.21/lodash.min.js"></script>
     <!-- <script src="https://unpkg.com/simple-ini@1.0.4/lib/simple-ini.js"></script> -->
 
-    <script src="./script.js?v=2025-08-31 12:04:29"></script>
+    <script>
+      (function () {
+        var script = document.createElement('script');
+        script.src = './script.js?v=' + Date.now();
+        document.body.appendChild(script);
+      })();
+    </script>
     <script>
       $(function () {});
     </script>
@@ -130,7 +138,7 @@
         return false;
       }
       $(function () {
-        fetch('./dataset.json?' + Date.now())
+        fetch('./dataset.json?v=' + Date.now())
           .then(response => response.json())
           .then(res => {
             console.log(res);
@@ -157,7 +165,7 @@
                   tabHtml += `
                       <li class="nav-item" role="presentation">
                         <button class="nav-link btn-block text-light font-weight-bolder ${nav_i == 0 ? 'active' : ''}" id="${nav.slug}-tab" data-toggle="tab" data-target="#${nav.slug}" type="button" role="tab" aria-controls="${nav.slug}" aria-selected="true">
-                          ${nav.name || _.upperFirst(nav.slug)}
+                          ${nav.name || nav.slug}
                         </button>
                       </li>
                       `;
@@ -195,6 +203,9 @@
               itemSelector: '.masonry-item',
               percentPosition: true
             });
+            $('img.lazy').lazyload({
+              placeholder: 'https://unpkg.com/@fortawesome/fontawesome-free@7.0.0/svgs/solid/earth-america.svg' // 占位符图片
+            });
             $('button[data-toggle="tab"]').on('shown.bs.tab', function (event) {
               // console.log(event.target);
               // console.log(event.relatedTarget);
@@ -204,6 +215,9 @@
                 // options
                 itemSelector: '.masonry-item',
                 percentPosition: true
+              });
+              $('img.lazy').lazyload({
+                placeholder: 'https://unpkg.com/@fortawesome/fontawesome-free@7.0.0/svgs/solid/earth-america.svg' // 占位符图片
               });
             });
             var tableRows = {

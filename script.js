@@ -254,19 +254,19 @@ $(function () {
           .sort((a, b) => a.order - b.order)
           .forEach((nav, nav_i) => {
             tabHtml += `
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link btn-block text-light font-weight-bolder ${nav_i == 0 ? 'active' : ''}" id="${nav.slug}-tab" data-toggle="tab" data-target="#${nav.slug}" type="button" role="tab" aria-controls="${nav.slug}" aria-selected="true">
-                          ${nav.name || nav.slug}
-                        </button>
-                      </li>
-                      `;
+            <li class="nav-item" role="presentation">
+              <button class="nav-link btn-block py-1 text-light font-weight-bolder ${nav_i == 0 ? 'active' : ''}" id="${nav.slug}-tab" data-toggle="tab" data-target="#${nav.slug}" type="button" role="tab" aria-controls="${nav.slug}" aria-selected="true">
+                ${nav.name || nav.slug}
+              </button>
+            </li>
+            `;
 
             tabContentHtml += `<div class="tab-pane fade ${nav_i == 0 ? 'show active' : ''}" id="${nav.slug}" role="tabpanel" aria-labelledby="${nav.slug}-tab">`;
             tabContentHtml += `<nav aria-label="breadcrumb">
-                        <ol class="breadcrumb mb-2 py-0 bg-dark--4">
-                          <li class="breadcrumb-item active"><a href="#" class="badge badge-primary">ALL</a></li>
-                        </ol>
-                      </nav>`;
+              <ol class="breadcrumb mb-2 py-0 bg-dark--4">
+                <li class="breadcrumb-item active"><a href="#" class="badge badge-primary">ALL</a></li>
+              </ol>
+            </nav>`;
             tabContentHtml += ` <div class="row row-cols-16 row-cols-sm-10 row-cols-md-12 text-center mx-0 masonry">`;
             tabContentHtml += `<div class="col col--1 row--1 masonry-item px-0 text-decoration-none"></div>`;
             [...(nav.children || []).filter(v => v.slug && v.recommand), ...(nav.children || []).filter(v => v.slug && !v.recommand).sort((a, b) => a.order - b.order)].forEach((child, child_i) => {
@@ -278,12 +278,12 @@ $(function () {
             tabContentHtml += `</div> </div>`;
           });
         carouselInnerHtml += `
-                    <div class="carousel-item ${g_index == 0 ? 'active' : ''}">
-                      <ul id="app-tab--${g_index}" class="nav nav-pills nav-justified mb-2" role="tablist" style="background-color: rgba(0, 0, 0, 0.3)">${tabHtml}</ul>
+        <div class="carousel-item ${g_index == 0 ? 'active' : ''}">
+          <ul id="app-tab--${g_index}" class="nav nav-pills nav-justified mb-2" role="tablist" style="background-color: rgba(0, 0, 0, 0.3)">${tabHtml}</ul>
 
-                      <div id="app-tab-content--${g_index}" class="tab-content">${tabContentHtml}</div>
+          <div id="app-tab-content--${g_index}" class="tab-content">${tabContentHtml}</div>
 
-                    </div>`;
+        </div>`;
       });
       $('#app-carousel--indicators').html(carouselIndicatorHtml);
       $('#app-carousel--inner').html(carouselInnerHtml);

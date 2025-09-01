@@ -31,7 +31,7 @@
       <main id="app-main" class="container">
         <div class="jumbotron text-center p-0 mb-2" style="background-color: rgba(0, 0, 0, 0.3)">
           <h1 id="app-time" class="font-weight-bolder text-light display-2">--:--:--</h1>
-          <p id="app-date" class="lead text-light mb-0">--- -- ---</p>
+          <p id="app-date" class="lead text-light small mb-0">--- -- ---</p>
         </div>
         <div class="row justify-content-center mb-3 d-none">
           <div class="col-8">
@@ -100,7 +100,7 @@
         console.log([moment().year(), moment().month() + 1, moment().date()]);
         const currentLunar = calendar.solar2lunar(moment().year(), moment().month() + 1, moment().date());
         console.log(currentLunar);
-        $('#app-date').text(moment().format('M月D日 dddd') + ' ' + currentLunar.IMonthCn + currentLunar.IDayCn);
+        $('#app-date').text(moment().format('Y年M月D日 第DDD天 第W周 dddd') + ' ' + currentLunar.IMonthCn + currentLunar.IDayCn);
       });
       function getTime() {
         var date = new Date();
@@ -225,7 +225,7 @@
               3: { name: 'Third row', isEditable: true, isRemovable: true }
             };
 
-            var menu = new BootstrapMenu('.masonry-item.col.col--1.row--1>.card', {
+            var menu = new BootstrapMenu('.masonry-item.col.col--1.row--1>.card,', {
               /* $rowElem is the jQuery element where the menu was opened. The
                * returned value is the `row` argument passed to each function. */
               fetchElementData: function ($rowElem) {

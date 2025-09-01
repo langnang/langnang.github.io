@@ -161,7 +161,7 @@ const makeCard = function (item, index) {
               <div class="modal-body rounded" style="background-color: rgba(255, 255, 255, .4);">
                 ${`<div class="row row-cols-10">` +
         item.children
-          .reduce((tol, chd, ind) => tol + `<div class="col px-1">${makeCard(chd, ind)}</div>`, ''
+          .reduce((tol, chd, ind) => tol + `<div class="col col--1 row--1 px-1">${makeCard(chd, ind)}</div>`, ''
           ) +
         `</div>`
         }

@@ -1,27 +1,5 @@
 (function ($, window, document, undefined) {
 
-  $.fn.setCurrentTime = function (format = "hh:mm:ss") {
-    var date = new Date();
-
-    // 年、月、日
-    var year = date.getFullYear();
-    var month = ("00" + (date.getMonth() + 1)).slice(-2);
-    var day = ("00" + date.getDate()).slice(-2);
-
-    // 时、分、秒
-    var hour = ("00" + date.getHours()).slice(-2);
-    var minute = ("00" + date.getMinutes()).slice(-2);
-    var second = ("00" + date.getSeconds()).slice(-2);
-
-    // 实时显示
-    // element.innerText = "" + year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
-    this.text(year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second);
-    // console.log(this);
-    // console.log($(this));
-    // console.log(el);
-  }
-  $.fn.setCurrentData = function () { }
-
   $.fn.render = function (data, options) { }
   $.fn.renderTab = function (data, options) { }
   $.fn.renderTabContent = function (data, options) { }
@@ -31,6 +9,8 @@
   }
 
   $.makeComponent = function (key, data) { }
+
+  $.fn.renderComponent = function (key, data) { }
 
   $.makeHtml = function () {
     // console.log(arguments)
@@ -72,7 +52,7 @@
       if (data.type == 'link' && data.url) {
         $return += `
       <span class="badge badge-light p-0 position-absolute right-0 bottom-0 text-primary">
-        <i class="fas fa-link"></i>
+        <i class="fa-solid fa-paperclip"></i>
       </span>`;
       }
       return $return;
@@ -205,7 +185,19 @@
     return $return;
   }
 })(jQuery, window, document);
-$.createComponent('searchEngine');
+$.createComponent('jumbotron', {});
+$.createComponent('carousel', {
+  render: ``,
+  template: '',
+  data() {
+    return {
+
+    }
+  },
+  created() { },
+  mounted() { },
+});
+$.createComponent('card');
 $.makeHtml();
 // moment
 $(function () {

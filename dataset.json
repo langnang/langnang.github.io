@@ -199,7 +199,7 @@
         { "slug": "edge", "title": "", "url": "https://www.microsoft.com/zh-cn/edge/", "ico": "favicon", "type": "link" },
         { "slug": "firefox", "title": "", "url": "https://www.firefox.com.cn/", "ico": "https://www.firefox.com.cn/media/img/favicons/firefox/browser/favicon.f093404c0135.ico", "type": "link" },
         { "slug": "crystaldiskinfo", "title": "", "url": "https://crystalmark.info/", "ico": "favicon", "type": "link" },
-        { "slug": "", "title": "", "url": "", "ico": "favicon", "type": "link" },
+        { "slug": "hexhub", "title": "", "url": "https://www.hexhub.cn/", "ico": "favicon", "type": "link" },
         { "slug": "", "title": "", "url": "", "ico": "favicon", "type": "link" },
         { "slug": "", "title": "", "url": "", "ico": "favicon", "type": "link" },
         { "slug": "", "title": "", "url": "", "ico": "favicon", "type": "link" },

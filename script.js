@@ -25,8 +25,16 @@
   $.fn.render = function (data, options) { }
   $.fn.renderTab = function (data, options) { }
   $.fn.renderTabContent = function (data, options) { }
+  const components = {};
+  $.createComponent = function (key) {
+    // console.log(arguments)
+  }
+  $.makeHtml = function () {
+    // console.log(arguments)
+  }
 })(jQuery, window, document);
-
+$.createComponent('searchEngine');
+$.makeHtml();
 const makeCard = function (item, index) {
 
   const id = `${item.slug}--${index}`.replace(/\.| |\(|\)/g, "-")

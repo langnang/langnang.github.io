@@ -284,7 +284,7 @@
             { "slug": "tocify", "title": "", "url": "http://gregfranko.com/jquery.tocify.js/", "ico": "favicon", "type": "link" },
             { "slug": "bootstrap-colorpalette", "title": "", "url": "https://extremefe.github.io/bootstrap-colorpalette/", "ico": "favicon", "type": "link" },
             { "slug": "bootstrap-table", "title": "", "url": "https://bootstrap-table.com/", "ico": "https://bootstrap-table.com/favicon.png", "type": "link" },
-            { "slug": "", "title": "", "url": "", "ico": "favicon", "type": "link" },
+            { "slug": "adminlte", "title": "", "url": "https://adminlte.cn/", "ico": "https://adminlte.cn/wp-content/uploads/2021/03/cropped-logo-32x32.png", "type": "link" },
             { "slug": "", "title": "", "url": "", "ico": "favicon", "type": "link" },
             { "slug": "", "title": "", "url": "", "ico": "favicon", "type": "link" },
             { "slug": "", "title": "", "url": "", "ico": "favicon", "type": "link" },

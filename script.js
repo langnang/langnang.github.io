@@ -254,14 +254,19 @@ $(function () {
             `;
 
             tabContentHtml += `<div class="tab-pane fade ${nav_i == 0 ? 'show active' : ''}" id="${nav.slug}" role="tabpanel" aria-labelledby="${nav.slug}-tab">`;
+            const navChildren = [...(nav.children || []).filter(v => v.slug && v.recommand), ...(nav.children || []).filter(v => v.slug && !v.recommand).sort((a, b) => a.order - b.order)];
+
+            const keywords = Array.from(new Set(navChildren.filter(v => v.keywords).map(v => v.keywords && v.keywords.split(',')).flat(Infinity)));
+
             tabContentHtml += `<nav aria-label="breadcrumb">
               <ol class="breadcrumb mb-2 py-0 bg-dark--4">
                 <li class="breadcrumb-item active"><a href="#" class="badge badge-primary">ALL</a></li>
+                ${keywords.reduce((t, v) => t + `<li class="breadcrumb-item"><a href="#" class="badge">${v}</a></li>`, '')}
               </ol>
             </nav>`;
             tabContentHtml += ` <div class="row row-cols-16 row-cols-sm-10 row-cols-md-12 text-center mx-0 masonry">`;
             tabContentHtml += `<div class="col col--1 row--1 masonry-item px-0 text-decoration-none"></div>`;
-            [...(nav.children || []).filter(v => v.slug && v.recommand), ...(nav.children || []).filter(v => v.slug && !v.recommand).sort((a, b) => a.order - b.order)].forEach((child, child_i) => {
+            navChildren.forEach((child, child_i) => {
               tabContentHtml += `<div class="col col--${child.col || 1} row--${child.row || 1} masonry-item px-0 text-decoration-none" data-id="${child.slug}--${child_i}">`;
 
               tabContentHtml += $.makeCard(child, child_i);

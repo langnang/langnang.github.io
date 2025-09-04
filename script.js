@@ -307,7 +307,17 @@ $(function () {
         $('img.lazy').lazyload({
           placeholder: 'https://unpkg.com/@fortawesome/fontawesome-free@7.0.0/svgs/solid/earth-america.svg' // 占位符图片
         });
+        console.log($('.modal img.lazy'))
       });
+      $('#exampleModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget) // Button that triggered the modal
+        var recipient = button.data('whatever') // Extract info from data-* attributes
+        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+        var modal = $(this)
+        modal.find('.modal-title').text('New message to ' + recipient)
+        modal.find('.modal-body input').val(recipient)
+      })
       var tableRows = {
         1: { name: 'First row', isEditable: true, isRemovable: true },
         2: { name: 'Second row', isEditable: true, isRemovable: true },

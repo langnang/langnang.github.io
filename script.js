@@ -185,8 +185,8 @@
     return $return;
   }
 })(jQuery, window, document);
-$.createComponent('jumbotron', {});
-$.createComponent('carousel', {
+$.createComponent('bt4-jumbotron', {});
+$.createComponent('bt4-carousel', {
   render: ``,
   template: '',
   data() {
@@ -197,7 +197,28 @@ $.createComponent('carousel', {
   created() { },
   mounted() { },
 });
-$.createComponent('card');
+$.createComponent('bt4-card');
+$.createComponent('bt4-breadcrumb', {
+  name: "",
+  template: `
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Library</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Data</li>
+  </ol>
+</nav>
+  `,
+  render() {
+    return ``;
+  },
+  data() {
+    return {}
+  },
+  props: {
+
+  }
+})
 $.makeHtml();
 // moment
 $(function () {
@@ -260,8 +281,8 @@ $(function () {
 
             tabContentHtml += `<nav aria-label="breadcrumb">
               <ol class="breadcrumb mb-2 py-0 bg-dark--4">
-                <li class="breadcrumb-item active"><a href="#" class="badge badge-primary">ALL</a></li>
-                ${keywords.reduce((t, v) => t + `<li class="breadcrumb-item"><a href="#" class="badge">${v}</a></li>`, '')}
+                <li class="breadcrumb-item active" aria-label="page"><a href="#" class="badge badge-primary">ALL</a></li>
+                ${keywords.reduce((t, v) => t + `<li class="breadcrumb-item" aria-label="breadcrumb"><a href="#" class="badge">${v}</a></li>`, '')}
               </ol>
             </nav>`;
             tabContentHtml += ` <div class="row row-cols-16 row-cols-sm-10 row-cols-md-12 text-center mx-0 masonry">`;

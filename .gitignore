@@ -3,6 +3,9 @@
 .temp/
 vendor/
 node_modules/
+
+
+dataset.development.json
 composer.lock
 package.lock
 pnpm-lock.yaml

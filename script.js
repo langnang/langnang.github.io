@@ -242,7 +242,8 @@ $(function () { });
 $(function () { });
 // main
 $(function () {
-  fetch('./dataset.json?v=' + Date.now())
+  const dataSetUrl = ['localhost', '127.0.0.1'].includes(location.hostname) ? './dataset.development.json' : './dataset.json';
+  fetch(`${dataSetUrl}?v=${Date.now()}`)
     .then(response => response.json())
     .then(res => {
       console.log(res);

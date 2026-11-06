@@ -1125,7 +1125,8 @@ textarea.json-area:focus {
   <script>
 (function (global, factory) {
   class OneNav {
-    STORAGE_KEY = 'omnipage_data';
+    title = "OneNav";
+    STORAGE_KEY = 'onenav_data';
     MOBILE_BREAKPOINT = 900;
     editable = false;             // 是否允许编辑
     isEditing = false;            // 是否处于编辑模式
@@ -1136,6 +1137,8 @@ textarea.json-area:focus {
     sidebarOpen = false;          // 移动端侧栏展开状态
     scrollObserver = null;        // 滚动高亮观察器
     constructor(options) {
+      this.title = options.title || "OneNav";
+      this.editable = options.editable || false;
       this.render();
       init();
     }
@@ -1145,16 +1148,17 @@ textarea.json-area:focus {
     render() {
       $("#app").innerHTML = `<!-- 左侧导航栏 -->
   <nav class="sidebar" id="sidebar">
-    <div class="sidebar-title">References·参考文献</div>
+    <div class="sidebar-title">${this.title}</div>
     <div id="navList"></div>
-    <div class="sidebar-bottom" id="sidebarBottom" style="display:none">
-      <button class="btn btn-primary" id="btnEdit" onclick="toggleEdit()">编辑</button>
+    <div class="sidebar-bottom" id="sidebarBottom">
+      ${this.editable ? `<button class="btn btn-primary" id="btnEdit" onclick="toggleEdit()">编辑</button>
       <button class="btn btn-success" id="btnSave" onclick="saveData()" style="display:none">保存</button>
       <button class="btn btn-secondary" id="btnCancel" onclick="cancelEdit()" style="display:none">取消</button>
+        ` : ``}
       <button class="btn btn-secondary" onclick="exportData()">导出</button>
-      <button class="btn btn-secondary" onclick="showImport()">导入</button>
+      ${this.editable ? `<button class="btn btn-secondary" onclick="showImport()">导入</button>` : ``}
       <button class="btn btn-secondary" onclick="checkAllLinks()">检查链接</button>
-      <button class="btn btn-secondary" onclick="showGuide()">功能介绍</button>
+      <button class="btn btn-secondary" onclick="showGuide()" style="display:none">功能介绍</button>
     </div>
   </nav>
   <button class="sidebar-toggle" id="sidebarToggle" onclick="toggleSidebar()">☰</button>
@@ -1185,7 +1189,7 @@ textarea.json-area:focus {
     <div class="container" id="mainContainer"></div>
 
     <div id="mainFooter">
-      develop by langnang fork from hemanruc/OmniPage
+      develop by <a target="_blank" href="https://github.com/langnang">langnang</a> fork from <a target="_blank" href="https://github.com/hemanruc/OmniPage">hemanruc/OmniPage</a> 
     </div>
 
     <div class="add-cat-bar" id="addCatBar">
@@ -1588,7 +1592,7 @@ let defaultData = {
 /* ============================================================
  * 常量与工具函数
  * ============================================================ */
-// const STORAGE_KEY = 'omnipage_data';
+// const STORAGE_KEY = 'onenav_data';
 const STORAGE_KEY = null;
 const MOBILE_BREAKPOINT = 900;
 
@@ -1721,9 +1725,15 @@ function scrollToCategory(idx) {
   const el = $(`.category[data-idx="${idx}"]`);
   if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
-
+document.addEventListener('click', function (event) {
+  console.log(event);
+  if (event.target.id == 'sidebarToggle') {
+    toggleSidebar();
+  }
+})
 function toggleSidebar() {
   sidebarOpen = !sidebarOpen;
+  console.log(`toggleSidebar`, sidebarOpen)
   $('#sidebar').classList.toggle('open', sidebarOpen);
 }
 
@@ -2304,10 +2314,12 @@ function hideGuide() {
   fetch('./repository.json')
     .then(response => response.json())
     .then(data => {
-      let $return = {};
+      let $return = {
+        title: data.title || "OneNav",
+      };
       let $data = data.onenav;
-      console.log(`assemblyData`, data);
-      console.log(`assemblyData`, data.onenav.metas);
+      // console.log(`assemblyData`, data);
+      // console.log(`assemblyData`, data.onenav.metas);
       $return['categories'] = Object.values(data.onenav.metas || [])
         .filter(v => v.type == 'category')
         .sort((a, b) => a.order - b.order)
@@ -2318,7 +2330,7 @@ function hideGuide() {
           v.files = array_unique([...v.files || [], ...v.relationships.filter(v_r => v_r.file).map(v_r => v_r.file)]).reduce((t, v_f) => $data.files[v_f] ? [...t, $data.files[v_f]] : t, []);
           return v;
         });
-      console.log(`assemblyData`, $return);
+      // console.log(`assemblyData`, $return);
       defaultData = $return;
       console.log(`assemblyData`, defaultData);
       // init();

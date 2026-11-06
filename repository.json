@@ -30,7 +30,10 @@
         "title": "Packages",
         "type": "category",
         "contents": [],
-        "links": [],
+        "links": [
+          "packages.composer.helpers",
+          "packages.composer.phpspider"
+        ],
         "files": []
       },
       "documents": {
@@ -48,6 +51,14 @@
       "toolkits": {
         "id": "toolkits",
         "title": "Toolkits·工具辅助",
+        "type": "category",
+        "contents": [],
+        "links": [],
+        "files": []
+      },
+      "configs": {
+        "id": "configs",
+        "title": "Configs·配置信息",
         "type": "category",
         "contents": [],
         "links": [],
@@ -89,6 +100,14 @@
         "name": "Manuals",
         "url": "https://langnang.github.io/manuals/",
         "description": "指南手册"
+      },
+      "packages.composer.phpspider": {
+        "name": "composer.phpspider",
+        "url": "https://github.com/langnang/packages.composer.phpspider"
+      },
+      "packages.composer.helpers": {
+        "name": "composer.helpers",
+        "url": "https://github.com/langnang/packages.composer.helpers"
       },
       "AMiner": {
         "name": "AMiner",

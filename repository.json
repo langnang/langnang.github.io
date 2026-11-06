@@ -1,5 +1,176 @@
 {
   "name": "langnang.github.io",
   "title": "langnang.github.io",
-  "onenav": {}
+  "onenav": {
+    "el": "#app",
+    "editable": false,
+    "styles": {},
+    "scripts": {},
+    "metas": {
+      "langnang": {
+        "id": "langnang",
+        "title": "Langnang",
+        "type": "category",
+        "contents": [],
+        "links": [
+          "langnang"
+        ],
+        "files": []
+      },
+      "projects": {
+        "id": "projects",
+        "title": "Projects·项目案例",
+        "type": "category",
+        "contents": [],
+        "links": [],
+        "files": []
+      },
+      "packages": {
+        "id": "packages",
+        "title": "Packages",
+        "type": "category",
+        "contents": [],
+        "links": [],
+        "files": []
+      },
+      "documents": {
+        "id": "documents",
+        "title": "Document·文献手册",
+        "type": "category",
+        "contents": [],
+        "links": [
+          "documents",
+          "references",
+          "manuals"
+        ],
+        "files": []
+      },
+      "toolkits": {
+        "id": "toolkits",
+        "title": "Toolkits·工具辅助",
+        "type": "category",
+        "contents": [],
+        "links": [],
+        "files": []
+      },
+      "examples": {
+        "id": "examples",
+        "title": "Examples·示例模板",
+        "type": "category",
+        "contents": [],
+        "links": [],
+        "files": []
+      },
+      "extensions": {
+        "id": "extensions",
+        "title": "Extensions·插件拓展",
+        "type": "category",
+        "contents": [],
+        "links": [],
+        "files": []
+      }
+    },
+    "contents": {},
+    "links": {
+      "langnang": {
+        "name": "langnang",
+        "url": "https://langnang.github.io/langnang/"
+      },
+      "documents": {
+        "name": "Documents",
+        "url": "https://langnang.github.io/documents/"
+      },
+      "references": {
+        "name": "References",
+        "url": "https://langnang.github.io/references/",
+        "description": "参考文献"
+      },
+      "manuals": {
+        "name": "Manuals",
+        "url": "https://langnang.github.io/manuals/",
+        "description": "指南手册"
+      },
+      "AMiner": {
+        "name": "AMiner",
+        "url": "https://www.aminer.cn/",
+        "description": "学术搜索与分析",
+        "keywords": "示例"
+      },
+      "X-MOL": {
+        "name": "X-MOL",
+        "url": "https://www.x-mol.com/",
+        "description": "学术资讯平台",
+        "keywords": "示例"
+      },
+      "Nature": {
+        "name": "Nature",
+        "url": "https://www.nature.com/",
+        "description": "",
+        "keywords": ""
+      },
+      "Science": {
+        "name": "Science",
+        "url": "https://www.science.org/",
+        "description": "",
+        "keywords": ""
+      },
+      "张希": {
+        "name": "张希",
+        "url": "http://zhangxigroup.com/",
+        "description": "清华大学",
+        "keywords": "超分子"
+      },
+      "裴坚": {
+        "name": "裴坚",
+        "url": "http://www.chem.pku.edu.cn/pei/",
+        "description": "北京大学",
+        "keywords": "有机电子"
+      },
+      "鲍哲楠": {
+        "name": "鲍哲楠",
+        "url": "http://baogroup.stanford.edu/",
+        "description": "斯坦福大学",
+        "keywords": "柔性电子"
+      }
+    },
+    "files": {},
+    "relationships": [
+      {
+        "meta": "useful",
+        "link": "AMiner"
+      },
+      {
+        "meta": "useful",
+        "link": "X-MOL"
+      },
+      {
+        "meta": "useful",
+        "link": "Nature"
+      },
+      {
+        "meta": "useful",
+        "link": "X-MOL"
+      },
+      {
+        "meta": "journals",
+        "link": "Nature"
+      },
+      {
+        "meta": "journals",
+        "link": "Science"
+      },
+      {
+        "meta": "scholars",
+        "link": "张希"
+      },
+      {
+        "meta": "scholars",
+        "link": "裴坚"
+      },
+      {
+        "meta": "scholars",
+        "link": "鲍哲楠"
+      }
+    ]
+  }
 }

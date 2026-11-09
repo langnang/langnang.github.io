@@ -223,7 +223,8 @@
       },
       "documents": {
         "name": "Documents",
-        "url": "https://langnang.github.io/documents/"
+        "url": "https://langnang.github.io/documents/",
+        "description": "文档记录"
       },
       "references": {
         "name": "References",

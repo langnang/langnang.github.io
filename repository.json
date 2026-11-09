@@ -105,12 +105,24 @@
             "id": "stars",
             "title": "Stars",
             "type": "tag",
+            "fetch_links": {
+              "url": "https://api.github.com/users/langnang/starred",
+              "fields": {
+                "url": "svn_url"
+              }
+            },
             "links": []
           },
           {
-            "id": "forks",
-            "title": "Forks",
+            "id": "repos",
+            "title": "Repos",
             "type": "tag",
+            "fetch_links": {
+              "url": "https://api.github.com/users/langnang/repos",
+              "fields": {
+                "url": "svn_url"
+              }
+            },
             "links": []
           },
           {

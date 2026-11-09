@@ -17,6 +17,128 @@
         ],
         "files": []
       },
+      "github": {
+        "id": "github",
+        "title": "GitHub",
+        "type": "category",
+        "tags": [
+          {
+            "id": "explore",
+            "title": "Explore",
+            "type": "tag",
+            "links": []
+          },
+          {
+            "id": "topics",
+            "title": "Topics",
+            "type": "tag",
+            "links": [
+              {
+                "name": "Awesome Lists",
+                "github": "topics/awesome",
+                "description": "",
+                "keywords": ""
+              },
+              {
+                "name": "CSS",
+                "github": "topics/css",
+                "description": "",
+                "keywords": ""
+              },
+              {
+                "name": "JavaScript",
+                "github": "topics/javascript",
+                "description": "",
+                "keywords": ""
+              },
+              {
+                "name": "Node.js",
+                "github": "topics/nodejs",
+                "description": "",
+                "keywords": ""
+              },
+              {
+                "name": "Front End",
+                "github": "topics/frontend",
+                "description": "",
+                "keywords": ""
+              },
+              {
+                "name": "NPM",
+                "github": "topics/npm",
+                "description": "",
+                "keywords": ""
+              },
+              {
+                "name": "TypeScript",
+                "github": "topics/typescript",
+                "description": "",
+                "keywords": ""
+              },
+              {
+                "name": "Database",
+                "github": "topics/database",
+                "description": "",
+                "keywords": ""
+              }
+            ]
+          },
+          {
+            "id": "trending",
+            "title": "Trending",
+            "type": "tag",
+            "links": []
+          },
+          {
+            "id": "collections",
+            "title": "Collections",
+            "type": "tag",
+            "links": []
+          },
+          {
+            "id": "events",
+            "title": "Events",
+            "type": "tag",
+            "links": []
+          },
+          {
+            "id": "stars",
+            "title": "Stars",
+            "type": "tag",
+            "links": []
+          },
+          {
+            "id": "forks",
+            "title": "Forks",
+            "type": "tag",
+            "links": []
+          },
+          {
+            "id": "gists",
+            "title": "Gists",
+            "type": "tag",
+            "links": []
+          }
+        ],
+        "contents": [],
+        "links": [],
+        "files": []
+      },
+      "singlefile": {
+        "id": "singlefile",
+        "title": "SingleFile·单文件",
+        "type": "category",
+        "contents": [],
+        "links": [
+          {
+            "name": "hemanruc/OmniPage",
+            "github": "hemanruc/OmniPage",
+            "description": "",
+            "keywords": "导航"
+          }
+        ],
+        "files": []
+      },
       "projects": {
         "id": "projects",
         "title": "Projects·项目案例",

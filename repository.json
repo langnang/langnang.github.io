@@ -165,8 +165,22 @@
         "type": "category",
         "contents": [],
         "links": [
-          "packages.composer.helpers",
-          "packages.composer.phpspider"
+          {
+            "name": "composer.phpspider",
+            "url": "https://github.com/langnang/packages.composer.phpspider"
+          },
+          {
+            "name": "composer.helpers",
+            "url": "https://github.com/langnang/packages.composer.helpers"
+          },
+          {
+            "name": "node.javascripts",
+            "url": "https://github.com/langnang/packages.node.javascripts"
+          },
+          {
+            "name": "node.stylesheets",
+            "url": "https://github.com/langnang/packages.node.stylesheets"
+          }
         ],
         "files": []
       },
@@ -176,9 +190,21 @@
         "type": "category",
         "contents": [],
         "links": [
-          "documents",
-          "references",
-          "manuals"
+          {
+            "name": "Documents",
+            "url": "https://langnang.github.io/documents/",
+            "description": "文档记录"
+          },
+          {
+            "name": "References",
+            "url": "https://langnang.github.io/references/",
+            "description": "参考文献"
+          },
+          {
+            "name": "Manuals",
+            "url": "https://langnang.github.io/manuals/",
+            "description": "指南手册"
+          }
         ],
         "files": []
       },
@@ -220,29 +246,6 @@
       "langnang": {
         "name": "langnang",
         "url": "https://langnang.github.io/langnang/"
-      },
-      "documents": {
-        "name": "Documents",
-        "url": "https://langnang.github.io/documents/",
-        "description": "文档记录"
-      },
-      "references": {
-        "name": "References",
-        "url": "https://langnang.github.io/references/",
-        "description": "参考文献"
-      },
-      "manuals": {
-        "name": "Manuals",
-        "url": "https://langnang.github.io/manuals/",
-        "description": "指南手册"
-      },
-      "packages.composer.phpspider": {
-        "name": "composer.phpspider",
-        "url": "https://github.com/langnang/packages.composer.phpspider"
-      },
-      "packages.composer.helpers": {
-        "name": "composer.helpers",
-        "url": "https://github.com/langnang/packages.composer.helpers"
       },
       "AMiner": {
         "name": "AMiner",
